@@ -1,3 +1,15 @@
+## Team
+| Member | GitHub | Contribution |
+|---|---|---|
+| Rahul Yadav | @rahulyadav2054 | Architecture, AI pipeline, backend, JWT Authentication |
+| Priyali Pandey | @priyalipandey4 | RAG System |
+| Shubham Pal | @shubham936 | UI testing, Evaluation, Debugging, Testing|
+
+
+
+
+
+
 # IT Ticket Resolution Assistant
 
 Analyzes one incoming IT ticket and returns:
