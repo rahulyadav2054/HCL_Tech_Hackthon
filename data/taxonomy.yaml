@@ -1,0 +1,57 @@
+# Ticket taxonomy (category > subcategory) and default escalation groups
+categories:
+  Access:
+    default_group: Access-Management
+    subcategories:
+      - Password reset
+      - Account locked
+      - Permission request
+      - MFA issue
+  Application:
+    default_group: App-Support-L2
+    subcategories:
+      - Error/crash
+      - Performance
+      - Login failure
+      - Functional bug
+  Network:
+    default_group: Network-L2
+    subcategories:
+      - VPN
+      - Wi-Fi
+      - DNS
+      - Connectivity
+  Email and collaboration:
+    default_group: Messaging
+    subcategories:
+      - Outlook
+      - Mailbox/quota
+      - Teams
+  Database:
+    default_group: DBA
+    subcategories:
+      - Connection
+      - Slow query
+      - Job failure
+  Hardware:
+    default_group: Hardware-Support
+    subcategories:
+      - Laptop
+      - Printer
+      - Peripheral
+  Configuration:
+    default_group: Desktop-Support
+    subcategories:
+      - Software install
+      - Patch/update
+      - Settings change
+priorities:
+  P1: {name: Critical, rule: 'Production outage or security incident, many users, no workaround'}
+  P2: {name: High, rule: 'Key function broken for a team or site, no workaround'}
+  P3: {name: Medium, rule: 'Single user impaired, workaround exists'}
+  P4: {name: Low, rule: 'Request, question or cosmetic issue'}
+priority_signals:
+  P1: ['production is down', 'all users', 'outage', 'security incident', 'phishing', 'customers are affected']
+  P2: ['entire team', 'whole office', 'several colleagues', 'cannot process', 'month-end', 'nobody can']
+  P3: ['only me', 'only my machine', 'work around', 'few times a day']
+  P4: ['not urgent', 'no rush', 'request', 'whenever']

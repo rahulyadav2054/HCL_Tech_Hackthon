@@ -1,0 +1,192 @@
+kb_id,title,scenario_id,category,subcategory,applies_to,error_codes,symptoms,cause,resolution_steps,owner_group,last_reviewed,approved,version,note
+KB0001,Troubleshooting: Password expired cannot log in,ACC-PWD-01,Access,Password reset,"Windows sign-in, Employee Portal, SAP GUI",,"When I try to log in to Windows sign-in it says my password has expired. I am getting a 'your password has expired' message on Windows sign-in. Cannot sign in this morning, the screen asks me to change my password but it fails.",Password expired under the 90-day password policy,"1. Verified the account password had expired in Active Directory
+2. Guided user through self-service password reset
+3. User signed in with the new password
+4. Advised user to update the password on mobile devices",Service-Desk-L1,2025-04-25,True,1.0,
+KB0002,Troubleshooting: Password reset link not working,ACC-PWD-02,Access,Password reset,Password Reset Portal,,I forgot my password and the self-service reset page says my account is not registered for reset. The password reset portal tells me I have no verification methods set up. I tried to reset my password online but never get the verification code.,User not enrolled in self-service password reset (SSPR),"1. Verified user identity via manager callback
+2. Set a temporary password and forced change at next sign-in
+3. Enrolled user in self-service password reset with phone and authenticator
+4. Confirmed user can sign in",Service-Desk-L1,2025-01-26,True,1.0,
+KB0003,Troubleshooting: Entered my password on a suspicious link,ACC-PWD-03,Access,Password reset,"Microsoft 365, OneDrive, DocuSign",,"I received an email about a shared Microsoft 365 document and entered my username and password on the page, now I think it was fake. After clicking a link in an email I got a login page that looked like Microsoft 365. I typed my password before noticing the address was wrong. I got an alert about a sign-in from an unknown location right after I opened a link in an email.",Credentials compromised via phishing page,"1. Forced password reset and revoked all active sessions
+2. Re-registered MFA methods
+3. Reviewed sign-in logs for unauthorized access
+4. Blocked sender and purged the phishing email from all mailboxes
+5. Reported incident to Security Operations",Security-Ops,2025-10-09,True,1.0,
+KB0004,Troubleshooting: Account keeps getting locked,ACC-LCK-01,Access,Account locked,"Active Directory, Outlook mobile",4740,My account gets locked every 15-20 minutes even though I'm typing the right password. Since I changed my password yesterday my account keeps locking out. I keep getting 'your account has been locked' and have to call the helpdesk to unlock.,Stale password cached on mobile mail app causing repeated failed logins,"1. Checked lockout source in AD; failed attempts came from the user's mobile device
+2. Unlocked the account
+3. User updated the password in the Outlook mobile app
+4. Monitored for 1 hour, no further lockouts",Service-Desk-L1,2025-09-08,True,1.0,
+KB0005,Troubleshooting: Account locked out after password change,ACC-LCK-02,Access,Account locked,Active Directory,4740,"My account locks out every morning around 7 AM even before I log in. Account keeps locking after my password change, I don't have email on my phone. I'm getting locked out repeatedly and I only use my desktop.",Old credentials stored in a scheduled task / mapped drive on another machine,"1. Traced lockout source to a scheduled task on the affected host running under the user's account
+2. Updated the stored credentials in the scheduled task
+3. Removed persistent mapped drive with saved credentials
+4. Unlocked the account and confirmed no further lockouts",Service-Desk-L1,2025-08-17,True,1.0,
+KB0006,Troubleshooting: Access denied on shared folder,ACC-PRM-01,Access,Permission request,"Finance share, Projects share, HR share, Marketing share",0x80070005,When I open the Finance share on the file server I get 'Access is denied'. I joined the team last week and still can't open the Finance share. Getting error 0x80070005 when trying to open the Finance share.,User not a member of the AD security group for the share,"1. Confirmed manager approval for access
+2. Added user to the share's AD security group
+3. Asked user to sign out and back in to refresh group membership
+4. User confirmed access to the folder",Access-Management,2025-05-23,True,1.0,
+KB0007,Troubleshooting: Not receiving MFA prompts,ACC-MFA-01,Access,MFA issue,"Microsoft Authenticator, Okta Verify",,I got a new phone and now I don't receive the Microsoft Authenticator approval request. MFA notifications go to my old phone which I already returned. The sign-in screen waits for approval but nothing appears on my phone.,MFA registered to old device; new device not enrolled,"1. Verified user identity via manager callback
+2. Removed old device registration and issued a temporary access pass
+3. User registered Microsoft Authenticator on the new phone
+4. Confirmed successful MFA sign-in",Access-Management,2025-04-15,True,1.0,
+KB0008,Troubleshooting: MFA code not accepted,ACC-MFA-02,Access,MFA issue,"Microsoft Authenticator, Google Authenticator",,The 6 digit code from Microsoft Authenticator is always rejected as invalid. I enter the code from the app but it says the code is wrong. MFA code fails even though I type it quickly.,Phone clock out of sync causing invalid one-time codes,"1. Checked phone time settings; clock was several minutes off
+2. Enabled automatic date and time on the phone
+3. Synced time in the authenticator app
+4. Code accepted on next attempt",Access-Management,2025-03-31,True,1.0,
+KB0009,Troubleshooting: SAP GUI crashes on startup,APP-ERR-01,Application,Error/crash,SAP GUI,0xc0000005,Since last night's Windows update SAP GUI closes as soon as I open it. SAP GUI crashes on launch with error 0xc0000005. I click on SAP GUI and the window flashes and disappears.,Installed SAP GUI version incompatible with latest Windows update,"1. Confirmed crash in Windows event log after cumulative update
+2. Uninstalled old SAP GUI version
+3. Installed approved SAP GUI 8.00 patch level from Software Center
+4. Restored user's connection list; SAP GUI opens normally",App-Support-L2,2026-03-09,True,1.0,
+KB0010,Troubleshooting: Excel crashes when opening files,APP-ERR-02,Application,Error/crash,Excel,,Excel crashes every time I open the monthly forecast workbook. Excel goes to 'Not responding' and then closes when I open bigger files. Excel closes without any error when I try to open attachments.,Faulty COM add-in causing Excel to crash,"1. Started Excel in safe mode; file opened without issue
+2. Identified and disabled the faulty COM add-in
+3. Updated the add-in to the latest version
+4. User confirmed Excel stable",Desktop-Support,2025-02-02,True,1.0,
+KB0011,Troubleshooting: CRM error HTTP 500 when saving,APP-ERR-03,Application,Error/crash,"CRM, Customer Portal, Salesforce integration",HTTP 500,Every time we try to save a customer record in CRM we get HTTP 500 Internal Server Error. CRM shows 'Something went wrong' and the record does not save. Saving orders in CRM fails since this morning for the whole team.,Integration service account API token expired,"1. Checked application logs; downstream API returned 401 Unauthorized
+2. Renewed the expired service account API token and updated the secret in the vault
+3. Restarted the integration service
+4. Verified saves succeed",App-Support-L2,2025-01-31,True,1.0,
+KB0012,Troubleshooting: Reporting Portal very slow,APP-PRF-01,Application,Performance,"Reporting Portal, Sales Dashboard",,"Reporting Portal reports now take 3-4 minutes to load, before it was seconds. Since the weekend release Reporting Portal keeps timing out. Dashboards in Reporting Portal are extremely slow for all of us.",New release query missing database index,"1. Reproduced slowness and captured the slow query from APM
+2. Found full table scan introduced in the latest release
+3. Created the missing index on the orders table
+4. Page load time back to normal",App-Support-L2,2025-04-06,True,1.0,
+KB0013,Troubleshooting: SAP ERP slow during month end,APP-PRF-02,Application,Performance,"SAP ERP, Oracle EBS",,During month-end close SAP ERP transactions are extremely slow. Posting invoices in SAP ERP takes several minutes each. SAP ERP becomes slow every day around 10 AM.,Heavy batch jobs scheduled during business hours,"1. Checked system load; batch jobs consuming most work processes
+2. Rescheduled non-critical batch jobs to off-peak hours
+3. Added background work processes
+4. Users confirmed improved response time",App-Support-L2,2025-08-12,True,1.0,
+KB0014,Troubleshooting: Cannot log in to HR Portal,APP-LGN-01,Application,Login failure,"HR Portal, Workday, Concur",AADSTS50105,When I sign in to HR Portal I get error AADSTS50105. HR Portal says my account is not assigned to this application. SSO login to HR Portal fails with a message to contact the administrator.,User not assigned to the enterprise application in Entra ID,"1. Confirmed error AADSTS50105 in sign-in logs
+2. Added user to the application's assignment group in Entra ID
+3. User signed in successfully",Access-Management,2025-08-27,True,1.0,
+KB0015,Troubleshooting: HR Portal login keeps looping,APP-LGN-02,Application,Login failure,"HR Portal, Workday, Concur",,When I log in to HR Portal the page keeps redirecting back to the sign-in page. HR Portal login page reloads endlessly after I enter my password. I sign in to HR Portal and it goes back to the login screen again.,Stale session cookies / blocked third-party cookies in browser,"1. Reproduced loop in user's browser; worked in a private window
+2. Cleared browser cookies and cache for the SSO domain
+3. Allowed third-party cookies for the identity provider
+4. User logged in successfully",Desktop-Support,2026-06-02,True,1.0,
+KB0016,Troubleshooting: Cannot upload receipt in Expense Portal,APP-BUG-01,Application,Functional bug,"Expense Portal, Concur",,When I upload my receipt PDF in Expense Portal it just says upload failed. Expense Portal rejects my attachment without a clear error. Upload spinner runs and then fails for a scanned receipt.,Attachment exceeds 10 MB upload limit (known limitation),"1. Checked file size; attachment was over the 10 MB limit
+2. Advised user to compress the PDF or split it
+3. User uploaded the compressed file successfully
+4. Linked to known problem record for a clearer error message",App-Support-L1,2025-01-28,True,1.0,
+KB0017,Troubleshooting: VPN not working after Windows upgrade,NET-VPN-01,Network,VPN,"GlobalProtect VPN, Cisco AnyConnect",,"After the Windows 11 upgrade GlobalProtect VPN stays on 'Connecting' and never connects. GlobalProtect VPN shows a driver error since my laptop was upgraded. VPN was working until the OS upgrade, now it fails every time.",VPN client version incompatible with upgraded OS,"1. Checked VPN client version; older than supported for the new OS
+2. Uninstalled the old client and installed the latest VPN client from Software Center
+3. Rebooted and connected successfully",Network-L2,2025-07-23,True,1.0,
+KB0018,Troubleshooting: VPN not connecting after password change,NET-VPN-03,Network,VPN,GlobalProtect VPN,809,Since I changed my password GlobalProtect VPN gives error 809 when connecting from home. GlobalProtect VPN shows error 809 and keeps asking for credentials. VPN fails with error 809 right after my password reset yesterday.,Stale cached credentials after password change,"1. Cleared cached VPN credentials in Credential Manager
+2. User signed out and back in to re-sync the AD password
+3. Reconnected VPN with the new password
+4. Connection successful",Network-L2,2026-03-06,True,1.0,
+KB0019,Troubleshooting: VPN down for multiple users - error 809,NET-VPN-07,Network,VPN,GlobalProtect VPN,809,"Since last night nobody in our office can connect to GlobalProtect VPN, everyone gets error 809. Whole team getting VPN error 809 from home since this morning. VPN error 809 for all users at the the site site.",Firewall rule change blocked IKE/IPsec ports (UDP 500/4500),"1. Correlated start time with last night's firewall change
+2. Found UDP 500/4500 blocked by the new rule
+3. Restored the firewall rule for IKE/IPsec traffic
+4. Confirmed users can connect",Network-L2,2025-08-14,True,1.0,
+KB0020,Troubleshooting: Can't connect to corporate Wi-Fi,NET-WIF-01,Network,Wi-Fi,Corporate Wi-Fi,,"My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works. Office Wi-Fi authentication fails only on my laptop. I can see the corporate SSID but it never connects.",Expired machine certificate used for 802.1X Wi-Fi authentication,"1. Connected laptop via LAN cable
+2. Found the machine certificate had expired
+3. Ran gpupdate /force and renewed the certificate
+4. Laptop connected to corporate Wi-Fi",Desktop-Support,2026-04-05,True,1.0,
+KB0021,Troubleshooting: Wi-Fi dropping on the floor,NET-WIF-02,Network,Wi-Fi,Corporate Wi-Fi,,"Wi-Fi drops every few minutes for everyone on the floor. Teams calls keep disconnecting on the floor, other floors are fine. Wireless signal is very weak near the east wing of the floor.",Faulty wireless access point on the floor,"1. Checked wireless controller; one access point rebooting repeatedly
+2. Replaced the faulty access point
+3. Ran a site survey; coverage restored",Network-L2,2025-10-12,True,1.0,
+KB0022,Troubleshooting: Internal site not opening,NET-DNS-01,Network,DNS,"Intranet, Jira, Confluence",DNS_PROBE_FINISHED_NXDOMAIN,"Intranet shows 'This site can't be reached' for me but works for others. I get DNS_PROBE_FINISHED_NXDOMAIN when opening Intranet. Intranet doesn't open on my laptop, my colleague can open it.",Stale DNS cache entry on user's machine after server IP change,"1. Confirmed the name resolved correctly from another machine
+2. Flushed DNS cache with ipconfig /flushdns
+3. Renewed IP lease
+4. Intranet opened successfully",Desktop-Support,2025-01-07,True,1.0,
+KB0023,Troubleshooting: Intranet not reachable for anyone,NET-DNS-02,Network,DNS,"Intranet, Jira, Confluence",DNS_PROBE_FINISHED_NXDOMAIN,"Since this morning nobody can open Intranet, browser says the server can't be found. Intranet gives DNS_PROBE_FINISHED_NXDOMAIN for the whole department. All users get 'site can't be reached' on Intranet.",DNS A record removed during server migration,"1. nslookup returned NXDOMAIN from all DNS servers
+2. Found the A record was deleted during last night's migration
+3. Recreated the DNS A record with the new IP
+4. Verified resolution and access from multiple sites",Network-L2,2025-06-13,True,1.0,
+KB0024,Troubleshooting: No network at my desk,NET-CON-01,Network,Connectivity,Wired LAN,,"I'm at desk the desk and my laptop says 'Network cable unplugged' even though it is connected. Wired network not working at my new desk. Docking station LAN has no connectivity, Wi-Fi works.",Switch port disabled / not patched for the desk,"1. Traced the desk port to the switch
+2. Found the switch port administratively disabled
+3. Enabled the port and assigned the user VLAN
+4. Laptop got an IP and connected",Network-L1,2026-03-09,True,1.0,
+KB0025,Troubleshooting: Internet down at the site office,NET-CON-02,Network,Connectivity,WAN link,,"Nobody at the the site office has internet or access to internal systems. All systems unreachable from the site since 9 AM. Complete network outage at the site, phones also down.",Primary ISP link down; automatic failover did not trigger,"1. Confirmed primary WAN circuit down with the ISP
+2. Manually failed over to the backup link
+3. Raised ticket with the ISP for the fiber cut
+4. Restored primary link and failed back after the ISP fix",Network-L2,2025-12-15,True,1.0,
+KB0026,Troubleshooting: Outlook disconnected,EML-OUT-01,Email and collaboration,Outlook,Outlook,,"Outlook status bar shows 'Disconnected' and no new emails arrive. Outlook keeps saying 'Trying to connect...' but webmail works fine. My Outlook stopped syncing since yesterday, folders are not updating.",Corrupted Outlook profile / OST file,"1. Confirmed mailbox works in Outlook on the web
+2. Created a new Outlook profile and rebuilt the OST cache
+3. Outlook connected and synced",Desktop-Support,2025-10-12,True,1.0,
+KB0027,Troubleshooting: Outlook keeps asking for password,EML-OUT-02,Email and collaboration,Outlook,Outlook,,Outlook keeps popping up a password window even after I enter the correct password. I get the Windows security prompt for Outlook every few minutes. Outlook shows 'Need password' and the prompt comes back.,Stale Office credentials cached / modern authentication token issue,"1. Removed Office credentials from Credential Manager
+2. Signed out of all Office apps and signed back in
+3. Verified modern authentication enabled
+4. Prompts stopped",Desktop-Support,2025-06-09,True,1.0,
+KB0028,Troubleshooting: Mailbox full cannot send email,EML-MBX-01,Email and collaboration,Mailbox/quota,"Outlook, Exchange Online",,"I can't send emails, I get a message that my mailbox is full. Outlook says my mailbox has exceeded its size limit. Emails bounce back saying mailbox is full.",Mailbox exceeded storage quota,"1. Checked mailbox size; over the 50 GB quota
+2. Enabled online archive and applied retention policy
+3. Helped user clean up large attachments
+4. Sending restored",Messaging,2025-08-09,True,1.0,
+KB0029,Troubleshooting: Teams camera not working,EML-TMS-01,Email and collaboration,Teams,Microsoft Teams,,In Teams meetings my camera shows 'no camera available'. Camera works in the Camera app but Teams can't find it. Others can't see my video in Teams calls.,Windows privacy setting blocking camera access for desktop apps,"1. Checked Windows privacy settings; camera access blocked for desktop apps
+2. Enabled camera access
+3. Restarted Teams and selected the correct camera
+4. Video working",Desktop-Support,2025-12-11,True,1.0,
+KB0030,Troubleshooting: Teams messages not loading,EML-TMS-02,Email and collaboration,Teams,Microsoft Teams,,"Teams chat shows messages from yesterday only, new ones don't appear. Teams keeps showing a loading spinner in chats. Messages I send in Teams stay pending.",Corrupted Teams local cache,"1. Confirmed Teams on the web works
+2. Quit Teams and cleared the local cache folder
+3. Restarted Teams; messages synced",Desktop-Support,2025-04-15,True,1.0,
+KB0031,Troubleshooting: ORA-12541 TNS no listener,DB-CON-01,Database,Connection,"Oracle DB, Billing DB",ORA-12541,"All application servers fail to connect to Oracle DB with ORA-12541: TNS:no listener. Since the server reboot, connections to Oracle DB fail with ORA-12541. Billing jobs failing with ORA-12541 on every connection attempt.",Database listener not started after server reboot,"1. Checked listener status; listener was down
+2. Started the listener with lsnrctl start
+3. Enabled listener auto-start on boot
+4. Verified application connections",DBA,2025-04-05,True,1.0,
+KB0032,Troubleshooting: ORA-12541 from one app server,DB-CON-02,Database,Connection,"Oracle DB, Billing DB",ORA-12541,"Only application server the affected host gets ORA-12541, other servers connect fine. After the migration, our app on the affected host throws ORA-12541. New UAT server fails with ORA-12541 when connecting to Oracle DB.",Wrong port in tnsnames.ora after database migration,"1. Confirmed listener running on new port 1522
+2. Found tnsnames.ora on the affected host still pointing to port 1521
+3. Updated the connection string
+4. Application connected",DBA,2026-01-25,True,1.0,
+KB0033,Troubleshooting: PostgreSQL: too many connections,DB-CON-03,Database,Connection,"PostgreSQL, MySQL, Orders DB","FATAL: too many connections, Error 1040","Application logs show 'FATAL: too many connections' during peak hours. Users intermittently see errors and logs say the connection pool is exhausted. PostgreSQL rejects new connections, error FATAL: too many connections.",Connection leak in application exhausting the database connection limit,"1. Found hundreds of idle connections from one service
+2. Restarted the leaking service to release connections
+3. Development fixed the connection leak and set pool limits
+4. No further errors",DBA,2025-04-10,True,1.0,
+KB0034,Troubleshooting: Query running very slow,DB-SLW-01,Database,Slow query,"Oracle DB, SQL Server",,A report query that used to take 30 seconds now runs for 20 minutes on Oracle DB. After the big data load queries are very slow. Execution plan changed and the query is much slower.,Stale optimizer statistics after large data load,"1. Compared execution plans before and after
+2. Gathered fresh table statistics
+3. Query back to normal runtime",DBA,2026-01-03,True,1.0,
+KB0035,Troubleshooting: Nightly ETL failed,DB-JOB-01,Database,Job failure,"Data Warehouse, Oracle DB",ORA-01653,The nightly ETL job failed with ORA-01653: unable to extend table. Morning dashboards are empty because the data load failed. ETL log shows ORA-01653 on the sales fact table.,Tablespace full; table could not extend,"1. Checked tablespace usage; 100% full
+2. Added a new datafile to the tablespace
+3. Re-ran the failed ETL job
+4. Added space usage alert at 85%",DBA,2025-12-19,True,1.0,
+KB0036,Troubleshooting: Database backup job failed,DB-JOB-02,Database,Job failure,"SQL Server, Backup Server",18456,"Backup job on the affected host failed last night with login failed for the service account. No database backups for the last 2 days on the affected host. Backup alert: job failed, error 18456.",Backup service account password expired,"1. Found login failures for the backup service account
+2. Reset the service account password per the service account policy
+3. Updated credentials in the backup job
+4. Ran manual backup successfully",DBA,2025-09-28,True,1.0,
+KB0037,Troubleshooting: Laptop asking for BitLocker recovery key,HW-LAP-01,Hardware,Laptop,Laptop,,"My laptop shows a blue BitLocker recovery screen asking for a 48 digit key. After the BIOS update my laptop asks for a recovery key at startup. Laptop the affected host won't boot, it wants a BitLocker recovery key.",BIOS/firmware update triggered BitLocker recovery,"1. Verified user identity
+2. Retrieved the recovery key for the affected host from Entra ID
+3. User entered the key and Windows booted
+4. Suspended and resumed BitLocker to reseal the TPM",Desktop-Support,2025-02-14,True,1.0,
+KB0038,Troubleshooting: Laptop battery draining fast,HW-LAP-02,Hardware,Laptop,Laptop,,"My laptop battery goes from 100% to 0 in about an hour. Laptop gets very hot and battery drains quickly. Battery shows 'plugged in, not charging'.",Degraded laptop battery,"1. Ran battery health report; capacity below 40%
+2. Ordered replacement battery under warranty
+3. Replaced the battery
+4. Battery holding charge normally",Hardware-Support,2026-04-16,True,1.0,
+KB0039,Troubleshooting: Laptop very slow,HW-LAP-03,Hardware,Laptop,Laptop,,"My laptop takes ages to open anything and freezes often. Getting low disk space warnings on C drive. Laptop is extremely slow, even typing lags.",System drive nearly full,"1. Checked C drive; less than 1 GB free
+2. Cleared temp files and old Windows update files
+3. Moved large personal files to OneDrive
+4. Performance back to normal",Desktop-Support,2025-05-08,True,1.0,
+KB0040,Troubleshooting: Printer offline,HW-PRN-01,Hardware,Printer,Printer,,"Printer the printer shows offline on my laptop and jobs stay in the queue. Documents get stuck in the print queue and nothing prints. I can't print to the printer, it says error - printing.",Print spooler stuck with a corrupted job,"1. Stopped the Print Spooler service
+2. Cleared stuck jobs from the spool folder
+3. Restarted the spooler
+4. Test page printed successfully",Desktop-Support,2026-01-23,True,1.0,
+KB0041,Troubleshooting: Printer not found after office move,HW-PRN-02,Hardware,Printer,Printer,,After moving to the new floor I can't find printer the printer. Printer the printer is not in my list anymore. Adding printer the printer fails with 'printer not found'.,Printer IP changed after relocation; old queue mapping invalid,"1. Confirmed the printer received a new IP after the move
+2. Updated the print server port to the new IP
+3. Re-added the printer queue for the user
+4. Test page printed",Desktop-Support,2025-03-22,True,1.0,
+KB0042,Troubleshooting: External monitors not detected,HW-PER-01,Hardware,Peripheral,Docking station,,My two monitors connected to the dock show 'no signal'. Laptop doesn't detect external displays through the docking station. Monitors flicker and go black when connected via the dock.,Outdated docking station firmware,"1. Checked dock firmware version; outdated
+2. Updated dock firmware and display drivers
+3. Monitors detected after reconnecting",Hardware-Support,2025-10-28,True,1.0,
+KB0043,Troubleshooting: Request to install Visio,CFG-INS-01,Configuration,Software install,"Visio, Power BI Desktop, Notepad++, Python, Tableau",,"Please install Visio on my laptop, I need it for a new project. I need Visio for reporting work, can you install it? Requesting installation of Visio. Manager approved.",Standard software request,"1. Checked license availability and manager approval
+2. Added user to the Visio deployment group
+3. Installed via Software Center
+4. User confirmed installation",Desktop-Support,2026-01-06,True,1.0,
+KB0044,Troubleshooting: Zoom install failed 1603,CFG-INS-02,Configuration,Software install,"Zoom, Adobe Reader, Power BI Desktop, Visio",1603,"Installing Zoom from Software Center fails with error 1603. Zoom installation rolls back at the end with a fatal error 1603. I tried installing Zoom twice, both times it failed.",Remnants of previous version blocking the installer,"1. Checked installer log; previous version files found
+2. Removed the old version with the cleanup tool
+3. Rebooted
+4. Reinstalled successfully",Desktop-Support,2025-07-16,True,1.0,
+KB0045,Troubleshooting: Windows update failing 0x800f0922,CFG-PAT-01,Configuration,Patch/update,Windows Update,0x800f0922,"Windows Update fails every night with error 0x800f0922. The monthly update downloads but fails to install. My laptop keeps saying updates failed, error 0x800f0922.",Corrupted update components / insufficient system reserved partition,"1. Ran DISM and SFC repair
+2. Reset Windows Update components
+3. Extended the system reserved partition
+4. Update installed successfully",Desktop-Support,2025-03-13,True,1.0,
+KB0046,Troubleshooting: Chrome stopped working after update,CFG-PAT-02,Configuration,Patch/update,"Chrome, Java, Office",,"After last night's patch, Chrome doesn't open some internal pages. Since the update Chrome keeps showing errors. Chrome functionality broken after automatic update.",Faulty vendor patch causing regression,"1. Confirmed issue on patched machines only
+2. Rolled back the patch via update management
+3. Paused the patch ring pending vendor fix
+4. Users confirmed working",Desktop-Support,2025-02-16,True,1.0,
+KB0047,Troubleshooting: Wrong time on laptop,CFG-SET-02,Configuration,Settings change,Windows,,My laptop clock is 2 hours off and meeting invites show wrong times. Time zone on my laptop changed by itself. Calendar shows meetings at the wrong time.,Automatic time zone disabled / location services off,"1. Enabled automatic time zone
+2. Synced time with the domain controller
+3. Calendar times correct",Desktop-Support,2025-08-22,True,1.0,
+KB0048,VPN error 809 - reinstall client (superseded),NET-VPN-03,Network,VPN,GlobalProtect VPN,809,Since I changed my password GlobalProtect VPN gives error 809 when connecting from home. GlobalProtect VPN shows error 809 and keeps asking for credentials.,Corrupted VPN client installation,"1. Uninstall GlobalProtect
+2. Reinstall from Software Center
+3. Reboot",Network-L2,2024-11-15,False,0.9,Superseded by the cached-credentials article; reinstall rarely fixes 809.
+KB0049,SAP GUI crash - install SAP GUI 7.70 (outdated),APP-ERR-01,Application,Error/crash,SAP GUI,0xc0000005,Since last night's Windows update SAP GUI closes as soon as I open it. SAP GUI crashes on launch with error 0xc0000005.,Corrupted SAP GUI installation,"1. Uninstall SAP GUI
+2. Install SAP GUI 7.70 from the shared drive",App-Support-L2,2024-11-15,False,0.9,Outdated: 7.70 is no longer supported on current Windows builds.
+KB0050,Blocking sessions - draft runbook,DB-SLW-02,Database,Slow query,"SQL Server, Oracle DB",,Users' save operations hang and eventually time out. We see blocking sessions on SQL Server and the app is frozen.,Long-running transactions,"1. Find head blocker
+2. Contact session owner
+3. Kill session if approved",DBA,2024-11-15,False,0.9,Draft pending DBA review.
+KB0051,Default apps reset after reboot - draft,CFG-SET-01,Configuration,Settings change,"Adobe Reader, Chrome, Edge",,"Every time I restart, files open in the wrong program instead of Adobe Reader. I set Adobe Reader as default but it resets after reboot.",Group Policy default association file,"1. Check applied GPOs
+2. Request policy exception",Desktop-Support,2024-11-15,False,0.9,Draft pending Desktop Engineering review.

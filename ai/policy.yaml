@@ -1,0 +1,51 @@
+# Operational rules the AI layer needs that the dataset's taxonomy.yaml does not provide.
+# The category tree, default groups, priority rules and priority signal words come from
+# data/taxonomy.yaml (the dataset); everything here is policy owned by this project.
+
+# Priority rule overrides (workflow section 7.1 step 4)
+security_keywords: [security incident, phishing, malware, ransomware, compromised, data breach,
+                    suspicious link, suspicious login, suspicious sign-in, unauthorized access]
+
+# Scope signals, matched case-insensitively. Merged with taxonomy.yaml priority_signals
+# (P1 -> all_users, P2 -> team, P3 -> single_user).
+scope_phrases:
+  all_users: [all users, everyone, nobody can, whole site, whole company, company-wide, customers are affected,
+              production is down, whole branch, entire branch]
+  team: [entire team, whole team, whole office, several colleagues, many of us, the whole floor, everyone in,
+         everyone on, cannot process orders, month-end close, multiple users, all of us]
+  single_user: [only me, just me, only my machine, only my laptop, others are fine, colleagues can, only on my]
+
+# Escalation routing for the Escalate band (P1 / security): the PDF's "on-call group".
+# P1 goes to the category's default group (taxonomy.yaml) as an on-call handoff.
+security_group: Security-Ops
+
+# Clarifying questions used by the fallback when the LLM gives none (section 10.4).
+clarifying_questions:
+  default:
+    - "When did the issue start, and did anything change just before (update, password change, move)?"
+    - "Is it only you, your team, or everyone?"
+    - "What is the exact error message or code?"
+  Password reset: ["Which system's password needs resetting?", "Are you enrolled in self-service password reset?", "Did you click a link or enter your password on an unusual page?"]
+  Account locked: ["Did you change your password recently?", "Do you have email set up on a phone or tablet?", "Do you have mapped drives or scheduled tasks using your account?"]
+  Permission request: ["Which resource do you need access to?", "What level of access (read or edit) is needed?", "Who is the owner or approver?"]
+  MFA issue: ["Did you change or reset your phone recently?", "Is the time on your phone set automatically?", "Which MFA app do you use?"]
+  Error/crash: ["Which application and version?", "What exactly were you doing when it crashed?", "Did it start after an update or release?"]
+  Performance: ["Which pages or reports are slow?", "Is it slow for others too?", "Did it start after a release or data load?"]
+  Login failure: ["What error appears at login?", "Is this a new account or role?", "Does it work in a private browser window?"]
+  Functional bug: ["What result did you expect and what did you get?", "Can you share a record ID that shows the problem?", "When did it last work correctly?"]
+  VPN: ["Which VPN client version?", "Exact error code?", "Did it start after a password change, or is the whole office affected?"]
+  Wi-Fi: ["Which network name (SSID) and location?", "Does wired network work?", "Is it only your device?"]
+  DNS: ["Which hostname fails to resolve?", "Does it open by IP address?", "Is it only on your device?"]
+  Connectivity: ["Wired or wireless?", "Which site, floor or desk?", "Is anyone else at the location affected?"]
+  Outlook: ["Exact error or prompt shown?", "Does Outlook on the web work?", "Did your password change recently?"]
+  Teams: ["Desktop app or web?", "Is it meetings, chat, audio or video?", "Does it work on another device?"]
+  Mailbox/quota: ["Personal or shared mailbox?", "Exact bounce or warning message?", "How large is the mailbox?"]
+  Connection: ["Which database and from which application or server?", "Exact error code (ORA- or SQL error)?", "Is it every server or only one?"]
+  Slow query: ["Which query or report is slow?", "How long did it take before?", "Was there a release or data load recently?"]
+  Job failure: ["Which job and when did it fail?", "What does the job history error say?", "Did credentials or schemas change recently?"]
+  Laptop: ["Laptop model and asset tag?", "Any error or stop code on screen?", "Did it start after an update?"]
+  Printer: ["Which printer (name or location)?", "Does it affect everyone using the printer?", "What does the printer panel show?"]
+  Peripheral: ["Which device (dock, headset, webcam, mouse)?", "Wired or wireless?", "Does it work on another computer?"]
+  Software install: ["Which software and version?", "Software Center or a manual installer?", "Exact error or exit code?"]
+  Patch/update: ["Which update failed?", "Exact error code?", "Were you on VPN during the update?"]
+  Settings change: ["Which setting needs changing?", "Is it for one device or many?", "Is there a business approval?"]

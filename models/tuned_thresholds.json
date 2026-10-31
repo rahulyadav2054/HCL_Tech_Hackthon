@@ -1,0 +1,6 @@
+{
+  "RERANK_PLATT_A": 0.56311,
+  "RERANK_PLATT_B": -1.13953,
+  "CLS_CONF_MIN": 0.7,
+  "CLS_MARGIN_MIN": 0.2
+}

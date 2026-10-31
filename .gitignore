@@ -1,0 +1,15 @@
+.env
+# virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# runtime databases (audit log, LLM cache, eval audit log)
+data/app.sqlite
+data/eval_audit.sqlite
+data/llm_cache.sqlite
+# rebuilt by `python -m ai.build_index` / `python -m ai.classify --train`
+data/processed/
+index/
+models/*.joblib

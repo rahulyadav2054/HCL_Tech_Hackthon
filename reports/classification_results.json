@@ -1,0 +1,364 @@
+{
+  "n_test": 450,
+  "n_standard": 400,
+  "model_variant": "tfidf",
+  "category": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "subcategory": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "subcategory_pair_accuracy": 1.0,
+  "priority": {
+    "accuracy": 0.87,
+    "macro_f1": 0.8399
+  },
+  "priority_model_only": {
+    "accuracy": 0.875,
+    "macro_f1": 0.8499
+  },
+  "priority_recall": {
+    "P1": 0.7647,
+    "P2": 0.8667,
+    "P3": 0.9355,
+    "P4": 0.7363
+  },
+  "priority_recall_model_only": {
+    "P1": 0.7647,
+    "P2": 0.88
+  },
+  "priority_support": {
+    "P3": 217,
+    "P4": 91,
+    "P2": 75,
+    "P1": 17
+  },
+  "gate": {
+    "share_model_only": 1.0,
+    "accuracy_model_only": 1.0,
+    "accuracy_deferred": null
+  },
+  "explained_share": 0.9933,
+  "per_class_category": {
+    "Access": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 75.0
+    },
+    "Application": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 69.0
+    },
+    "Configuration": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 51.0
+    },
+    "Database": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 35.0
+    },
+    "Email and collaboration": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 50.0
+    },
+    "Hardware": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 57.0
+    },
+    "Network": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 63.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 400.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 400.0
+    }
+  },
+  "per_class_priority": {
+    "P1": {
+      "precision": 0.8125,
+      "recall": 0.7647058823529411,
+      "f1-score": 0.7878787878787878,
+      "support": 17.0
+    },
+    "P2": {
+      "precision": 0.8227848101265823,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.8441558441558441,
+      "support": 75.0
+    },
+    "P3": {
+      "precision": 0.8675213675213675,
+      "recall": 0.9354838709677419,
+      "f1-score": 0.9002217294900222,
+      "support": 217.0
+    },
+    "P4": {
+      "precision": 0.9436619718309859,
+      "recall": 0.7362637362637363,
+      "f1-score": 0.8271604938271605,
+      "support": 91.0
+    },
+    "accuracy": 0.87,
+    "macro avg": {
+      "precision": 0.8616170373697339,
+      "recall": 0.8257800390627715,
+      "f1-score": 0.8398542138379537,
+      "support": 400.0
+    },
+    "weighted avg": {
+      "precision": 0.8741168423706253,
+      "recall": 0.87,
+      "f1-score": 0.8683133698580852,
+      "support": 400.0
+    }
+  },
+  "by_test_type": {
+    "contradictory": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "n": 10,
+      "low_confidence_share": 0.0
+    },
+    "novel": {
+      "accuracy": 0.4,
+      "macro_f1": 0.3143,
+      "n": 25,
+      "low_confidence_share": 0.88
+    },
+    "standard": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "n": 400,
+      "low_confidence_share": 0.0
+    },
+    "vague": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "n": 15,
+      "low_confidence_share": 0.8
+    }
+  },
+  "feature_ablation_category": {
+    "tfidf": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "embedding": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "combined": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "llm_assist": {
+    "status": "not run (pass --llm with an API key configured)",
+    "close_calls_that_would_be_sent": 0
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Access",
+      "Application",
+      "Configuration",
+      "Database",
+      "Email and collaboration",
+      "Hardware",
+      "Network"
+    ],
+    "matrix": [
+      [
+        75,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        69,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        51,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        35,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        57,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        63
+      ]
+    ]
+  },
+  "errors": [
+    {
+      "ticket_id": "INC0200015",
+      "title": "Java stopped working after update",
+      "kind": "priority",
+      "label": "P2",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "single_user",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200041",
+      "title": "docking station monitors black",
+      "kind": "priority",
+      "label": "P4",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "unknown",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200046",
+      "title": "Can't approve sign in - changed phone",
+      "kind": "priority",
+      "label": "P2",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "single_user",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200079",
+      "title": "Low disk space warning",
+      "kind": "priority",
+      "label": "P4",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "unknown",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200106",
+      "title": "chrome stopped working after update",
+      "kind": "priority",
+      "label": "P3",
+      "pred": "P2",
+      "confidence": 1.0,
+      "scope": "unknown",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200113",
+      "title": "New floor printer not working",
+      "kind": "priority",
+      "label": "P4",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "single_user",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200115",
+      "title": "URGENT: Blocking sessions on Oracle DB",
+      "kind": "priority",
+      "label": "P1",
+      "pred": "P2",
+      "confidence": 1.0,
+      "scope": "unknown",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200124",
+      "title": "Permission error on network drive",
+      "kind": "priority",
+      "label": "P4",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "single_user",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200131",
+      "title": "outlook credential prompt loop",
+      "kind": "priority",
+      "label": "P4",
+      "pred": "P3",
+      "confidence": 1.0,
+      "scope": "single_user",
+      "signals": ""
+    },
+    {
+      "ticket_id": "INC0200137",
+      "title": "PostgreSQL: too many connections",
+      "kind": "priority",
+      "label": "P3",
+      "pred": "P2",
+      "confidence": 1.0,
+      "scope": "unknown",
+      "signals": ""
+    }
+  ],
+  "n_category_errors": 0,
+  "n_priority_errors": 52
+}

@@ -1,0 +1,1111 @@
+ticket_id,title,description,application,environment,status,created_at,sensitivity,is_synthetic
+INC0200001,Outlook shows disconnected status,"Good morning, Emails stuck in Outbox and Outlook says disconnected. Just me, others are fine.",Outlook,Production,New,2026-07-01 13:58,Internal,True
+INC0200002,No video in Teams,Others can't see my video in Teams calls. Camera works in the Camera app but Teams can't find it. Since Monday. Low priority request. Rebooting didn't help. My laptop is LT-2224.,Microsoft Teams,Production,New,2026-07-01 18:01,Internal,True
+INC0200003,Password reset link not working,"Reset portal shows 'You can't reset your own password because you haven't registered'. Since Monday. Just me, others are fine. Rebooting didn't help.
+
+Regards,
+Emma Nair
+emma.nair@acmecorp.example | +91 9801745469",Password Reset Portal,Production,New,2026-07-02 01:21,Internal,True
+INC0200004,Printer offline,"I can't print to PRN-PUN-1F-07, it says error - printing. Started after lunch today. I cleared my browser cache already. My laptop is LT-4976. Please help.
+
+Regards,
+Wei Das
+wei.das@acmecorp.example | +91 9657829578",Printer,Production,New,2026-07-02 08:01,Internal,True
+INC0200005,Data load failed last night,"Dear IT, Morning dashboards are empty because the data load failed. This is blocking the finance month-end close. I already restarted my laptop. Can someone look into this?",Oracle DB,Production,New,2026-07-02 09:11,Internal,True
+INC0200006,Cannot reach Confluence by name,I get DNS_PROBE_FINISHED_NXDOMAIN when opening Conflunece.,Confluence,Production,New,2026-07-02 10:38,Internal,True
+INC0200007,New floor printer not working,"Adding pirnter PRN-NOI-6F-02 fails with 'printer not found'. Only my machine seems affected. Rebooting didn't help. My laptop is LT-9575. Kindly assist.
+
+Regards,
+Laura Das
+laura.das@acmecorp.example | +91 9342690359",Printer,Production,New,2026-07-02 10:51,Public,True
+INC0200008,People can't hear me on calls,My headset microphone isn't picking up any sound. Mic level stays at zero with the USB headset. No rush on this. Please help.,Headset,Production,New,2026-07-02 14:31,Internal,True
+INC0200009,Visitor badge printer not encoding cards,"badges come out blank on the chip side, front print looks fine. thanks in advance.",Badge Printer,Production,New,2026-07-02 14:57,Internal,True
+INC0200010,Can't reset my password myself,"Hello, I forgot my password and the self-service reset page says my account is not registered for reset. Whenever someone gets a chance.",Password Reset Portal,Production,New,2026-07-02 16:42,Internal,True
+INC0200011,ORA-12541 from one app server,"After the migration, our app on FS-SRV-25 throws ORA-12541. Only application server FS-SRV-25 gets ORA-12541, other servers connect fine. This has been happening since this morning.
+
+Regards,
+Meera Das
+meera.das@acmecorp.example | +91 9276769941",Oracle DB,UAT,New,2026-07-02 16:45,Internal,True
+INC0200012,Outlook credential prompt loop,"Outlook keeps popping up a password window even after I enter the correct password. Just me, others are fine. Kindly assist.
+
+Regards,
+Rahul Kumar
+rahul.kumar@acmecorp.example | +91 9696268550",Outlook,Production,New,2026-07-02 17:08,Internal,True
+INC0200013,Laptop asking for BitLocker recovery key,"Laptop LT-8579 won't boot, it wants a BitLocker recovery key. I restarted and now it's asking for the BitLocker key. Several colleagues have the same problem. Kindly assist.",Laptop,Production,New,2026-07-02 17:56,Restricted,True
+INC0200014,teams camera not working,Teams video preview is black. Camera works in the Camera app but Teams can't find it. Whenever someone gets a chance.,Microsoft Teams,Production,New,2026-07-02 18:06,Internal,True
+INC0200015,Java stopped working after update,Java functionality broken after automatic update. Started yesterday. My laptop is LT-1629. Please help.,Java,Production,New,2026-07-03 09:06,Internal,True
+INC0200016,Problem after last night's patch,"Hi, After last night's patch, Java doesn't open some internal pages. Since Monday. My laptop is LT-2004. Kindly assist.",Java,Production,New,2026-07-03 09:19,Internal,True
+INC0200017,shared mailbox not showing,"hello, my manager said i was added to procurement@acmecorp.example but i can't see it. i need access to the procurement@acmecorp.example shared mailbox but it doesn't appear in outlook. i can work around it for now but it slows me down. please help.
+
+regards,
+laura gupta
+laura.gupta@acmecorp.example | +91 9894803736",Outlook,Production,New,2026-07-03 10:19,Internal,True
+INC0200018,windows update error 0x800f0922,Windows Update fails every night with error 0x800f0922. Since Monday. Only my machine seems affected.,Windows Update,Production,New,2026-07-03 11:52,Internal,True
+INC0200019,ad account locked out repeatedly,"Hi team, Since I changed my password yesterday my account keeps locking out. I keep getting 'your account has been locked' and have to call the helpdesk to unlock. I have email set up on my phone. My entire team (18 people) is affected. Rebooting didn't help.",Outlook mobile,Production,New,2026-07-03 13:39,Internal,True
+INC0200020,Report query slow on Oracle DB,Execution plan changed and the query is much slower. A report query that used to take 30 seconds now runs for 20 minutes on Oracle DB. Only my machine seems affected. Please help.,Oracle DB,Production,New,2026-07-03 17:56,Internal,True
+INC0200021,Laptop hangs constantly,"My laptop takes ages to open anything and freezes often. Only my machine seems affected. My laptop is LT-9702. Thanks in advance.
+
+Regards,
+Fatima Taylor
+fatima.taylor@acmecorp.example | +91 9344093251",Laptop,Production,New,2026-07-03 18:04,Internal,True
+INC0200022,Can't connect to corporate Wi-Fi,"Good morning, I can see the corporate SSID but it never connects. Started yesterday. Just me, others are fine.",Corporate Wi-Fi,Production,New,2026-07-04 17:12,Internal,True
+INC0200023,Request access to approve POs in Workday,Workday shows 'You do not have authorization for this action'. No rush on this.,Workday,Production,New,2026-07-05 17:11,Internal,True
+INC0200024,Can't login to Windows sign-in - password expired message,I am getting a 'your password has expired' message on Windows sign-in. The password reset portal tells me I have no verification methods set up.,Windows sign-in,Production,New,2026-07-05 18:32,Internal,True
+INC0200025,My account locks every few minutes,Since I changed my password yesterday my account keeps locking out. I use Outlook on my iPhone and iPad. Since Monday. It happens a few times a day. I tried logging out and in again.,Outlook mobile,Production,New,2026-07-05 23:08,Public,True
+INC0200026,Can't see Copilot button in Office,"Hi, I was told I have access to Copilot but it doesn't show up in Office. It happens a few times a day. My laptop is LT-3143. Please check urgently.
+
+Regards,
+Lin Nair
+lin.nair@acmecorp.example | +91 9990756162",Copilot,Production,New,2026-07-06 13:20,Internal,True
+INC0200027,"After update, Office not working","Hi support, After last night's patch, Office doesn't open some internal pages.",Office,Production,New,2026-07-06 14:04,Restricted,True
+INC0200028,App fails to get DB connection,Order processing fails every afternoon with FATAL: too many connections.,MySQL,Production,New,2026-07-06 14:54,Internal,True
+INC0200029,Network?,"Things are slow today, not sure if it's the network or the app.",,Production,New,2026-07-06 15:48,Internal,True
+INC0200030,Badge Printer prints but badges don't open doors,"The Badge Printer at reception shows 'encoder error' on every card. My entire team (7 people) is affected. I tried logging out and in again.
+
+Regards,
+Priya Wilson
+priya.wilson@acmecorp.example | +91 9490858794",Badge Printer,Production,New,2026-07-06 17:00,Internal,True
+INC0200031,reporting portal pdf export shows dates wrong,"Hi team, My colleague's export is fine but mine shows US date format. When I export to PDF from Reporting Portal the dates show as MM/DD instead of DD/MM. No rush on this. Rebooting didn't help. My laptop is LT-5523. Kindly assist.",Reporting Portal,Production,New,2026-07-07 08:21,Internal,True
+INC0200032,External monitors not detected,"Good morning, USB works on the dock but monitors don't. Since Monday. Please check urgently.",Docking station,Production,New,2026-07-07 08:23,Public,True
+INC0200033,receipt upload keeps failing,"Good morning, Expense Portal rejects my attachment without a clear error. This has been happening since this morning. Whenever someone gets a chance. I already restarted my laptop. Please check urgently.",Expense Portal,Production,New,2026-07-07 08:58,Internal,True
+INC0200034,Dock not detecting displays,"Good morning, USB works on the dock but monitors don't. Started after lunch today.",Docking station,Production,New,2026-07-07 11:20,Public,True
+INC0200035,VPN not working after Windows upgrade,"VPN was working until the OS upgrade, now it fails every time. GlobalProtect VPN shows a driver error since my laptop was upgraded. I can work around it for now but it slows me down. My laptop is LT-2963.",GlobalProtect VPN,Production,New,2026-07-07 12:41,Public,True
+INC0200036,Java broken since patching,Several of us have issues with Java after the patch. This is blocking the finance month-end close.,Java,Production,New,2026-07-07 16:44,Public,True
+INC0200037,bitlocker recovery screen on boot,After the BIOS update my laptop asks for a recovery key at startup. My entire team (27 people) is affected.,Laptop,Production,New,2026-07-07 18:25,Internal,True
+INC0200038,Laptop battery draining fast,Laptop gets very hot and battery drains quickly. Only my machine seems affected. My laptop is LT-5805. Thanks in advance.,Laptop,Production,New,2026-07-07 21:12,Public,True
+INC0200039,Request to install Python,"Python is not in Software Center for me. My laptop is LT-7703.
+
+Regards,
+Tom Patel
+tom.patel@acmecorp.example | +91 9482721058",Python,Production,New,2026-07-07 23:19,Restricted,True
+INC0200040,My account locks every few minutes,My account gets locked every 15-20 minutes even though I'm typing the right password. I use Outlook on my iPhone and iPad. Only my machine seems affected. I already restarted my laptop.,Outlook mobile,Production,New,2026-07-08 02:10,Internal,True
+INC0200041,docking station monitors black,"Dear IT, Laptop doesn't detect external displays through the docking station. Since Monday.",Docking station,Production,New,2026-07-08 23:24,Internal,True
+INC0200042,Outlook disconnected,"My Outlook stopped syncing since yesterday, folders are not updating. It's been like this for 2 days. Rebooting didn't help.",Outlook,Production,New,2026-07-09 08:14,Internal,True
+INC0200043,laptop very slow,"Dear IT, My laptop takes ages to open anything and freezes often. Started yesterday. Not urgent. My laptop is LT-5309.
+
+Regards,
+Wei Patel
+wei.patel@acmecorp.example | +91 9990394811",Laptop,Production,New,2026-07-09 09:36,Internal,True
+INC0200044,Excel freezes then closes,"hello, excel crashes every time i open the monthly forecast workbook. it works in safe mode. since monday. my laptop is lt-3172.",Excel,Production,New,2026-07-09 11:05,Internal,True
+INC0200045,Cannot reach Confluence by name,"Dear IT, Confluence shows 'This site can't be reached' for me but works for others. This has been happening since this morning. It happens a few times a day. Thanks.
+
+Regards,
+Pooja Reddy
+pooja.reddy@acmecorp.example | +91 9086838585",Confluence,Production,New,2026-07-09 12:30,Internal,True
+INC0200046,Can't approve sign in - changed phone,"MFA notifications go to my old phone which I already returned. Started after lunch today. Please help.
+
+Regards,
+Suresh Patel
+suresh.patel@acmecorp.example | +91 9598494192",Microsoft Authenticator,Production,New,2026-07-09 13:34,Internal,True
+INC0200047,No video in Teams,Others can't see my video in Teams calls. Low priority request. I cleared my browser cache already. Kindly assist.,Microsoft Teams,Production,New,2026-07-09 14:28,Public,True
+INC0200048,missing authorization in salesforce,"menu option is greyed out in salesforce, my colleague has it. it happens a few times a day. can someone look into this?",Salesforce,Production,New,2026-07-09 14:54,Internal,True
+INC0200049,Excel keeps crashing,Excel starts but crashes as soon as I open a file. Other Office apps are fine. This has been happening since this morning. It happens a few times a day. I already restarted my laptop. My laptop is LT-8323. Thanks in advance.,Excel,Production,New,2026-07-09 16:03,Internal,True
+INC0200050,date format issue in exported report,Exported report from SAP ERP has dates in the wrong format. It's been like this for 2 days. Please check urgently.,SAP ERP,Production,New,2026-07-09 18:00,Restricted,True
+INC0200051,Visio install failed 1603,"Hi, Installing Visio from Software Center fails with error 1603. Software Center shows 'Failed' for Visio, code 1603. Since Monday. Only my machine seems affected. My laptop is LT-9264.",Visio,Production,New,2026-07-10 11:14,Internal,True
+INC0200052,expense hub not loading - white screen,"Good morning, The new Expense Hub just shows a white screen after login. It's been like this for 2 days. My entire team (14 people) is affected. My laptop is LT-8533. Thanks in advance.
+
+Regards,
+Maria Brown
+maria.brown@acmecorp.example | +91 9712677280",Expense Hub,Production,New,2026-07-10 15:54,Internal,True
+INC0200053,Can't connect to corporate Wi-Fi,"My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works. I can see the corporate SSID but it never connects. This has been happening since this morning. I can work around it for now but it slows me down. I tried logging out and in again. My laptop is LT-5051.
+
+Regards,
+Karthik Reddy
+karthik.reddy@acmecorp.example | +91 9913431691",Corporate Wi-Fi,Production,New,2026-07-11 09:22,Internal,True
+INC0200054,MFA code not accepted,"Dear IT, The 6 digit code from Google Authenticator is always rejected as invalid. It worked fine until a few days ago. Thanks.
+
+Regards,
+Rahul Menon
+rahul.menon@acmecorp.example | +91 9968708936",Google Authenticator,Production,New,2026-07-11 10:04,Internal,True
+INC0200055,confluence not reachable for anyone,all usres get 'site can't be reached' on confluence. confluence gives dns_probe_finished_nxdomain for the whole department. since monday. my entire team (12 people) is affected. can someone look into this?,Confluence,Production,New,2026-07-13 02:48,Internal,True
+INC0200056,Weird behaviour,Screen behaves weird sometimes.,,Production,New,2026-07-13 05:00,Internal,True
+INC0200057,Excel keeps crashing,"Excel closes without any error when I try to open attachments. Other Office apps are fine. Started yesterday. It happens a few times a day. I cleared my browser cache already.
+
+Regards,
+Pooja Pillai
+pooja.pillai@acmecorp.example | +91 9761801551",Excel,Production,New,2026-07-13 08:19,Internal,True
+INC0200058,Printer offline,"documents get stuck in the print queue and nothing prints. i can't print to prn-dal-3f-07, it says error - printing. this has been happening since this morning. low priority request. my laptop is lt-5529.
+
+regards,
+maria reddy
+maria.reddy@acmecorp.example | +91 9183241024",Printer,Production,New,2026-07-13 09:25,Internal,True
+INC0200059,Request access to approve POs in SAP ERP,"menu option is greyed out in sap erp, my colleague has it. no rush on this.",SAP ERP,Production,New,2026-07-13 12:01,Internal,True
+INC0200060,Outlook disconnected,"Hello, Outlook status bar shows 'Disconnected' and no new emails arrive. It's been like this for 2 days. I already restarted my laptop. Thanks in advance.",Outlook,Production,New,2026-07-13 12:15,Internal,True
+INC0200061,Expense Hub not loading - white screen,"Good morning, The new Expense Hub just shows a white screen after login. It happens a few times a day. I tried logging out and in again. Kindly assist.
+
+Regards,
+Fatima Pillai
+fatima.pillai@acmecorp.example | +91 9857262605",Expense Hub,Production,New,2026-07-13 16:17,Internal,True
+INC0200062,Customer Portal save fails for everyone,Saving orders in Customer Portal fails since this morning for the whole team. It's been like this for 2 days. Whole site cannot work. Please check urgently.,Customer Portal,Production,New,2026-07-14 09:00,Internal,True
+INC0200063,Reporting Portal PDF export shows dates wrong,"My colleague's export is fine but mine shows US date format. Reporting Portal exports show 10/03 when it should be 03/10. No rush on this. My laptop is LT-6856.
+
+Regards,
+Anil Das
+anil.das@acmecorp.example | +91 9126415079",Reporting Portal,Production,New,2026-07-14 12:16,Internal,True
+INC0200064,GlobalProtect VPN error 809,"Hello, GlobalProtect VPN shows error 809 and keeps asking for credentials. VPN fails with error 809 right after my password reset yesterday. I can work around it for now but it slows me down. Please check urgently.
+
+Regards,
+Aisha Garcia
+aisha.garcia@acmecorp.example | +91 9707330192",GlobalProtect VPN,Production,New,2026-07-14 16:42,Internal,True
+INC0200065,HR Portal SSO error AADSTS50105,SSO login to HR Portal fails with a message to contact the administrator. It happens a few times a day. Can someone look into this?,HR Portal,Production,New,2026-07-14 18:06,Internal,True
+INC0200066,outlook disconnected,"Good morning, My Outlook stopped syncing since yesterday, folders are not updating.",Outlook,Production,New,2026-07-15 10:14,Internal,True
+INC0200067,Copilot not available for me,"Dear IT, My team has Copilot in Word and Excel but the button is missing for me. It happens a few times a day.
+
+Regards,
+Laura Gupta
+laura.gupta@acmecorp.example | +91 9981937175",Copilot,Production,New,2026-07-15 13:52,Public,True
+INC0200068,Wireless keeps disconnecting on the 2nd floor,"Hello, Wi-Fi drops every few minutes for everyone on the 2nd floor. This has been happening since this morning. My entire team (19 people) is affected. Rebooting didn't help.",Corporate Wi-Fi,Production,New,2026-07-15 17:27,Internal,True
+INC0200069,Access,Need access.,,Production,New,2026-07-15 19:05,Internal,True
+INC0200070,Only server FS-SRV-37 cannot reach DB,"Hi support, ORA-12541 from FS-SRV-37 but the DBA says the listener is running. Started yesterday. Please help.",Oracle DB,Dev,New,2026-07-16 05:36,Internal,True
+INC0200071,Account keeps getting locked,"account locked out multiple times today, my manager says event 4740 shows in the logs. i keep getting 'your account has been locked' and have to call the helpdesk to unlock. i use outlook on my iphone and ipad. my laptop is lt-1811. thanks.",Outlook mobile,Production,New,2026-07-16 08:30,Public,True
+INC0200072,backup job login failed,No database backups for the last 2 days on BKP-SRV-40. Backup job on BKP-SRV-40 failed last night with login failed for the service account. My entire team (31 people) is affected. Please check urgently.,Backup Server,Production,New,2026-07-16 11:02,Internal,True
+INC0200073,excel keeps crashing,"Hi, Excel starts but crashes as soon as I open a file. This has been happening since this morning. Rebooting didn't help. Can someone look into this?
+
+Regards,
+Michael Nair
+michael.nair@acmecorp.example | +91 9999120280",Excel,Production,New,2026-07-16 13:07,Internal,True
+INC0200074,laptop locked by bitlocker,"Hi, My laptop shows a blue BitLocker recovery screen asking for a 48 digit key. Started after lunch today. My entire team (13 people) is affected. Kindly assist.",Laptop,Production,New,2026-07-16 18:04,Internal,True
+INC0200075,Laptop not joining office Wi-Fi,"Hello, My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works. Office Wi-Fi authentication fails only on my laptop. Since Monday. I can work around it for now but it solws me down. My laptop is LT-3892.",Corporate Wi-Fi,Production,New,2026-07-16 18:27,Internal,True
+INC0200076,Posting in Oracle EBS takes forever,"Finance team reports Oracle EBS is sluggish today. Started after lunch today. I can work around it for now but it slows me down.
+
+Regards,
+Sara Reddy
+sara.reddy@acmecorp.example | +91 9882436758",Oracle EBS,Production,New,2026-07-17 16:05,Internal,True
+INC0200077,teams stuck loading,teams app is blank but works in the browser. i can work around it for now but it slows me down. i tried logging out and in again. my laptop is lt-1155. can someone look into this?,Microsoft Teams,Production,New,2026-07-17 16:24,Restricted,True
+INC0200078,Can't send emails - mailbox full,"Hi, Emails bounce back saying mailbox is full. I can work around it for now but it slows me down. Please help.",Outlook,Production,New,2026-07-17 19:29,Public,True
+INC0200079,Low disk space warning,"Hi support, Laptop is extremely slow, even typing lags. Kindly assist.
+
+Regards,
+David Nair
+david.nair@acmecorp.example | +91 9671329089",Laptop,Production,New,2026-07-18 07:45,Internal,True
+INC0200080,"After update, Office not working",Office functionality broken after automatic update. We cannot process orders until this is fixed. I already restarted my laptop.,Office,Production,New,2026-07-19 08:15,Internal,True
+INC0200081,Slow performance in Sales Dashboard since release,Filters in Sales Dashboard spin forever. Since Monday. We cannot process orders until this is fixed.,Sales Dashboard,Production,New,2026-07-20 07:41,Internal,True
+INC0200082,Site outage - no internet,"Hello, All systems unreachable from Chennai since 9 AM. Complete network outage at Chennai, phones also down. I already restarted my laptop. Please check urgently.",WAN link,Production,New,2026-07-20 08:56,Internal,True
+INC0200083,Wrong date format in Reporting Portal export,When I export to PDF from Reporting Portal the dates show as MM/DD instead of DD/MM. Reporting Portal exports show 10/03 when it should be 03/10. No rush on this. Please check urgently.,Reporting Portal,Production,New,2026-07-20 13:54,Public,True
+INC0200084,database connection pool exhausted,"Application logs show 'Error 1040' during peak hours. MySQL rejects new connections, error Error 1040. My entire team (18 people) is affected. My laptop is LT-5824. Thanks in advance.",MySQL,Production,New,2026-07-20 16:38,Internal,True
+INC0200085,Password expired cannot log in,"I am getting a 'your password has expired' message on Windows sign-in. It's been like this for 2 days. Only my machine seems affected. I already restarted my laptop.
+
+Regards,
+John Wilson
+john.wilson@acmecorp.example | +91 9239139677",Windows sign-in,Production,New,2026-07-21 09:30,Internal,True
+INC0200086,No network at my desk,"Docking station LAN has no connectivity, Wi-Fi works. Just me, others are fine. My laptop is LT-7210.",Wired LAN,Production,New,2026-07-21 12:50,Internal,True
+INC0200087,VPN not connecting after password change,"Good morning, GlobalProtect VPN shows error 809 and keeps asking for credentials. VPN fails with error 809 right after my password reset yesterday. Only me, my team is connected fine. Just me, others are fine.",GlobalProtect VPN,Production,New,2026-07-21 13:01,Internal,True
+INC0200088,Wireless keeps disconnecting on the 3rd floor,Many of us on the 3rd floor lose Wi-Fi connection randomly. Since Monday. This is blocking the finance month-end close. Rebooting didn't help.,Corporate Wi-Fi,Production,New,2026-07-21 17:56,Restricted,True
+INC0200089,Time zone incorrect after travel,"My laptop clock is 2 hours off and meeting invites show wrong times. Since I came back from the trip my laptop shows the wrong time. Just me, others are fine. Please check urgently.",Windows,Production,New,2026-07-21 19:13,Internal,True
+INC0200090,URGENT: Suspicious login alert after email link,"Colleague told me the email I opened was phishing, I had already entered my credentials. After clicking a link in an email I got a login page that looked like DocuSign. I typed my password before noticing the address was wrong. This is a critical outage, customers are affected.
+
+Regards,
+Anil Chen
+anil.chen@acmecorp.example | +91 9771813061",DocuSign,Production,New,2026-07-22 08:55,Restricted,True
+INC0200091,Transactions hanging on SQL Server,We see blocking sessions on SQL Server and the app is frozen. Started after lunch today. We cannot process orders until this is fixed.,SQL Server,Production,New,2026-07-22 12:29,Internal,True
+INC0200092,outlook asks for login every few minutes,"I get the Windows security prompt for Outlook every few minutes. Just me, others are fine. Rebooting didn't help.",Outlook,Production,New,2026-07-22 18:45,Internal,True
+INC0200093,Teams messages not loading,"Hi support, Messages I send in Teams stay pending. It happens a few times a day. I already restarted my laptop. My laptop is LT-3402. Can someone look into this?
+
+Regards,
+Maria Das
+maria.das@acmecorp.example | +91 9793074837",Microsoft Teams,Production,New,2026-07-23 01:08,Internal,True
+INC0200094,cannot upload receipt in expense portal,"Hi support, When I upload my receipt PDF in Expense Portal it just says upload failed. Not urgent.
+
+Regards,
+Carlos Das
+carlos.das@acmecorp.example | +91 9099741649",Expense Portal,Production,New,2026-07-23 08:43,Internal,True
+INC0200095,Payments API pods restarting continuously,"Hello, Customers get 503 from Payments API; Kubernetes shows pods restarting every minute. Payments API pods are in CrashLoopBackOff since the 2 PM deployment. Several colleagues have the same problem. Please help.",Payments API,Production,New,2026-07-23 09:39,Public,True
+INC0200096,Laptop locked by BitLocker,"Hello, I restarted and now it's asking for the BitLocker key. Can someone look into this?",Laptop,Production,New,2026-07-23 11:07,Internal,True
+INC0200097,Cannot log in to Concur - page keeps reloading,"When I log in to Concur the page keeps redirecting back to the sign-in page. Kindly assist.
+
+Regards,
+Divya Reddy
+divya.reddy@acmecorp.example | +91 9283310906",Concur,Production,New,2026-07-23 13:48,Internal,True
+INC0200098,Verification code wrong every time,I enter the code from the app but it says the code is wrong. I changed the time on my phone manually. Whenever someone gets a chance. I tried logging out and in again.,Google Authenticator,Production,New,2026-07-23 17:07,Internal,True
+INC0200099,Laptop clock is wrong,"Since I came back from the trip my laptop shows the wrong time. This has been happening since this morning. I already restarted my laptop.
+
+Regards,
+Pooja Singh
+pooja.singh@acmecorp.example | +91 9829746155",Windows,Production,New,2026-07-24 04:17,Internal,True
+INC0200100,HR Portal SSO redirect loop,When I log in to HR Portal the page keeps redirecting back to the sign-in page. I can work around it for now but it slows me down. My laptop is LT-4914.,HR Portal,Production,New,2026-07-24 08:00,Public,True
+INC0200101,workday sso error aadsts50105,"When I sign in to Workday I get error AADSTS50105. New joiner cannot access Workday, error AADSTS50105. No rush on this. Kindly assist.",Workday,Production,New,2026-07-24 08:34,Public,True
+INC0200102,Password expired cannot log in,"I am getting a 'your password has expired' message on SAP GUI. Cannot sign in this morning, the screen asks me to change my password but it fails. I tried my old password a few times. Since Monday. I can work around it for now but it slows me down.
+
+Regards,
+Ananya Gupta
+ananya.gupta@acmecorp.example | +91 9295675849",SAP GUI,Production,New,2026-07-24 12:01,Internal,True
+INC0200103,Password reset link not working,I forgot my password and the self-service reset page says my account is not registered for reset. It happens a few times a day. Please help.,Password Reset Portal,Production,New,2026-07-24 12:03,Internal,True
+INC0200104,visio install failed 1603,"hi team, visio installation rolls back at the end with a fatal error 1603. installing visio from software center fails with error 1603. just me, others are fine. my laptop is lt-1499.",Visio,Production,New,2026-07-24 14:42,Internal,True
+INC0200105,SAP GUI not opening after Windows update,Since last night's Windows update SAP GUI closes as soon as I open it. We cannot process orders until this is fixed.,SAP GUI,Production,New,2026-07-26 11:25,Internal,True
+INC0200106,chrome stopped working after update,"After last night's patch, Chrome doesn't open some internal pages. Several of us have issues with Chrome after the patch. Started after lunch today. Kindly assist.",Chrome,Production,New,2026-07-27 13:48,Internal,True
+INC0200107,Dock not detecting displays,USB works on the dock but monitors don't. Moniotrs flicker and go black when connected via the dock. Started yesterday. Low priority request. Please help.,Docking station,Production,New,2026-07-27 17:41,Internal,True
+INC0200108,VPN fails since password reset,"Since I changed my password GlobalProtect VPN gives error 809 when connecting from home. Since last night nobody in our office can connect to GlobalProtect VPN, everyone gets error 809.",GlobalProtect VPN,Production,New,2026-07-28 12:59,Internal,True
+INC0200109,No network at my desk,"Hi support, Wired network not working at my new desk. No network on the desk port after the office move.
+
+Regards,
+Ananya Das
+ananya.das@acmecorp.example | +91 9772918844",Wired LAN,Production,New,2026-07-29 12:51,Internal,True
+INC0200110,VPN down for multiple users - error 809,"VPN error 809 for all users at the London site. Since Monday. This is a critical outage, customers are affected. I cleared my browser cache already.
+
+Regards,
+Divya Iyer
+divya.iyer@acmecorp.example | +91 9275092448",GlobalProtect VPN,Production,New,2026-07-29 17:19,Internal,True
+INC0200111,Outlook stuck on trying to connect,"Outlook keeps saying 'Trying to connect...' but webmail works fine. I can work around it for now but it slows me down. Please check urgently.
+
+Regards,
+Ananya Chen
+ananya.chen@acmecorp.example | +91 9908211272",Outlook,Production,New,2026-07-29 17:30,Internal,True
+INC0200112,vpn fails since password reset,"Hi support, I can't connect to the VPN anymore, error 809, I recently changed my password. It happens a few times a day. I cleared my browser cache already. Please check urgently.",GlobalProtect VPN,Production,New,2026-07-29 17:38,Internal,True
+INC0200113,New floor printer not working,After moving to the new floor I can't find printer PRN-HYD-3F-07. This has been happening since this morning.,Printer,Production,New,2026-07-29 18:26,Internal,True
+INC0200114,Poor Wi-Fi in the 3rd floor meeting rooms,"Hi support, Wireless signal is very weak near the east wing of the 3rd floor. Since Monday. Rebooting didn't help. Thanks.
+
+Regards,
+Laura Menon
+laura.meonn@acmecorp.example | +91 9170528730",Corporate Wi-Fi,Production,New,2026-07-29 23:54,Public,True
+INC0200115,URGENT: Blocking sessions on Oracle DB,Users' save operations hang and eventually time out. Please help.,Oracle DB,Production,New,2026-07-30 09:02,Internal,True
+INC0200116,problem after last night's patch,"Chrome functionality broken after automatic update. Several colleagues have the same problem. My laptop is LT-2420.
+
+Regards,
+Michael Patel
+michael.patel@acmecorp.example | +91 9919616185",Chrome,Production,New,2026-07-30 09:55,Internal,True
+INC0200117,Copilot not available for me,"i was told i have access to copilot but it doesn't show up in office.
+
+regards,
+tom smith
+tom.smith@acmecorp.example | +91 9153063377",Copilot,Production,New,2026-07-30 16:16,Internal,True
+INC0200118,People can't hear me on calls,"Hello, Mic level stays at zero with the USB headset. Only my machine seems affected. My latpop is LT-5717.",Headset,Production,New,2026-07-31 14:46,Internal,True
+INC0200119,SAP ERP transactions very slow,"Hello, During month-end close SAP ERP transactions are extremely slow. Posting invoices in SAP ERP takes several minutes each. This is blocking the finance month-end close. Rebooting didn't help.",SAP ERP,Production,New,2026-07-31 17:32,Internal,True
+INC0200120,URGENT: Payments API returning 503,"Payments API health checks failing after the config change, pods keep restarting. My laptop is LT-2156.",Payments API,Production,New,2026-08-02 17:10,Internal,True
+INC0200121,Can't see team mailbox in Outlook,"Hello, Shared mailbox procurement@acmecorp.example disappeared from my Outlook. I get an error when I try to open the procurement@acmecorp.example mailbox. I can work around it for now but it slows me down. I cleared my browser cache already.",Outlook,Production,New,2026-08-03 09:01,Internal,True
+INC0200122,Posting in SAP ERP takes forever,"Posting invoices in SAP ERP takes several minutes each. Several colleagues have the same problem. Rebooting didn't help.
+
+Regards,
+Tom Kumar
+tom.kumar@acmecorp.example | +91 9834512919",SAP ERP,Production,New,2026-08-03 09:14,Internal,True
+INC0200123,docking station monitors black,USB works on the dock but monitors don't. Please check urgently.,Docking station,Production,New,2026-08-03 11:59,Internal,True
+INC0200124,Permission error on network drive,Getting error 0x80070005 when trying to open the Projects share. My colleagues can open the Projects share but I get a permission error. Kindly assist.,Projects share,Production,New,2026-08-03 12:57,Internal,True
+INC0200125,Issue,System is not working please check asap.,,Production,New,2026-08-03 15:05,Internal,True
+INC0200126,mailbox quota exceeded,"I can't send emails, I get a message that my mailbox is full. It's been like this for 2 days. Just me, others are fine. Rebooting didn't help.
+
+Regards,
+David Garcia
+david.garcia@acmecorp.example | +91 9881109090",Outlook,Production,New,2026-08-03 15:07,Internal,True
+INC0200127,SAP GUI crashes on startup,"Good morning, Application error 0xc0000005 when starting SAP GUI. I click on SAP GUI and the window flashes and disappears. Only my machine seems affected.",SAP GUI,Production,New,2026-08-03 15:37,Internal,True
+INC0200128,Laptop battery draining fast,"The touchpad is lifting and the battery seems swollen. Battery shows 'plugged in, not charging'. It's been like this for 2 days. Thanks.",Laptop,Production,New,2026-08-03 18:20,Internal,True
+INC0200129,Password expired cannot log in,"Hi team, When I try to log in to SAP GUI it says my password has expired. My password seems to have expired and I can't get past the login screen. I already restarted my laptop. Kindly assist.",SAP GUI,Production,New,2026-08-04 08:20,Internal,True
+INC0200130,upload error on expense portal,expense portal rejects my attachment without a clear error. when i upload my receipt pdf in expense portal it just says upload failed. started after lunch today. not urgent.,Expense Portal,Production,New,2026-08-04 10:56,Internal,True
+INC0200131,outlook credential prompt loop,After my password change Outlook won't stop asking for credentials. Rebooting didn't help.,Outlook,Production,New,2026-08-04 11:03,Internal,True
+INC0200132,warehouse load job error ora-01653,"hi team, morning dashboards are empty because the data load failed. it's been like this for 2 days. we cannot process orders until this is fixed. i cleared my browser cache already. thanks in advance.",Oracle DB,Production,New,2026-08-04 11:47,Internal,True
+INC0200133,Computer slow and freezing,"Applications take minutes to start on LT-7750. This has been happening since this morning. Only my machine seems affected. I already restarted my laptop. Thanks in advance.
+
+Regards,
+Meera Smith
+meera.smith@acmecorp.example | +91 9684799172",Laptop,Production,New,2026-08-04 13:14,Internal,True
+INC0200134,Headset audio issue,"Dear IT, People can't hear me in calls when I use my headset. Started after lunch today. It happens a few times a day.",Headset,Production,New,2026-08-04 13:53,Internal,True
+INC0200135,Cannot log in to Concur - page keeps reloading,"when i log in to concur the page keeps redirecting back to the sign-in page. i sign in to concur and it goes back to the login screen again. it happens a few times a day.
+
+regards,
+john nair
+john.nair@acmecorp.example | +91 9010722871",Concur,Production,New,2026-08-05 07:55,Internal,True
+INC0200136,Request to install Python,Python is not in Software Center for me. I tried logging out and in again. Please check urgently.,Python,Production,New,2026-08-05 11:51,Internal,True
+INC0200137,PostgreSQL: too many connections,"order processing fails every afternoon with fatal: too many connections. application logs show 'fatal: too many connections' during peak hours. please check urgently.
+
+regards,
+wei chen
+wei.chen@acmecorp.example | +91 9279083470",PostgreSQL,Dev,New,2026-08-05 12:09,Internal,True
+INC0200138,Cisco AnyConnect stuck connecting,"After the Windows 11 upgrade Cisco AnyConnect stays on 'Connecting' and never connects. VPN was working until the OS upgrade, now it fails every time. Since Monday. Please check urgently.",Cisco AnyConnect,Production,New,2026-08-05 12:53,Public,True
+INC0200139,Request access to approve POs in Workday,I moved to the procurement team and need approval rights in Workday. Thanks.,Workday,Production,New,2026-08-05 13:38,Public,True
+INC0200140,Slow SQL after data load,"SQL Server queries for the sales report are timing out. Since Monday. Thanks in advance.
+
+Regards,
+Ananya Chen
+ananya.chen@acmecorp.example | +91 9885376836",SQL Server,Production,New,2026-08-05 15:18,Internal,True
+INC0200141,Repeated password prompts in Outlook,"Hi support, I get the Windows security prompt for Outlook every few minutes. I can work around it for now but it slows me down.
+
+Regards,
+Rohit Gupta
+rohit.gupta@acmecorp.example | +91 9365333902",Outlook,Production,New,2026-08-05 18:31,Restricted,True
+INC0200142,default browser changes back,Default app settings don't stay. It's been like this for 2 days. Whenever someone gets a chance. My laptop is LT-4641.,Chrome,Production,New,2026-08-06 12:37,Internal,True
+INC0200143,Authenticator not working on new phone,"Dear IT, I reinstalled Microsoft Authenticator and my account is gone from it. Started after lunch today. It happens a few times a day. I already restarted my laptop. Can someone look into this?",Microsoft Authenticator,Production,New,2026-08-07 09:05,Internal,True
+INC0200144,Outlook shows disconnected status,"Emails stuck in Outbox and Outlook says disconnected. I get the Windows security prompt for Outlook every few minutes. Some people say it's only me, others say it's everyone.",Outlook,Production,New,2026-08-07 10:22,Internal,True
+INC0200145,Concur: user not assigned to application,"Hi team, When I sign in to Concur I get error AADSTS50105. Started after lunch today. Can someone look into this?",Concur,Production,New,2026-08-07 11:41,Internal,True
+INC0200146,DNS error for Intranet,I get DNS_PROBE_FINISHED_NXDOMAIN when opening Intranet. I can work around it for now but it slows me down.,Intranet,Production,New,2026-08-07 12:05,Public,True
+INC0200147,Concur SSO error AADSTS50105,"Hi, Concur says my account is not assigned to this application. SSO login to Concur fails with a message to contact the administrator. My laptop is LT-7704.
+
+Regards,
+Aisha Chen
+aisha.chen@acmecorp.example | +91 9406492207",Concur,Production,New,2026-08-07 14:01,Internal,True
+INC0200148,Password expired cannot log in,"Hi team, Cannot sign in this morning, the screen asks me to change my password but it fails. I am getting a 'your password has expired' message on Employee Portal. I tried my old password a few times. Only my machine seems affected. Thanks in advance.",Employee Portal,Production,New,2026-08-07 14:09,Public,True
+INC0200149,outlook not syncing emails,Emails stuck in Outbox and Outlook says disconnected. Since Monday. Only my machine seems affected. Please help.,Outlook,Production,New,2026-08-07 16:37,Public,True
+INC0200150,sales dashboard takes minutes to load,"Sales Dashboard reports now take 3-4 minutes to load, before it was seconds. Several colleagues have the same problem. Thanks.",Sales Dashboard,Production,New,2026-08-07 17:07,Internal,True
+INC0200151,Can't see team mailbox in Outlook,"dear it, shared mailbox invoices@acmecorp.example disappeared from my outlook. started after lunch today.",Outlook,Production,New,2026-08-07 17:58,Public,True
+INC0200152,Confluence page cannot be found,"Confluence shows 'This site can't be reached' for me but works for others. Confluence hostname does not resolve anywhere in the office. Some people say it's only me, others say it's everyone.",Confluence,Production,New,2026-08-07 17:58,Public,True
+INC0200153,Can't reset my password myself,"Hi support, The password reset portal tells me I have no verification methods set up.",Password Reset Portal,Production,New,2026-08-08 11:56,Restricted,True
+INC0200154,MFA push notifications not arriving,"Hello, I got a new phone and now I don't receive the Microsoft Authenticator approval request. MFA notifications go to my old phone which I already returned. Started after lunch today. We cannot process orders until this is fixed.",Microsoft Authenticator,Production,New,2026-08-09 06:53,Internal,True
+INC0200155,Mailbox full cannot send email,"I keep getting warnings that my mailbox is almost full and now sending stopped. Outlook says my mailbox has exceeded its size limit. No rush on this. I tired logging out and in again. Thanks in advance.
+
+Regards,
+Maria Iyer
+maria.iyer@acmecorp.example | +91 9986278629",Outlook,Production,New,2026-08-09 14:18,Internal,True
+INC0200156,Database performance degraded,"Hi, A report query that used to take 30 seconds now runs for 20 minutes on SQL Server. This is blocking the finance month-end close.
+
+Regards,
+Vikram Reddy
+vikram.reddy@acmecorp.example | +91 9107028836",SQL Server,Production,New,2026-08-09 18:38,Internal,True
+INC0200157,Installation of Power BI Desktop fails,"Power BI Desktop installation rolls back at the end with a fatal error 1603. Software Center shows 'Failed' for Power BI Desktop, code 1603. Rebooting didn't help. Please check urgently.",Power BI Desktop,Production,New,2026-08-10 06:33,Internal,True
+INC0200158,please call,Please call me back regarding my issue. John Singh,,Production,New,2026-08-10 08:28,Internal,True
+INC0200159,ethernet not working,"Hello, Docking station LAN has no connectivity, Wi-Fi works. Started yesterday. Only my machine seems affected.",Wired LAN,Production,New,2026-08-10 18:43,Internal,True
+INC0200160,Cisco AnyConnect won't connect after update,"Hi support, After the Windows 11 upgrade Cisco AnyConnect stays on 'Connecting' and never connects. The Cisco AnyConnect icon shows an error and won't start. This has been happening since this morning.",Cisco AnyConnect,Production,New,2026-08-11 08:02,Internal,True
+INC0200161,Copilot not available for me,"Dear IT, I was told I have access to Copilot but it doesn't show up in Office. Not urgent.
+
+Regards,
+Anil Garcia
+anil.garcia@acmecorp.example | +91 9758021883",Copilot,Production,New,2026-08-11 11:15,Internal,True
+INC0200162,Password expired cannot log in,"Cannot sign in this morning, the screen asks me to change my password but it fails. This has been happening since this morning. It happens a few times a day.",Employee Portal,Production,New,2026-08-12 08:17,Internal,True
+INC0200163,Excel not responding with large workbook,Excel goes to 'Not responding' and then clsoes when I open bigger files. It works in safe mode. It's been like this for 2 days.,Excel,Production,New,2026-08-12 09:30,Restricted,True
+INC0200164,Application cannot connect to database - ORA-12541,All application servers fail to connect to Oracle DB with ORA-12541: TNS:no listener. Production is down for all users. Please check urgently.,Oracle DB,UAT,New,2026-08-12 11:39,Internal,True
+INC0200165,Nightly ETL failed,"Good morning, Warehouse refresh failed overnight with space errors. Just me, others are fine. Can someone look into this?",Oracle DB,Production,New,2026-08-13 02:02,Internal,True
+INC0200166,VPN down for multiple users - error 809,whole team getting vpn error 809 from home since this morning. i already restarted my laptop. please check urgently.,GlobalProtect VPN,Production,New,2026-08-13 08:59,Internal,True
+INC0200167,Meeting times showing incorrectly,"Hi support, Time zone on my laptop changed by itself. It happens a few times a day. My laptop is LT-8864.",Windows,Production,New,2026-08-13 09:27,Internal,True
+INC0200168,Teams messages not loading,"Hi, Teams keeps showing a loading spinner in chats. Teams app is blank but works in the browser. Only my machine seems affected. My laptop is LT-1304.
+
+Regards,
+Carlos Rao
+carlos.rao@acmecorp.example | +91 9752994558",Microsoft Teams,Production,New,2026-08-13 13:38,Internal,True
+INC0200169,Upload error on Expense Portal,"Good morning, When I upload my receipt PDF in Expense Portal it just says upload failed. Since Monday. It happens a few times a day. I tried logging out and in again.
+
+Regards,
+Priya Singh
+priya.singh@acmecorp.example | +91 9399692717",Expense Portal,Production,New,2026-08-13 14:49,Restricted,True
+INC0200170,Reports timing out in Reporting Portal,"Since the weekend release Reporting Portal keeps timing out. Just me, others are fine. I already restarted my laptop. Thanks in advance.",Reporting Portal,Production,New,2026-08-13 16:05,Internal,True
+INC0200171,Default app keeps resetting,"Hi support, Links keep opening in the wrong browser. Every time I restart, files open in the wrong program instead of Adobe Reader. It's been like this for 2 days. Kindly assist.
+
+Regards,
+Tom Kumar
+tom.kumar@acmecorp.example | +91 9003409488",Adobe Reader,Production,New,2026-08-13 20:37,Internal,True
+INC0200172,Jira page cannot be found,"Jira doesn't open on my laptop, my colleague can open it. Browser can't find Jira since the server move. It happens a few times a day. My laptop is LT-2525. Thanks in advance.
+
+Regards,
+Imran Sharma
+imran.sharma@acmecorp.example | +91 9821359129",Jira,Production,New,2026-08-14 11:35,Internal,True
+INC0200173,Stuck in sign-in loop on HR Portal,"Hi team, I sign in to HR Portal and it goes back to the login screen again. HR Portal login page reloads endlessly after I enter my password. My laptop is LT-5681.",HR Portal,Production,New,2026-08-14 13:12,Internal,True
+INC0200174,Windows Update error 0x800f0922,"Dear IT, Compliance portal shows my laptop missing patches. Windows Update fails every night with error 0x800f0922. My laptop is LT-3942.
+
+Regards,
+Wei Brown
+wei.brwon@acmecorp.example | +91 9542327297",Windows Update,Production,New,2026-08-14 14:23,Public,True
+INC0200175,Backup job login failed,"No database backups for the last 2 days on FS-SRV-06.
+
+Regards,
+Michael Sharma
+michael.sharma@acmecorp.example | +91 9710314210",Backup Server,Production,New,2026-08-14 18:32,Internal,True
+INC0200176,Locked out again after password change,"I keep getting 'your account has been locked' and have to call the helpdesk to unlock. Account keeps locking after my password change, I don't have email on my phone. Some people say it's only me, others say it's everyone.",Active Directory,Production,New,2026-08-15 20:25,Internal,True
+INC0200177,ORA-12541 on new app server,"Dear IT, ORA-12541 from FS-SRV-24 but the DBA says the listener is running. Since Monday. We cannot process orders until this is fixed. Kindly assist.",Oracle DB,Dev,New,2026-08-17 10:15,Internal,True
+INC0200178,Please install Power BI Desktop on my laptop,"Dear IT, I need Power BI Desktop for reporting work, can you install it? It's been like this for 2 days. My laptop is LT-2141. Kindly assist.",Power BI Desktop,Production,New,2026-08-17 10:19,Internal,True
+INC0200179,Jira page cannot be found,"I get DNS_PROBE_FINISHED_NXDOMAIN when opening Jira.
+
+Regards,
+Maria Das
+maria.das@acmecorp.example | +91 9281088438",Jira,Production,New,2026-08-17 12:17,Internal,True
+INC0200180,Need role in Salesforce,I moved to the procurement team and need approval rights in Salesforce. Please check urgently.,Salesforce,Production,New,2026-08-17 15:02,Internal,True
+INC0200181,People can't hear me on calls,"People can't hear me in calls when I use my headset. Started after lunch today.
+
+Regards,
+Sneha Kumar
+sneha.kumar@acmecorp.example | +91 9611638944",Headset,Production,New,2026-08-17 15:05,Internal,True
+INC0200182,sap gui not opening after windows update,"Application error 0xc0000005 when starting SAP GUI. I tried logging out and in again.
+
+Regards,
+Emma Taylor
+emma.taylor@acmecorp.example | +91 9525302167",SAP GUI,Production,New,2026-08-17 18:04,Internal,True
+INC0200183,Password expired,When I try to log in to SAP GUI it says my password has expired. Since Monday. It happens a few times a day. My laptop is LT-3585. Thanks.,SAP GUI,Production,New,2026-08-18 11:18,Internal,True
+INC0200184,Intranet cannot be found - all users,"Hello, Since this morning nobody can open Intranet, browser says the server can't be found. It's been like this for 2 days. My laptop is LT-8134. Thanks in advance.",Intranet,Production,New,2026-08-18 13:24,Internal,True
+INC0200185,account lockout every morning,"Hi team, My account locks out every morning around 7 AM even before I log in. My laptop is LT-2516.",Active Directory,Production,New,2026-08-18 14:20,Internal,True
+INC0200186,Oracle EBS slow during month end,"Finance team reports Oracle EBS is sluggish today.
+
+Regards,
+Karthik Smith
+karthik.smith@acmecorp.example | +91 9889492147",Oracle EBS,Production,New,2026-08-18 19:49,Internal,True
+INC0200187,Receipt upload keeps failing,"Hi support, Concur rejects my attachment without a clear error. Whenever someone gets a chance. Rebooting didn't help. Thanks in advance.
+
+Regards,
+Maria Wilson
+maria.wilson@acmecorp.example | +91 9025324840",Concur,Production,New,2026-08-19 13:33,Internal,True
+INC0200188,Battery dies within an hour,Laptop gets very hot and battery drains quickly. Started after lunch today. I can work around it for now but it slows me down. I tried logging out and in again.,Laptop,Production,New,2026-08-19 18:01,Internal,True
+INC0200189,URGENT: No connectivity at London,"The whole London branch lost connectivity. Complete network outage at London, phones also down. Started yesterday. Rebooting didn't help. Thanks in advance.
+
+Regards,
+Wei Kumar
+wei.kumar@acmecorp.example | +91 9188505354",WAN link,Production,New,2026-08-20 07:32,Internal,True
+INC0200190,sap erp transactions very slow,During month-end close SAP ERP transactions are extremely slow. Posting invoices in SAP ERP takes several minutes each. I already restarted my laptop.,SAP ERP,Production,New,2026-08-20 09:25,Internal,True
+INC0200191,password reset link not working,I forgot my password and the self-service reset page says my account is not registered for reset. I tried to reset my password online but never get the verification code. Started after lunch today. It happens a few times a day.,Password Reset Portal,Production,New,2026-08-20 11:25,Internal,True
+INC0200192,my account locks every few minutes,"Hello, I keep getting 'your account has been locked' and have to call the helpdesk to unlock. Account locked out multiple times today, my manager says event 4740 shows in the logs. Only my machine seems affected.",Active Directory,Production,New,2026-08-20 12:09,Internal,True
+INC0200193,Please install Notepad++ on my laptop,"Good morning, Notepad++ is not in Software Center for me. Whenever someone gets a chance. Please check urgently.
+
+Regards,
+Anil Smith
+anil.smith@acmecorp.example | +91 9879200868",Notepad++,Production,New,2026-08-20 13:49,Internal,True
+INC0200194,Database locks blocking users,"Dear IT, Deadlock errors in application logs for the last hour. Everything that writes to the orders table is stuck. We cannot process orders until this is fixed. Rebooting didn't help. Can someone look into this?",SQL Server,Production,New,2026-08-20 14:18,Internal,True
+INC0200195,Account keeps getting locked,"Hello, Since I changed my password yesterday my account keeps locking out. This has been happening since this morning. My entire team (10 people) is affected. My laptop is LT-7376.
+
+Regards,
+Pooja Khan
+pooja.khan@acmecorp.example | +91 9122066715",Outlook mobile,Production,New,2026-08-20 14:44,Restricted,True
+INC0200196,can't login to employee portal - password expired message,"When I try to log in to Employee Portal it says my password has expired. Started yesterday. It happens a few times a day. Can someone look into this?
+
+Regards,
+Emma Sharma
+emma.sharma@acmecorp.example | +91 9205405827",Employee Portal,Production,New,2026-08-20 16:35,Public,True
+INC0200197,Can't login to Windows sign-in - password expired message,"Hi team, When I try to log in to Windows sign-in it says my password has expired. I tried my old password a few times. Since Monday. It happens a few times a day.",Windows sign-in,Production,New,2026-08-21 09:36,Internal,True
+INC0200198,password expired,"when i try to log in to employee portal it says my password has expired. i was on leave for two weeks. started yesterday. can someone look into this?
+
+regards,
+pooja sharma
+pooja.sharma@acmecorp.example | +91 9040177675",Employee Portal,Production,New,2026-08-21 09:45,Restricted,True
+INC0200199,Mailbox full cannot send email,"Hi support, I can't send emails, I get a message that my mailbox is full. Since Monday. I can work around it for now but it slows me down.",Outlook,Production,New,2026-08-21 10:40,Public,True
+INC0200200,Reporting Portal PDF export shows dates wrong,When I export to PDF from Reporting Portal the dates show as MM/DD instead of DD/MM. It's been like this for 2 days. Low priority request.,Reporting Portal,Production,New,2026-08-21 13:36,Internal,True
+INC0200201,Can't login to SAP GUI - password expired message,When I try to log in to SAP GUI it says my password has expired. This has been happening since this morning. Please help.,SAP GUI,Production,New,2026-08-21 13:54,Public,True
+INC0200202,need access to shared mailbox,"I get an error when I try to open the payroll@acmecorp.example mailbox. My manager said I was added to payroll@acmecorp.example but I can't see it. Low priority request. Rebooting didn't help. My laptop is LT-7281. Please check urgently.
+
+Regards,
+Neha Pillai
+neha.pillai@acmecorp.example | +91 9693117735",Outlook,Production,New,2026-08-21 14:18,Internal,True
+INC0200203,Can't approve sign in - changed phone,I reinstalled Microsoft Authenticator and my account is gone from it. MFA notifications go to my old phone which I already returned. I already restarted my laptop. Please help.,Microsoft Authenticator,Production,New,2026-08-21 15:22,Internal,True
+INC0200204,Can't start laptop - recovery key needed,"Hi, I restarted and now it's asking for the BitLocker key. I can work around it for now but it slows me down.",Laptop,Production,New,2026-08-22 06:29,Internal,True
+INC0200205,Workday: user not assigned to application,"Hi support, New joiner cannot access Workday, error AADSTS50105. I can work around it for now but it slows me down.
+
+Regards,
+Michael Reddy
+michael.reddy@acmecorp.example | +91 9853812438",Workday,Production,New,2026-08-22 12:04,Internal,True
+INC0200206,CRM error HTTP 500 when saving,Saving orders in CRM fails since this morning for the whole team. This has been happening since this morning. Several colleagues have the same problem. Thanks.,CRM,Production,New,2026-08-22 15:30,Internal,True
+INC0200207,request to install visio,"Hi team, I need Visio for reporting work, can you install it? Visio is not in Software Center for me. This has been happening since this morning. Not urgent. Please check urgently.
+
+Regards,
+Sara Gupta
+sara.gupta@acmecorp.example | +91 9992535816",Visio,Production,New,2026-08-23 04:38,Restricted,True
+INC0200208,Microphone not working in meetings,"Mic level stays at zero with the USB headset. My headset microphone isn't picking up any sound. Only my machine seems affected. I tried logging out and in again. My laptop is LT-4486. Thanks.
+
+Regards,
+Karthik Joshi
+karthik.joshi@acmecorp.example | +91 9500196846",Headset,Production,New,2026-08-23 08:54,Internal,True
+INC0200209,URGENT: DB connection failure ORA-12541,"Users get database connection errors, logs show ORA-12541. Since the server reboot, connections to Billing DB fail with ORA-12541. This has been happening since this morning.",Billing DB,Production,New,2026-08-23 10:11,Internal,True
+INC0200210,Oracle EBS slow during month end,"Dear IT, Oracle EBS becomes slow every day around 10 AM. Posting invoices in Oracle EBS takes several minutes each. This has been happening since this morning. We cannot process orders until this is fixed. Please check urgently.",Oracle EBS,Production,New,2026-08-23 23:03,Internal,True
+INC0200211,VPN client error after upgrade,"Hi, VPN was working until the OS upgrade, now it fails every time. Started yesterday. We cannot process orders until this is fixed.",Cisco AnyConnect,Production,New,2026-08-24 01:26,Internal,True
+INC0200212,Webcam black in Teams meetings,"Dear IT, Others can't see my video in Teams calls. In Teams meetings my camera shows 'no camera available'. Only my machine seems affected. I tried logging out and in again.",Microsoft Teams,Production,New,2026-08-24 03:39,Internal,True
+INC0200213,Cannot reach Intranet by name,"Intranet doesn't open on my laptop, my collaegue can open it. Since Monday. Whenever someone gets a chance. I already restarted my laptop.",Intranet,Production,New,2026-08-24 10:55,Internal,True
+INC0200214,Software request: Power BI Desktop,"Hi support, I need Power BI Desktop for reporting work, can you install it? Power BI Desktop is not in Software Center for me. Low priority request. I cleared my browser cache already.
+
+Regards,
+Wei Reddy
+wei.reddy@acmecorp.example | +91 9569108511",Power BI Desktop,Production,New,2026-08-24 11:50,Public,True
+INC0200215,data load failed last night,"The nightly ETL job failed with ORA-01653: unable to extend table. ETL log shows ORA-01653 on the sales fact table. I tried logging out and in again. My laptop is LT-3088. Thanks.
+
+Regards,
+Anil Nair
+anil.nair@acmecorp.example | +91 9426739041",Data Warehouse,Production,New,2026-08-24 12:11,Internal,True
+INC0200216,HR Portal SSO error AADSTS50105,"New joiner cannot access HR Portal, error AADSTS50105. When I sign in to HR Portal I get error AADSTS50105. Only my machine seems affected. I cleared my browser cache already. Kindly assist.
+
+Regards,
+Imran Sharma
+imran.sharma@acmecorp.example | +91 9158128704",HR Portal,Production,New,2026-08-24 12:51,Internal,True
+INC0200217,Wrong time on laptop,Since I came back from the trip my laptop shows the wrong time. Time zone on my laptop changed by itself. Started yesterday. No rush on this.,Windows,Production,New,2026-08-24 14:48,Internal,True
+INC0200218,Slow performance in Reporting Portal since release,filters in reporting portal spin forever. started yesterday. my laptop is lt-8102.,Reporting Portal,Production,New,2026-08-24 17:00,Internal,True
+INC0200219,Need role in SAP ERP,"hi support, i moved to the procurement team and need approval rights in sap erp. started yesterday. i cleared my browser cache already. please check urgently.",SAP ERP,Production,New,2026-08-24 18:38,Internal,True
+INC0200220,Expense Hub not loading - white screen,"Dear IT, Expense Hub loads the header but the page body is empty.",Expense Hub,Production,New,2026-08-25 11:27,Internal,True
+INC0200221,Badge Printer prints but badges don't open doors,"Badges come out blank on the chip side, front print looks fine. The Badge Printer at reception shows 'encoder error' on every card. Several colleagues have the same problem. I cleared my browser cache already. Kindly assist.",Badge Printer,Production,New,2026-08-25 12:03,Internal,True
+INC0200222,Visitor badge printer not encoding cards,"Hi support, Visitor badges print fine from the Badge Printer but the doors don't accept them. Started after lunch today. Thanks in advance.",Badge Printer,Production,New,2026-08-25 12:05,Internal,True
+INC0200223,Help needed,cant work since morning pls help,,Production,New,2026-08-25 12:47,Internal,True
+INC0200224,Can't connect to corporate Wi-Fi,"Dear IT, Wi-Fi was fine yesterday, today it won't authenticate. Started yesterday. Only my machine seems affected.",Corporate Wi-Fi,Production,New,2026-08-25 16:30,Public,True
+INC0200225,Webcam black in Teams meetings,"Camera works in the Camera app but Teams can't find it. Others can't see my video in Teams calls. I already restarted my laptop.
+
+Regards,
+Priya Taylor
+priya.taylor@amcecorp.example | +91 9017483836",Microsoft Teams,Production,New,2026-08-25 16:57,Internal,True
+INC0200226,urgent,Error coming again. Please fix.,,Production,New,2026-08-26 11:31,Internal,True
+INC0200227,Ethernet not working,"Dear IT, Docking station LAN has no connectivity, Wi-Fi works. Started after lunch today. It happens a few times a day. I already restarted my laptop. My laptop is LT-9300.",Wired LAN,Production,New,2026-08-26 13:53,Internal,True
+INC0200228,Error,Getting an error when I click the button.,,Production,New,2026-08-26 14:34,Internal,True
+INC0200229,Concur SSO redirect loop,"Hello, When I log in to Concur the page keeps redirecting back to the sign-in page. Not urgent.
+
+Regards,
+Sara Rao
+sara.rao@acmecorp.example | +91 9069482721",Concur,Production,New,2026-08-26 17:59,Internal,True
+INC0200230,LAN cable connected but no internet,No network on the desk port after the office move. Wired network not working at my new desk. It happens a few times a day. My laptop is LT-2121.,Wired LAN,Production,New,2026-08-27 12:14,Internal,True
+INC0200231,urgent: oracle db unreachable - ora-12541,"Hi team, Billing jobs failing with ORA-12541 on every connection attempt. Since the server reboot, connections to Oracle DB fail with ORA-12541. Started yesterady. This is a critical outage, customers are affected.
+
+Regards,
+Tom Joshi
+tom.joshi@acmecorp.example | +91 9726317272",Oracle DB,UAT,New,2026-08-27 12:59,Internal,True
+INC0200232,Second screen not working with dock,"My two monitors connected to the dock show 'no signal'. Started yesterday. I already restarted my laptop. Thanks in advance.
+
+Regards,
+Meera Nair
+meera.nair@acmecorp.example | +91 9864449476",Docking station,Production,New,2026-08-27 14:23,Internal,True
+INC0200233,Permission error on network drive,"Hi support, When I open the HR share on the file server I get 'Access is denied'. My colleagues can open the HR share but I get a permission error. This has been happening since this morning. I can work around it for now but it slows me down. Thanks.
+
+Regards,
+Michael Nair
+michael.nair@acmecorp.example | +91 9648131224",HR share,Production,New,2026-08-27 17:34,Internal,True
+INC0200234,Cannot upload receipt in Expense Portal,"Expense Portal rejects my attachment without a clear error.
+
+Regards,
+Meera Reddy
+meera.reddy@acmecorp.example | +91 9116866989",Expense Portal,Production,New,2026-08-28 02:05,Internal,True
+INC0200235,Transactions hanging on Oracle DB,"Dear IT, Users' save operations hang and eventually time out. It's been like this for 2 days. I tried logging out and in again.
+
+Reagrds,
+Ananya Garcia
+ananya.garcia@acmecorp.example | +91 9887090108",Oracle DB,Production,New,2026-08-28 08:32,Internal,True
+INC0200236,Cannot install Zoom,"Dear IT, I tried installing Zoom twice, both times it failed. It's been like this for 2 days. Just me, others are fine. Rebooting didn't help. My laptop is LT-8781. Please check urgently.
+
+Regards,
+Michael Smith
+michael.smith@acmecorp.example | +91 9453800694",Zoom,Production,New,2026-08-28 09:18,Internal,True
+INC0200237,missing authorization in workday,"Hello, Menu option is greyed out in Workday, my colleague has it. Whenever someone gets a chance.",Workday,Production,New,2026-08-28 15:00,Internal,True
+INC0200238,VPN client error after upgrade,"Good morning, After the Windows 11 upgrade GlobalProtect VPN stays on 'Connecting' and never connects. It happens a few times a day. Kindly assist.
+
+Regards,
+Maria Iyer
+maria.iyer@acmecorp.example | +91 9288107910",GlobalProtect VPN,Production,New,2026-08-28 16:56,Internal,True
+INC0200239,Backup job login failed,No database backups for the last 2 days on FS-SRV-35. Kindly assist.,SQL Server,Production,New,2026-08-28 18:50,Internal,True
+INC0200240,Intermittent DB connection errors - Error 1040,"Application logs show 'Error 1040' during peak hours. Order processing fails every afternoon with Error 1040. My entire team (7 people) is affected. I tried logging out and in again.
+
+Regards,
+Michael Wilson
+michael.wilson@acmecorp.example | +91 9919364913",PostgreSQL,Production,New,2026-08-29 02:47,Internal,True
+INC0200241,Laptop issue,My laptop has a problem.,,Production,New,2026-08-29 04:22,Internal,True
+INC0200242,can't reset my password myself,"hi team, reset portal shows 'you can't reset your own password because you haven't registered'. i cleared my browser cache already. my laptop is lt-1676. thanks in advance.",Password Reset Portal,Production,New,2026-08-31 16:17,Internal,True
+INC0200243,Cannot install Visio,"Hi team, Software Center shows 'Failed' for Visio, code 1603.",Visio,Production,New,2026-09-01 08:26,Internal,True
+INC0200244,GlobalProtect VPN won't connect after update,"The GlobalProtect VPN icon shows an error and won't start. Just me, others are fine. My laptop is LT-4053.
+
+Regards,
+Ananya Nair
+ananya.nair@acmecorp.example | +91 9658596256",GlobalProtect VPN,Production,New,2026-09-01 13:47,Internal,True
+INC0200245,Account locked out after password change,"Account keeps locking after my password change, I don't have email on my phone. Started after lunch today. This is blocking the finance month-end close. My laptop is LT-9193. Please help.",Active Directory,Production,New,2026-09-01 18:40,Internal,True
+INC0200246,URGENT: Suspicious login alert after email link,After clicking a link in an email I got a login page that looked like DocuSign. I typed my password before noticing the address was wrong. Thanks.,DocuSign,Production,New,2026-09-02 08:24,Restricted,True
+INC0200247,GlobalProtect VPN stuck connecting,"Hi, VPN was working until the OS upgrade, now it fails every time. It happens a few times a day.
+
+Regards,
+Carlos Chen
+carlos.chen@acmecorp.example | +91 9936528998",GlobalProtect VPN,Production,New,2026-09-02 09:01,Internal,True
+INC0200248,Updates keep failing,Windows Update fails every night with error 0x800f0922. Not urgent. I already restarted my laptop. Kindly assist.,Windows Update,Production,New,2026-09-02 09:15,Internal,True
+INC0200249,default app keeps resetting,Links keep opening in the wrong browser. Started after lunch today. Whenever someone gets a chance. My laptop is LT-2533. Please check urgently.,Chrome,Production,New,2026-09-02 09:30,Internal,True
+INC0200250,sap erp slow during month end,Posting invoices in SAP ERP takes several minutes each. Can someone look into this?,SAP ERP,Production,New,2026-09-02 11:19,Restricted,True
+INC0200251,people can't hear me on calls,"Hello, Headset auido works but the mic is silent. Mic level stays at zero with the USB headset. Please help.",Headset,Production,New,2026-09-02 13:33,Internal,True
+INC0200252,SAP GUI crash error 0xc0000005,"i click on sap gui and the window flashes and disappears. started after lunch today. just me, others are fine. my laptop is lt-4702.
+
+regards,
+tom iyer
+tom.iyer@acmecorp.example | +91 9057169943",SAP GUI,Production,New,2026-09-02 14:15,Public,True
+INC0200253,expense hub not loading - white screen,the new expense hub just shows a white screen after login. started after lunch today. only my machine seems affected.,Expense Hub,Production,New,2026-09-03 01:58,Internal,True
+INC0200254,Expense Hub not loading - white screen,"Hi team, Blank screen in Expense Hub on Chrome, other sites are fine. We cannot process orders until this is fixed. I tried logging out and in again. Thanks in advance.",Expense Hub,Production,New,2026-09-03 10:09,Internal,True
+INC0200255,ORA-12541 from one app server,New UAT server fails with ORA-12541 when conencting to Oracle DB. Please check urgently.,Oracle DB,UAT,New,2026-09-03 11:13,Internal,True
+INC0200256,windows update error 0x800f0922,windows update fails every night with error 0x800f0922. thanks in advance.,Windows Update,Production,New,2026-09-03 14:17,Internal,True
+INC0200257,Network cable unplugged message,"Docking station LAN has no connectivity, Wi-Fi works. Rebooting didn't help.
+
+Regards,
+Rahul Taylor
+rahul.taylor@acmecorp.example | +91 9682161352",Wired LAN,Production,New,2026-09-03 16:13,Public,True
+INC0200258,Badge Printer prints but badges don't open doors,"Visitor badges print fine from the Badge Printer but the doors don't accept them. I tried logging out and in again.
+
+Regards,
+Lin Kumar
+lin.kumar@acmecorp.example | +91 9798419710",Badge Printer,Production,New,2026-09-03 17:00,Public,True
+INC0200259,payments api pods restarting continuously,"Good morning, Customers get 503 from Payments API; Kubernetes shows pods restarting every minute. Payments API pods are in CrashLoopBackOff since the 2 PM deployment. We cannot process orders until this is fixed. I already restarted my laptop.
+
+Regards,
+Rohit Smith
+rohit.smith@acmecorp.example | +91 9500986191",Payments API,Production,New,2026-09-03 18:56,Internal,True
+INC0200260,URGENT: Entered my password on a suspicious link,"dear it, after clicking a link in an email i got a login page that looked like onedrive. i typed my password before noticing the address was wrong. can someone look into this?",OneDrive,Production,New,2026-09-04 10:06,Restricted,True
+INC0200261,copilot not available for me,"Hi support, My team has Copilot in Word and Excel but the button is missing for me. No rush on this. Can someone look into this?",Copilot,Production,New,2026-09-04 15:03,Internal,True
+INC0200262,VPN down for multiple users - error 809,"Dear IT, Multiple users report GlobalProtect VPN error 809 after the network change window. Whole team getting VPN error 809 from home since this morning. Started yesterday. Possible security incident, please treat as urgent. Thanks in advance.",GlobalProtect VPN,Production,New,2026-09-04 15:50,Internal,True
+INC0200263,New expense app shows blank screen,"Good morning, Expense Hub loads the header but the page body is empty. I can work around it for now but it slows me down.
+
+Regards,
+Lin Menon
+lin.menon@acmecorp.example | +91 9062674917",Expense Hub,Production,New,2026-09-04 16:45,Internal,True
+INC0200264,Updates keep failing,"Compliance portal shows my laptop missing patches. Since Monday. I cleared my browser cache already.
+
+Regards,
+Imran Nair
+imran.nair@acmecorp.example | +91 9594140575",Windows Update,Production,New,2026-09-06 11:26,Internal,True
+INC0200265,Database performance degraded,"hi, oracle db queries for the sales report are timing out. only my machine seems affected. rebooting didn't help. my laptop is lt-3040. please check urgently.
+
+regards,
+vikram taylor
+vikram.taylor@acmecorp.example | +91 9251540835",Oracle DB,Production,New,2026-09-06 17:40,Internal,True
+INC0200266,System down?,Is the system down? I can't do anything.,,Production,New,2026-09-06 19:13,Internal,True
+INC0200267,MFA push notifications not arriving,"Hello, I reinstalled Okta Verify and my account is gone from it. Can someone look into this?
+
+Regards,
+Maria Taylor
+maria.taylor@acmecorp.example | +91 9053343265",Okta Verify,Production,New,2026-09-07 04:02,Internal,True
+INC0200268,Teams chat not syncing,"Messages I send in Teams stay pending. Just me, others are fine. I tried logging out and in again. Can someone look into this?
+
+Regards,
+Sanjay Nair
+sanjay.nair@acmecorp.example | +91 9159564609",Microsoft Teams,Production,New,2026-09-07 09:32,Public,True
+INC0200269,Authenticator not working on new phone,"hi, mfa notifications go to my old phone which i already returned. only my machine seems affected. my laptop is lt-1519. thanks.",Okta Verify,Production,New,2026-09-07 14:38,Internal,True
+INC0200270,Ethernet not working,"Hi support, Docking station LAN has no connectivity, Wi-Fi works. No rush on this. Can someone look into this?
+
+Regards,
+Lin Singh
+lin.singh@acmecorp.example | +91 9724221315",Wired LAN,Production,New,2026-09-07 17:39,Restricted,True
+INC0200271,Laptop locked by BitLocker,"Hello, Laptop LT-4205 won't boot, it wants a BitLocker recovery key. My laptop shows a blue BitLocker recovery screen asking for a 48 digit key. Just me, others are fine.
+
+Regards,
+Anil Wilson
+anil.wilson@acmecorp.example | +91 9283298312",Laptop,Production,New,2026-09-08 08:52,Internal,True
+INC0200272,Nightly ETL failed,"Hi, The nightly ETL job failed with ORA-01653: unable to extend table. ETL log shows ORA-01653 on the sales fact table. My laptop is LT-4515. Please help.",Oracle DB,Production,New,2026-09-08 10:46,Internal,True
+INC0200273,Request to install Tableau,"Requesting installation of Tableau. Manager approved. Since Monday. I can work around it for now but it slows me down. I already restarted my laptop. My laptop is LT-7312.
+
+Regards,
+Priya Reddy
+priya.reddy@acmecorp.example | +91 9809905589",Tableau,Production,New,2026-09-08 13:29,Internal,True
+INC0200274,Outlook keeps asking for password,Outlook shows 'Need password' and the prompt comes back. It happens a few times a day. Please help.,Outlook,Production,New,2026-09-08 17:18,Internal,True
+INC0200275,DB connection failure ORA-12541,"Users get database connection errors, logs show ORA-12541. Billing jobs failing with ORA-12541 on every connection attempt. I tried logging out and in again.",Oracle DB,Production,New,2026-09-08 17:50,Internal,True
+INC0200276,Account locked out after password change,"My account locks out every morning around 7 AM even before I log in. I'm getting locked out repeatedly and I only use my desktop. I set up a scheduled report export some months ago. I can work around it for now but it slows me down. Please check urgently.
+
+Regards,
+Pooja Joshi
+pooja.joshi@acmecorp.example | +91 9235199403",Active Directory,Production,New,2026-09-09 10:45,Internal,True
+INC0200277,pdfs open in wrong app,"i set adobe reader as default but it resets after reboot. every time i restart, files open in the wrong program instead of adobe reader. not urgent.",Adobe Reader,Production,New,2026-09-09 16:59,Internal,True
+INC0200278,My account locks every few minutes,"Dear IT, I keep getting 'your account has been locked' and have to call the helpdesk to unlock. I have email set up on my phone. Please check urgently.",Active Directory,Production,New,2026-09-10 09:33,Internal,True
+INC0200279,Wi-Fi authentication failed,"My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works. Started yesterday. Thanks in advance.
+
+Regards,
+Rahul Khan
+rahul.khan@acmecorp.example | +91 9046793236",Corporate Wi-Fi,Production,New,2026-09-10 10:44,Internal,True
+INC0200280,Wireless keeps disconnecting on the 5th floor,Many of us on the 5th floor lose Wi-Fi connection randomly. Several colleagues have the same problem.,Corporate Wi-Fi,Production,New,2026-09-10 11:24,Internal,True
+INC0200281,shared mailbox missing,"I need access to the invoices@acmecorp.example shared mailbox but it doesn't appear in Outlook. It's been like this for 2 days. I already restarted my laptop. Please help.
+
+Regards,
+David Taylor
+david.taylor@acmecorp.example | +91 9037523039",Outlook,Production,New,2026-09-10 12:24,Restricted,True
+INC0200282,Jira cannot be found - all users,"All users get 'site can't be reached' on Jira. Thanks.
+
+Regards,
+Tom Singh
+tom.singh@acmecorp.example | +91 9909095944",Jira,Production,New,2026-09-11 08:27,Internal,True
+INC0200283,Cannot open team folder - access denied,My colleagues can open the Finance share but I get a permission error. This has been happening since this morning. Only my machine seems affected. I already restarted my laptop. Can someone look into this?,Finance share,Production,New,2026-09-11 10:15,Public,True
+INC0200284,shared mailbox missing,"Dear IT, I get an error when I try to open the support@acmecorp.example mailbox. Since Monday. No rush on this. My laptop is LT-4366. Please check urgently.",Outlook,Production,New,2026-09-11 10:52,Internal,True
+INC0200285,Authenticator code invalid,I enter the code from the app but it says the code is wrong. MFA code fails even though I type it quickly. Thanks in advance.,Google Authenticator,Production,New,2026-09-11 11:55,Internal,True
+INC0200286,Slow performance in Reporting Portal since release,Filters in Reporting Portal spin forever. Reporting Portal queries for the sales report are timing out. Not sure if these are related.,Reporting Portal,Production,New,2026-09-11 14:04,Public,True
+INC0200287,ad account locked - not using phone,"account keeps locking after my password change, i don't have email on my phone. my account locks out every morning around 7 am even before i log in. we cannot process orders until this is fixed. i claered my browser cache already. my laptop is lt-9745. kindly assist.",Active Directory,Production,New,2026-09-11 16:34,Internal,True
+INC0200288,verification code wrong every time,"MFA code fails even though I type it quickly. I changed the time on my phone manually. Started yesterday. Just me, others are fine. Can someone look into this?",Microsoft Authenticator,Production,New,2026-09-11 16:42,Internal,True
+INC0200289,Permission error on network drive,"Dear IT, When I open the Finance share on the file server I get 'Access is denied'. Not urgent. Can someone look into this?",Finance share,Production,New,2026-09-14 08:18,Internal,True
+INC0200290,URGENT: Payments API pods restarting continuously,"Hello, Customers get 503 from Payments API; Kubernetes shows pods restarting every minute. Possible security incident, please treat as urgent. I cleared my broswer cache already.
+
+Regards,
+Laura Joshi
+laura.joshi@acmecorp.example | +91 9761386906",Payments API,Production,New,2026-09-14 09:15,Internal,True
+INC0200291,Teams shows old messages only,"Teams chat shows messages from yesterday only, new ones don't appear. It happens a few times a day. Please help.
+
+Regards,
+Emma Wilson
+emma.wilson@acmecorp.example | +91 9651616601",Microsoft Teams,Production,New,2026-09-14 09:19,Internal,True
+INC0200292,Internal server error in Customer Portal,"Saving orders in Customer Portal fails since this morning for the whole team. Started yesterday. My entire team (26 people) is affected.
+
+Regards,
+Anil Pillai
+anil.pillai@acmecorp.example | +91 9878758273",Customer Portal,Production,New,2026-09-14 09:20,Internal,True
+INC0200293,Missing authorization in Salesforce,"Salesforce shows 'You do not have authorization for this action'. This has been happening since this morning. My laptop is LT-4987.
+
+Regards,
+Maria Das
+maria.das@acmecorp.example | +91 9201550675",Salesforce,Production,New,2026-09-15 09:33,Internal,True
+INC0200294,MFA push notifications not arriving,"I reinstalled Microsoft Authenticator and my account is gone from it. Microsoft Authenticator shows codes but none of them work. Some people say it's only me, others say it's everyone.",Microsoft Authenticator,Production,New,2026-09-15 11:34,Internal,True
+INC0200295,Cannot log in to Concur,"New joiner cannot access Concur, error AADSTS50105. Started after lunch today. I can work around it for now but it slows me down. My laptop is LT-2732. Please check urgently.",Concur,Production,New,2026-09-15 11:38,Internal,True
+INC0200296,Orders DB: too many connections,"Good morning, Users intermittently see errors and logs say the connection pool is exhausted. Several colleagues have the same problem. Please help.",Orders DB,Production,New,2026-09-15 14:32,Public,True
+INC0200297,Password reset link not working,Reset portal shows 'You can't reset your own password because you haven't registered'. I can work around it for now but it slows me down. Please help.,Password Reset Portal,Production,New,2026-09-15 15:24,Internal,True
+INC0200298,Sales Dashboard very slow,Filters in Sales Dashboard spin forever. Several colleagues have the same problem.,Sales Dashboard,Production,New,2026-09-15 15:32,Internal,True
+INC0200299,Adobe Reader install failed 1603,"Hello, Software Center shows 'Failed' for Adobe Reader, code 1603. Adobe Reader installation rolls back at the end with a fatal error 1603. Just me, others are fine. I tried logging out and in again. My laptop is LT-4749. Kindly assist.",Adobe Reader,Production,New,2026-09-15 20:53,Internal,True
+INC0200300,Database locks blocking users,users' save operations hang and eventually time out. everything that writes to the orders table is stuck. this is blocking the finance month-end close. my laptop is lt-8599. thanks.,SQL Server,Production,New,2026-09-16 12:37,Internal,True
+INC0200301,Teams camera not working,"In Teams meetings my camera shows 'no camera available'. Started after lunch today. No rush on this.
+
+Regards,
+Divya Menon
+divya.menon@acmecorp.example | +91 9545419135",Microsoft Teams,Production,New,2026-09-16 18:39,Internal,True
+INC0200302,computer slow and freezing,"My laptop takes ages to open anything and freezes often. It happens a few times a day. Kindly assist.
+
+Regards,
+Maria Chen
+maria.chen@acmecorp.example | +91 9045865924",Laptop,Production,New,2026-09-17 03:42,Internal,True
+INC0200303,Outlook keeps asking for password,"after my password change outlook won't stop asking for credentials. thanks.
+
+regards,
+arjun wilson
+arjun.wilson@acmecorp.example | +91 9834691627",Outlook,Production,New,2026-09-17 18:05,Public,True
+INC0200304,outlook shows disconnected status,"Outlook keeps saying 'Trying to connect...' but webmail works fine. My Outlook stopped syncing since yesterday, folders are not updating. It's been like this for 2 days. Only my machine seems affected.",Outlook,Production,New,2026-09-17 18:29,Internal,True
+INC0200305,Printer missing from list,"Adding printer PRN-CHE-5F-02 fails with 'printer not found'. It's been like this for 2 days. I cleared my browser cache already. Please check urgently.
+
+Regards,
+John Nair
+john.nair@acmecorp.example | +91 9191438020",Printer,Production,New,2026-09-18 03:57,Internal,True
+INC0200306,Printing not working,Print queue won't clear and the printer appears offline. I already restarted my laptop. Thanks in advance.,Printer,Production,New,2026-09-18 08:52,Internal,True
+INC0200307,wi-fi unstable on the 5th floor,"Many of us on the 5th floor lose Wi-Fi connection randomly. Started yesterday. We cannot process orders until this is fixed. I tried logging out and in again. Please check urgently.
+
+Regards,
+Maria Khan
+maria.khan@acmecorp.example | +91 9845686004",Corporate Wi-Fi,Production,New,2026-09-18 10:53,Internal,True
+INC0200308,Print jobs stuck in queue,"Hi support, I can't print to PRN-LON-5F-04, it says error - printing. It happens a few times a day.",Printer,Production,New,2026-09-18 11:00,Internal,True
+INC0200309,Laptop very slow,"Dear IT, Getting low disk space warnings on C drive. Started after lunch today. I tried logging out and in again. My laptop is LT-7414.
+
+Regards,
+Ananya Sharma
+ananya.sharma@acmecorp.example | +91 9579792702",Laptop,Production,New,2026-09-18 12:30,Internal,True
+INC0200310,Mailbox quota exceeded,I keep getting warnings that my mailbox is almost full and now sending stopped. I can work around it for now but it slows me down. I tried logging out and in again. Can someone look into this?,Outlook,Production,New,2026-09-18 16:41,Internal,True
+INC0200311,password expired,"hello, cannot sign in this morning, the screen asks me to change my password but it fails. i was on leave for two weeks. just me, others are fine. thanks.",Employee Portal,Production,New,2026-09-18 18:23,Internal,True
+INC0200312,Email,Something with email.,,Production,New,2026-09-18 21:57,Internal,True
+INC0200313,ethernet not working,"Docking station LAN has no connectivity, Wi-Fi works. Wired network not working at my new desk. It happens a few times a day.",Wired LAN,Production,New,2026-09-20 14:39,Internal,True
+INC0200314,SAP GUI not opening after Windows update,SAP GUI crashes on launch with error 0xc0000005. This has been happening since this morning. I can work around it for now but it slows me down. I cleared my browser cache already.,SAP GUI,Production,New,2026-09-20 15:51,Internal,True
+INC0200315,Windows Update error 0x800f0922,"Hi team, Compliance portal shows my laptop missing patches. My laptop keeps saying updates failed, error 0x800f0922. I can work around it for now but it slows me down. Thanks.",Windows Update,Production,New,2026-09-21 09:31,Internal,True
+INC0200316,SAP ERP performance degraded,"During month-end close SAP ERP transactions are extremely slow. Finance team reports SAP ERP is sluggish today. It's been like this for 2 days. My entire team (28 people) is affected.
+
+Regards,
+Sneha Taylor
+sneha.taylor@acmecorp.example | +91 9785427020",SAP ERP,Production,New,2026-09-21 11:11,Internal,True
+INC0200317,Laptop overheating and battery issue,"Hi, Laptop gets very hot and battery drains quickly. It happens a few times a day. Can someone look into this?",Laptop,Production,New,2026-09-21 15:24,Internal,True
+INC0200318,Backup failure on BKP-SRV-15,"Good morning, Backup job on BKP-SRV-15 failed last night with login failed for the service account. Scheduled backup is failing since Monday. Started yesterday. My entire team (29 people) is affected. Rebooting didn't help.
+
+Regards,
+Kavya Menon
+kavya.menon@acmecorp.example | +91 9155512342",Backup Server,Production,New,2026-09-22 03:56,Internal,True
+INC0200319,Cannot reach Confluence by name,"hi team, i get dns_probe_finished_nxdomain when opening confluence. my laptop is lt-3576. thanks in advance.",Confluence,Production,New,2026-09-22 04:31,Restricted,True
+INC0200320,VPN not connecting after password change,"Good morning, Since I changed my password GlobalProtect VPN gives error 809 when connecting from home. I'm working from home today. I can work around it for now but it slows me down.",GlobalProtect VPN,Production,New,2026-09-22 11:41,Internal,True
+INC0200321,Printer missing from list,"Printer PRN-LON-5F-02 is not in my list anymore. Can someone look into this?
+
+Regards,
+Sneha Joshi
+sneha.joshi@acmecorp.example | +91 9759923046",Printer,Production,New,2026-09-22 12:19,Internal,True
+INC0200322,authenticator code invalid,"Hi support, Microsoft Authenticator shows codes but none of them work. I changed the time on my phone manually. Started after lunch today. I can work around it for now but it slows me down. Thanks.",Microsoft Authenticator,Production,New,2026-09-22 14:20,Internal,True
+INC0200323,login error on hr portal,"HR Portal says my account is not assigned to this application. New joiner cannot access HR Portal, error AADSTS50105. Rebooting didn't help. My laptop is LT-8201. Please help.",HR Portal,Production,New,2026-09-22 17:11,Internal,True
+INC0200324,Outlook keeps asking for password,"I get the Windows security prompt for Outlook every few minutes. After my password change Outlook won't stop asking for credentials. It happens a few times a day.
+
+Regards,
+Arjun Garcia
+arjun.garcia@acmecorp.example | +91 9811411151",Outlook,Production,New,2026-09-23 08:00,Internal,True
+INC0200325,Nobody can open Intranet,Intranet gives DNS_PROBE_FINISHED_NXDOMAIN for the whole department.,Intranet,Production,New,2026-09-23 08:12,Internal,True
+INC0200326,New expense app shows blank screen,Expense Hub loads the header but the page body is empty. I already restarted my laptop. My laptop is LT-2458. Can someone look into this?,Expense Hub,Production,New,2026-09-23 10:46,Internal,True
+INC0200327,DNS error for Confluence,"Dear IT, Confluence shows 'This site can't be reached' for me but works for others. Thanks in advance.",Confluence,Production,New,2026-09-23 12:36,Internal,True
+INC0200328,please install tableau on my laptop,"Hello, I need Tableau for reporting work, can you install it? It happens a few times a day. I already restarted my laptop. Please help.
+
+Regards,
+Laura Pillai
+laura.pillai@acmecorp.examlpe | +91 9276516035",Tableau,Production,New,2026-09-23 12:51,Internal,True
+INC0200329,reporting portal takes minutes to load,Filters in Reporting Portal spin forever. Since the weekend release Reporting Portal keeps timing out. My entire team (10 people) is affected. My laptop is LT-6575. Thanks in advance.,Reporting Portal,Production,New,2026-09-23 13:31,Internal,True
+INC0200330,AD account locked out repeatedly,"I keep getting 'your account has been locked' and have to call the helpdesk to unlock. I tried logging out and in again. Thanks.
+
+Regards,
+Rohit Taylor
+rohit.taylor@acmecorp.example | +91 9870934674",Outlook mobile,Production,New,2026-09-23 14:58,Internal,True
+INC0200331,Printer not found after office move,"Hi support, Adding printer PRN-DAL-2F-01 fails with 'printer not found'. I tried logging out and in again.",Printer,Production,New,2026-09-23 16:51,Restricted,True
+INC0200332,Can't connect to corporate Wi-Fi,"Office Wi-Fi authentication fails only on my laptop. Please check urgently.
+
+Regards,
+Divya Smith
+divya.smith@acmecorp.example | +91 9339719022",Corporate Wi-Fi,Production,New,2026-09-23 19:25,Public,True
+INC0200333,Laptop clock is wrong,"Hello, Time zone on my laptop changed by itself. My laptop clock is 2 hours off and meeting invites show wrong times. Low priority request. Can someone look into this?
+
+Regards,
+Sanjay Kumar
+sanjay.kumar@acmecorp.example | +91 9912611337",Windows,Production,New,2026-09-23 20:02,Internal,True
+INC0200334,Clicked phishing email and typed credentials,"Hi team, I received an email about a shared DocuSign document and entered my username and password on the page, now I think it was fake. Since Monday. This is blocking the finance month-end close. I cleared my browser cache already.",DocuSign,Production,New,2026-09-24 13:33,Restricted,True
+INC0200335,Concur: user not assigned to application,Concur says my account is not assigned to this application. I sign in to Concur and it goes back to the login screen again.,Concur,Production,New,2026-09-24 14:12,Internal,True
+INC0200336,sales dashboard very slow,"Hi, Dashboards in Sales Dashboard are extremely slow for all of us. Since Monday. We cannot process orders until this is fixed. I already restarted my laptop.
+
+Regards,
+Vikram Reddy
+vikram.reddy@acmecorp.example | +91 9642000909",Sales Dashboard,Production,New,2026-09-24 15:35,Internal,True
+INC0200337,need visio installed,"Please install Visio on my laptop, I need it for a new project. Requesting installation of Visio. Manager approved. No rush on this. Kindly assist.",Visio,Production,New,2026-09-24 16:03,Internal,True
+INC0200338,Wi-Fi dropping on the 3rd floor,"Dear IT, Wireless signal is very weak near the east wing of the 3rd floor. Teams calls keep disconnecting on the 3rd floor, other floors are fine. My entire team (10 people) is affected. Can someone look into this?
+
+Regards,
+Sneha Singh
+sneha.singh@acmecorp.example | +91 9642139742",Corporate Wi-Fi,Production,New,2026-09-24 16:16,Restricted,True
+INC0200339,Password expired cannot log in,I am getting a 'your password has expired' message on SAP GUI. I tried my old password a few times. It's been like this for 2 days.,SAP GUI,Production,New,2026-09-24 18:37,Internal,True
+INC0200340,Printing not working,"I can't print to PRN-BEN-4F-08, it says error - printing. Print queue won't clear and the printer appears offline. Just me, others are fine.",Printer,Production,New,2026-09-25 11:21,Internal,True
+INC0200341,Default browser changes back,"Dear IT, Default app settings don't stay. Rebooting didn't help. My laptop is LT-4915. Can someone look into this?
+
+Regards,
+Laura Patel
+laura.patel@acmecorp.example | +91 9439093052",Edge,Production,New,2026-09-25 13:57,Internal,True
+INC0200342,Reporting Portal PDF export shows dates wrong,"when i export to pdf from reporting portal the dates show as mm/dd instead of dd/mm. since monday. low priority request. i already restarted my laptop. my laptop is lt-5777. kindly assist.
+
+regards,
+sanjay nair
+sanjay.nair@acmecorp.example | +91 9466321603",Reporting Portal,Production,New,2026-09-25 14:34,Internal,True
+INC0200343,Upload error on Expense Portal,"When I upload my receipt PDF in Expense Portal it just says upload failed. Expense Portal rejects my attachment without a clear error. Just me, others are fine. Rebooting didn't help.
+
+Regards,
+Wei Das
+wei.das@acmecorp.example | +91 9127784016",Expense Portal,Production,New,2026-09-25 18:13,Internal,True
+INC0200344,urgent: payments api pods restarting continuously,"Payments API health checks failing after the config change, pods keep restarting. Production is down for all users. Rebooting didn't help.",Payments API,Production,New,2026-09-27 16:51,Internal,True
+INC0200345,Printer offline,"Documents get stuck in the print queue and nothing prints. It's been like this for 2 days. Low priority request. Thanks in advance.
+
+Regards,
+Suresh Khan
+suresh.khan@acmecorp.example | +91 9490379189",Printer,Production,New,2026-09-28 02:46,Internal,True
+INC0200346,Low disk space warning,My laptop takes ages to open anything and freezes often. This has been happening since this morning. Only my machine seems affected. My laptop is LT-6429.,Laptop,Production,New,2026-09-28 06:27,Internal,True
+INC0200347,Follow up,"Following up on my earlier issue, still not fixed.",,Production,New,2026-09-28 13:36,Internal,True
+INC0200348,crm error http 500 when saving,"every time we try to save a customer record in crm we get http 500 internal server error. crm shows 'something went wrong' and the record does not save. since monday. several colleagues have the same problem.
+
+regards,
+sara nair
+sara.nair@acmecorp.example | +91 9883229837",CRM,Production,New,2026-09-28 14:09,Internal,True
+INC0200349,Laptop locked by BitLocker,"dear it, laptop lt-7273 won't boot, it wants a bitlocker recovery key. i already restarted my laptop. thanks in advance.",Laptop,Production,New,2026-09-28 14:34,Internal,True
+INC0200350,VPN not connecting after password change,"VPN fails with error 809 right after my password reset yesterday. Only me, my team is connected fine. This has been happening since this morning. I can work around it for now but it slows me down.
+
+Regards,
+Divya Gupta
+divya.gupta@acmecorp.example | +91 9088615892",GlobalProtect VPN,Production,New,2026-09-28 17:02,Internal,True
+INC0200351,Can't print - printer shows offline,"Documents get stuck in the print queue and nothing prints. Print queue won't clear and the printer appears offline. My laptop is LT-7363. Please help.
+
+Regards,
+Fatima Rao
+fatima.rao@acmecorp.example | +91 9617928604",Printer,Production,New,2026-09-29 09:46,Restricted,True
+INC0200352,can't change default program,"Dear IT, I set Adobe Reader as default but it resets after reboot. Default app settings don't stay. It's been like this for 2 days. Whenever someone gets a chance. Kindly assist.
+
+Regards,
+Rohit Sharma
+rohit.sharma@acmecorp.example | +91 9694575715",Adobe Reader,Production,New,2026-09-29 11:38,Internal,True
+INC0200353,URGENT: Site outage - no internet,Nobody at the London office has internet or access to internal systems. Please help.,WAN link,Production,New,2026-09-29 16:34,Restricted,True
+INC0200354,Outlook stuck on trying to connect,"Outlook keeps saying 'Trying to connect...' but webmail works fine. Started yesterday. It happens a few times a day. Thanks.
+
+Regards,
+Aisha Reddy
+aisha.reddy@acmecorp.example | +91 9640612945",Outlook,Production,New,2026-09-29 17:52,Internal,True
+INC0200355,Account lockout every morning,"I'm getting locked out repeatedly and I only use my desktop. Started yesterday. Only my machine seems affected. I cleared my browser cache already. Kindly assist.
+
+Regards,
+Pooja Wilson
+pooja.wilson@acmecorp.example | +91 9902005331",Active Directory,Production,New,2026-09-29 17:58,Internal,True
+INC0200356,OTP code keeps failing,"hi team, the 6 digit code from google authenticator is always rejected as invalid. started after lunch today.
+
+regards,
+priya sharma
+priya.sharma@acmecorp.example | +91 9444181769",Google Authenticator,Production,New,2026-09-30 08:30,Public,True
+INC0200357,Wrong date format in Reporting Portal export,"When I export to PDF from Reporting Portal the dates show as MM/DD instead of DD/MM. Started yesterday. I can work around it for now but it slows me down. My laptop is LT-9784.
+
+Regards,
+Emma Patel
+emma.patel@acmecorp.example | +91 9642582624",Reporting Portal,Production,New,2026-09-30 08:52,Internal,True
+INC0200358,laptop locked by bitlocker,"Good morning, I restarted and now it's asking for the BitLocker key. This has been happening since this morning. Just me, others are fine. I already restarted my laptop. Thanks in advance.
+
+Regards,
+Sara Patel
+sara.patel@acmecorp.example | +91 9225539831",Laptop,Production,New,2026-09-30 12:37,Internal,True
+INC0200359,Teams stuck loading,"Hi team, Messages I send in Teams stay pending. Started after lunch today. Low priority request. Rebooting didn't help.",Microsoft Teams,Production,New,2026-10-01 10:36,Public,True
+INC0200360,VPN fails since password reset,"Since I changed my password GlobalProtect VPN gives error 809 when connecting from home. This has been happening since this morning. We cannot process orders until this is fixed. I already restarted my laptop.
+
+Regards,
+Wei Wilson
+wei.wilson@acmecorp.example | +91 9236406386",GlobalProtect VPN,Production,New,2026-10-02 17:06,Internal,True
+INC0200361,wrong date format in sap erp export,"Hi team, When I export to PDF from SAP ERP the dates show as MM/DD instead of DD/MM. SAP ERP exports show 10/03 when it should be 03/10. Rebooting didn't help. Please check urgently.
+
+Regards,
+Carlos Smith
+carlos.smith@acmecorp.example | +91 9842467084",SAP ERP,Production,New,2026-10-02 18:58,Internal,True
+INC0200362,Laptop overheating and battery issue,"Battery shows 'plugged in, not charging'. It happens a few times a day. I tried logging out and in again. Please check urgently.",Laptop,Production,New,2026-10-03 00:08,Internal,True
+INC0200363,Need access to Finance share,"When I open the Finance share on the file server I get 'Access is denied'. My colleagues can open the Finance share but I get a permission error. No rush on this. I cleared my browser cache already. Please help.
+
+Regards,
+Laura Garcia
+laura.garcia@acmecorp.example | +91 9381855695",Finance share,Production,New,2026-10-05 17:09,Internal,True
+INC0200364,Getting mailbox almost full warning,"I can't send emails, I get a message that my mailbox is full. Emails bounce back saying mailbox is full.
+
+Regards,
+Divya Chen
+divya.chen@acmecorp.example | +91 9056225470",Outlook,Production,New,2026-10-06 10:25,Internal,True
+INC0200365,Wireless keeps disconnecting on the 2nd floor,"Good morning, Wireless signal is very weak near the east wing of the 2nd floor. I tried logging out and in agian. Thanks.",Corporate Wi-Fi,Production,New,2026-10-06 11:17,Internal,True
+INC0200366,slow performance in reporting portal since release,Filters in Reporting Portal spin forever. It's been like this for 2 days. This is blocking the finance month-end close. My laptop is LT-9484. Thanks in advance.,Reporting Portal,Production,New,2026-10-06 12:39,Internal,True
+INC0200367,Outlook shows disconnected status,"Hi support, Outlook status bar shows 'Disconnected' and no new emails arrive. It happens a few times a day.",Outlook,Production,New,2026-10-06 14:46,Internal,True
+INC0200368,Authenticator code invalid,"Google Authenticator shows codes but none of them work. Only my machine seems affected. My laptop is LT-6088. Please check urgently.
+
+Regards,
+Lin Khan
+lin.khan@acmecorp.example | +91 9391638888",Google Authenticator,Production,New,2026-10-06 14:50,Internal,True
+INC0200369,Computer slow and freezing,"hello, applications take minutes to start on lt-3690.
+
+regards,
+rahul smith
+rahul.smith@acmecorp.example | +91 9773085824",Laptop,Production,New,2026-10-06 17:01,Restricted,True
+INC0200370,VPN not connecting after password change,"VPN fails with error 809 right after my password reset yesterday. Only me, my team is connected fine. It happens a few times a day. Rebooting didn't help. Thanks.",GlobalProtect VPN,Production,New,2026-10-06 17:09,Restricted,True
+INC0200371,vpn not connecting after password change,GlobalProtect VPN shows error 809 and keeps asking for credentials. VPN fails with error 809 right after my password reset yesterday. Please help.,GlobalProtect VPN,Production,New,2026-10-07 10:05,Restricted,True
+INC0200372,Stuck in sign-in loop on Concur,"hello, when i log in to concur the page keeps redirecting back to the sign-in page. too many redirects error when opening concur.",Concur,Production,New,2026-10-07 11:12,Internal,True
+INC0200373,Not working,"Something is wrong with my computer, please call me on +91 9264076558.",,Production,New,2026-10-07 11:22,Internal,True
+INC0200374,Outlook keeps asking for password,"I get the Windows security prompt for Outlook every few minutes. Started after lunch today. Low priority request. My laptop is LT-6660.
+
+Regards,
+Karthik Das
+karthik.das@acmecorp.example | +91 9617670439",Outlook,Production,New,2026-10-07 12:04,Internal,True
+INC0200375,Camera not detected in Teams,"Camera works in the Camera app but Teams can't find it. I can work around it for now but it slows me down. My laptop is LT-1313. Thanks.
+
+Regards,
+John Sharma
+john.sharma@acmecorp.example | +91 9156164131",Microsoft Teams,Production,New,2026-10-07 12:22,Internal,True
+INC0200376,visitor badge printer not encoding cards,"Good morning, Badges come out blank on the chip side, front print looks fine. Visitor badges print fine from the Badge Printer but the doors don't accept them. This has been happening since this morning. I tried logging out and in again. My laptop is LT-1673.",Badge Printer,Production,New,2026-10-07 12:47,Internal,True
+INC0200377,Battery swollen / not charging,"my laptop battery goes from 100% to 0 in about an hour. started after lunch today. it happens a few times a day. my laptop is lt-6804. can someone look into this?
+
+regards,
+vikram pillai
+vikram.pillai@acmecorp.example | +91 9239122356",Laptop,Production,New,2026-10-07 18:26,Internal,True
+INC0200378,Headset mic not working,"Mic level stays at zero with the USB headset. People can't hear me in calls when I use my headset. It happens a few times a day. Thanks.
+
+Regards,
+Michael Pillai
+michael.pillai@acmecorp.example | +91 9304186107",Headset,Production,New,2026-10-07 18:27,Internal,True
+INC0200379,teams chat not syncing,"Hi team, Teams chat shows messages from yesterday only, new ones don't appear. No rush on this. Thanks.",Microsoft Teams,Production,New,2026-10-07 18:36,Internal,True
+INC0200380,Default app keeps resetting,"Every time I restart, files open in the wrong program instead of Chrome. Started yesterday. Please check urgently.",Chrome,Production,New,2026-10-08 09:48,Restricted,True
+INC0200381,Account locked out after password change,"Hi team, My account locks out every morning around 7 AM even before I log in. I tried logging out and in again.",Active Directory,Production,New,2026-10-08 10:38,Internal,True
+INC0200382,OTP code keeps failing,"I enter the code from the app but it says the code is wrong. MFA code fails even though I type it quickly. I travelled last week to a different time zone. It's been like this for 2 days. Just me, others are fine.
+
+Regards,
+Sanjay Reddy
+sanjay.reddy@acmecorp.example | +91 9660773866",Microsoft Authenticator,Production,New,2026-10-08 11:43,Internal,True
+INC0200383,getting mailbox almost full warning,"hi team, emails bounce back saying mailbox is full. i keep getting warnings that my mailbox is almost full and now sending stopped. started yesterday. only my machine seems affected. my laptop is lt-4100.",Exchange Online,Production,New,2026-10-08 11:43,Internal,True
+INC0200384,My account locks every few minutes,Since I changed my password yesterday my account keeps locking out. My account gets locked every 15-20 minutes even though I'm typing the right password. Several colleagues have the same problem.,Outlook mobile,Production,New,2026-10-08 12:35,Internal,True
+INC0200385,Can't see Copilot button in Office,I was told I have access to Copilot but it doesn't show up in Office. Not urgent.,Copilot,Production,New,2026-10-08 12:44,Internal,True
+INC0200386,Excel not responding with large workbook,"Excel closes without any erorr when I try to open attachments. I installed a reporting plug-in last week.
+
+Regards,
+Rohit Wilson
+rohit.wilson@acmecorp.example | +91 9689676136",Excel,Production,New,2026-10-08 18:38,Internal,True
+INC0200387,Shared mailbox not showing,I get an error when I try to open the invoices@acmecorp.example mailbox.,Outlook,Production,New,2026-10-09 04:23,Internal,True
+INC0200388,Slow SQL after data load,"Dear IT, SQL Server queries for the sales report are timing out. My entire team (19 people) is affected. I already restarted my laptop.
+
+Regards,
+Sneha Kumar
+sneha.kumar@acmecorp.example | +91 9902113600",SQL Server,Production,New,2026-10-09 10:57,Internal,True
+INC0200389,Upload error on Expense Portal,"Expense Portal rejects my attachment without a clear error. No rush on this. I already restarted my laptop. My laptop is LT-1546. Thanks in advance.
+
+Regards,
+Emma Khan
+emma.khan@acmecorp.example | +91 9004512664",Expense Portal,Production,New,2026-10-09 11:34,Internal,True
+INC0200390,application cannot connect to database - ora-12541,"Hello, All application servers fail to connect to Billing DB with ORA-12541: TNS:no listener. This has been happening since this morning. Possible security incident, please treat as urgent.",Billing DB,Production,New,2026-10-09 11:44,Internal,True
+INC0200391,Self service password reset says not registered,"Reset portal sohws 'You can't reset your own password because you haven't registered'. I tried to reset my password online but never get the verification code. Please check urgently.
+
+Regards,
+Laura Sharma
+laura.sharma@acmecorp.example | +91 9679264207",Password Reset Portal,Production,New,2026-10-09 12:06,Internal,True
+INC0200392,Nightly DB backup not running,"No database backups for the last 2 days on FS-SRV-40. Several colleagues have the same problem.
+
+Regards,
+Ananya Reddy
+ananya.reddy@acmecorp.example | +91 9664873432",SQL Server,Production,New,2026-10-09 12:52,Public,True
+INC0200393,Workday SSO redirect loop,when i log in to workday the page keeps redirecting back to the sign-in page. i cleared my browser cache already. kindly assist.,Workday,Production,New,2026-10-09 15:05,Restricted,True
+INC0200394,Need access to Finance share,Getting error 0x80070005 when trying to open the Finance share. I can work around it for now but it slows me down. Can someone look into this?,Finance share,Production,New,2026-10-09 16:33,Internal,True
+INC0200395,Authenticator not working on new phone,"Dear IT, I got a new phone and now I don't receive the Okta Verify approval request. I reinstalled Okta Verify and my account is gone from it. This has been happening since this morning. It happens a few times a day.",Okta Verify,Production,New,2026-10-09 18:07,Internal,True
+INC0200396,Printer not found after office move,"Adding printer PRN-NOI-4F-03 fails with 'printer not found'.
+
+Regards,
+Rahul Smith
+rahul.smith@acmecorp.example | +91 9991237677",Printer,Production,New,2026-10-09 18:16,Internal,True
+INC0200397,sap gui closes immediately after update,"Since last night's Windows update SAP GUI closes as soon as I open it. I click on SAP GUI and the window flashes and disappears. Please check urgently.
+
+Regards,
+Michael Brown
+michael.brown@acmecorp.example | +91 9303367983",SAP GUI,Production,New,2026-10-12 08:22,Internal,True
+INC0200398,Print jobs stuck in queue,"I can't print to PRN-PUN-2F-03, it says error - printing. Print queue won't clear and the printer appears offline. Just me, others are fine. Please help.",Printer,Production,New,2026-10-12 12:05,Internal,True
+INC0200399,getting mailbox almost full warning,I keep getting warnings that my mailbox is almost full and now sending stopped. It happens a few times a day. Can someone look into this?,Outlook,Production,New,2026-10-12 13:49,Internal,True
+INC0200400,VPN not connecting after password change,GlobalProtect VPN shows error 809 and keeps asking for credentials. I'm working from home today. It happens a few times a day. My laptop is LT-5278.,GlobalProtect VPN,Production,New,2026-10-12 15:35,Internal,True
+INC0200401,Cisco AnyConnect stuck connecting,"Hello, The Cisco AnyConnect icon shows an error and won't start. It happens a few times a day.",Cisco AnyConnect,Production,New,2026-10-13 08:18,Internal,True
+INC0200402,Second screen not working with dock,"good morning, monitors flicker and go black when connected via the dock. laptop doesn't detect external displays through the docking station. i can work around it for now but it slows me down. i cleared my browser cache already. thanks in advance.",Docking station,Production,New,2026-10-13 09:46,Internal,True
+INC0200403,Access denied on shared folder,getting error 0x80070005 when triyng to open the hr share. this has been happening since this morning. i can work around it for now but it slows me down. rebooting didn't help. please help.,HR share,Production,New,2026-10-13 13:36,Internal,True
+INC0200404,cannot connect to vpn - error 809,VPN fails with error 809 right after my password reset yesterday. GlobalProtect VPN shows error 809 and keeps asking for credentials. I'm working from home today. I can work around it for now but it slows me down. My laptop is LT-5910.,GlobalProtect VPN,Production,New,2026-10-13 14:20,Internal,True
+INC0200405,VPN outage error 809,"Hi team, Since last night nobody in our office can connect to GlobalProtect VPN, everyone gets error 809.
+
+Regards,
+Ananya Iyer
+ananya.iyer@acmecorp.example | +91 9339262891",GlobalProtect VPN,Production,New,2026-10-13 16:59,Internal,True
+INC0200406,ORA-12541 on new app server,new uat server fails with ora-12541 when connecting to billing db. my entire team (25 people) is affected. can someone look into this?,Billing DB,Dev,New,2026-10-13 18:24,Internal,True
+INC0200407,Teams shows old messages only,"Good morning, Messages I send in Teams stay pending. Teams chat shows messages from yesterday only, new ones don't appear. I can work around it for now but it slows me down. Thanks.
+
+Regards,
+Priya Pillai
+priya.pillai@acmecorp.example | +91 9327435083",Microsoft Teams,Production,New,2026-10-14 10:03,Internal,True
+INC0200408,Updates keep failing,"Hi team, My laptop keeps saying updates failed, error 0x800f0922. Compliance portal shows my laptop missing patches. This has been happening since this morning. Thanks.
+
+Regards,
+Neha Rao
+neha.rao@acmecorp.example | +91 9368602040",Windows Update,Production,New,2026-10-14 12:59,Internal,True
+INC0200409,outlook stuck on trying to connect,"Outlook status bar shows 'Disconnected' and no new emails arrive. Just me, others are fine. I tried logging out and in again. My laptop is LT-2246. Thanks in advance.",Outlook,Production,New,2026-10-14 15:53,Internal,True
+INC0200410,Locked out again after password change,"Account locked out multiple times today, my manager says event 4740 shows in the logs. My account gets locked every 15-20 minutes even though I'm typing the right password. I have email set up on my phone. It's been like this for 2 days. We cannot process orders until this is fixed. Thanks in advance.",Outlook mobile,Production,New,2026-10-14 16:01,Internal,True
+INC0200411,Can't login to SAP GUI - password expired message,"When I try to log in to SAP GUI it says my password has expired. It happens a few times a day.
+
+Regards,
+Maria Patel
+maria.patel@acmecorp.example | +91 9882599785",SAP GUI,Production,New,2026-10-15 08:57,Internal,True
+INC0200412,Nobody can open Jira,All users get 'site can't be reached' on Jira. This is blocking the finance month-end close.,Jira,Production,New,2026-10-15 14:28,Internal,True
+INC0200413,globalprotect vpn error 809,"i can't connect to the vpn anymore, error 809, i recently changed my password. restarting the laptop didn't help. only my machine seems affected.",GlobalProtect VPN,Production,New,2026-10-15 17:59,Internal,True
+INC0200414,Default app keeps resetting,I set Adobe Reader as default but it reests after reboot. Default app settings don't stay. Only my machine seems affected.,Adobe Reader,Production,New,2026-10-15 18:45,Internal,True
+INC0200415,SAP GUI crash error 0xc0000005,"Good morning, SAP GUI crashes on launch with error 0xc0000005. Since last night's Windows update SAP GUI closes as soon as I open it. This is blocking the finance month-end close. I tried logging out and in again. My laptop is LT-1278. Thanks.",SAP GUI,Production,New,2026-10-16 08:47,Internal,True
+INC0200416,time zone incorrect after travel,My laptop clock is 2 hours off and meeting invites show wrong times. Since Monday. I tried logging out and in again. My laptop is LT-5378. Thanks.,Windows,Production,New,2026-10-16 09:10,Internal,True
+INC0200417,Shared mailbox not showing,"I get an error when I try to open the hr-team@acmecorp.example mailbox. My manager said I was added to hr-team@acmecorp.example but I can't see it.
+
+Regards,
+Karthik Taylor
+karthik.taylor@acmecorp.example | +91 9425637997",Outlook,Production,New,2026-10-16 09:16,Internal,True
+INC0200418,Wi-Fi dropping on the 3rd floor,"good morning, wi-fi drops every few minutes for everyone on the 3rd floor. it happens a few times a day. i tried logging out and in again. can someone look into this?",Corporate Wi-Fi,Production,New,2026-10-16 12:44,Internal,True
+INC0200419,Cannot log in to Workday - page keeps reloading,I sign in to Workday and it goes back to the login screen again. When I log in to Workday the page keeps redirecting back to the sign-in page. I already restarted my laptop. My laptop is LT-5696.,Workday,Production,New,2026-10-16 16:10,Internal,True
+INC0200420,adobe reader install failed 1603,"Installing Adobe Reader from Software Center fails with error 1603. Software Center shows 'Failed' for Adobe Reader, code 1603. Only my machine seems affected. I cleared my browser cache already.",Adobe Reader,Production,New,2026-10-16 17:04,Internal,True
+INC0200421,Account lockout every morning,"My account locks out every morning around 7 AM even before I log in. Lockouts started after password change; event 4740 points to server APP-SRV-40. I set up a scheduled report export some months ago. Only my machine seems affected.
+
+Regards,
+Lin Kumar
+lin.kumar@acmecorp.example | +91 9660275945",Active Directory,Production,New,2026-10-17 21:16,Internal,True
+INC0200422,Battery dies within an hour,"battery shows 'plugged in, not charging'. the touchpad is lifting and the battery seems swollen.",Laptop,Production,New,2026-10-19 11:30,Internal,True
+INC0200423,laptop not joining office wi-fi,"My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works. My laptop is LT-2723.",Corporate Wi-Fi,Production,New,2026-10-19 12:03,Internal,True
+INC0200424,Please install Visio on my laptop,"Hi, Please install Visio on my laptop, I need it for a new project. Visio is not in Software Center for me. Whenever someone gets a chance. I cleared my browser cache already. My laptop is LT-2249.",Visio,Production,New,2026-10-19 21:19,Internal,True
+INC0200425,SAP GUI not opening after Windows update,SAP GUI crashes on launch with error 0xc0000005. I click on SAP GUI and the window flashes and disappears. It's been like this for 2 days. Only my machine seems affected. Kindly assist.,SAP GUI,Production,New,2026-10-19 23:29,Internal,True
+INC0200426,windows update failing 0x800f0922,"Dear IT, Compliance portal sohws my laptop missing patches. This has been happening since this morning. Whenever someone gets a chance. Rebooting didn't help. Please help.",Windows Update,Production,New,2026-10-20 00:08,Internal,True
+INC0200427,New floor printer not working,Printer PRN-NOI-2F-03 is not in my list anymore.,Printer,Production,New,2026-10-20 08:59,Internal,True
+INC0200428,Teams camera not working,"Hello, Teams video preview is black. Since Monday. Just me, others are fine. Please help.",Microsoft Teams,Production,New,2026-10-20 13:57,Internal,True
+INC0200429,CRM save fails for everyone,"Hi support, We get HTTP 500 on submit, viewing records still works. CRM shows 'Something went wrong' and the record does not save. My entire team (17 people) is affected. Thanks in advance.",CRM,Production,New,2026-10-20 14:15,Internal,True
+INC0200430,print jobs stuck in queue,"Dear IT, Documents get stuck in the print queue and nothing prints. Can someone look into this?",Printer,Production,New,2026-10-20 21:12,Internal,True
+INC0200431,Access denied on shared folder,"My colleagues can open the HR share but I get a permission error. My laptop is LT-9334. Please check urgently.
+
+Regards,
+Meera Smith
+meera.smith@acmecorp.example | +91 9243680170",HR share,Production,New,2026-10-21 12:38,Internal,True
+INC0200432,Account lockout every morning,"I'm getting locked out repeatedly and I only use my desktop. I don't use any mobile dveice for work. Started after lunch today. Just me, others are fine. I tried logging out and in again. My laptop is LT-5940. Please help.",Active Directory,Production,New,2026-10-21 14:45,Internal,True
+INC0200433,Software request: Power BI Desktop,"Please install Power BI Desktop on my laptop, I need it for a new project. Power BI Desktop is not in Software Center for me. Low priority request. I tried logging out and in again. My laptop is LT-1359. Thanks.",Power BI Desktop,Production,New,2026-10-21 16:22,Internal,True
+INC0200434,Laptop clock is wrong,"Good mroning, Since I came back from the trip my laptop shows the wrong time. Not urgent. Can someone look into this?
+
+Regards,
+Lin Chen
+lin.chen@acmecorp.example | +91 9626378920",Windows,Production,New,2026-10-21 17:43,Internal,True
+INC0200435,software center install error 1603,"Hello, Visio installation rolls back at the end with a fatal error 1603. Whenever someone gets a chance. Thanks.",Visio,Production,New,2026-10-22 00:57,Internal,True
+INC0200436,authenticator not working on new phone,"The sign-in screen waits for approval but nothing appears on my phone. It's been like this for 2 days. My laptop is LT-7930.
+
+Regards,
+Tom Joshi
+tom.joshi@acmecorp.example | +91 9029807812",Okta Verify,Production,New,2026-10-22 07:05,Internal,True
+INC0200437,Microphone not working in meetings,"Mic level stays at zero with the USB headset. Started after lunch today. Whenever someone gets a chance. Please help.
+
+Regards,
+Imran Nair
+imran.nair@acmecorp.example | +91 9668182392",Headset,Production,New,2026-10-22 08:01,Internal,True
+INC0200438,VPN not connecting after password change,"VPN fails with error 809 right after my password reset yesterday. Multiple users report GlobalProtect VPN error 809 after the network change window. Some people say it's only me, others say it's everyone.",GlobalProtect VPN,Production,New,2026-10-22 09:17,Internal,True
+INC0200439,Application cannot connect to database - ORA-12541,"Since the server reboot, connections to Billing DB fail with ORA-12541. After the migration, our app on BKP-SRV-36 throws ORA-12541. Not sure if these are related.",Billing DB,Production,New,2026-10-22 10:57,Internal,True
+INC0200440,second screen not working with dock,"Monitors flicker and go black when connected via the dock. It's been like this for 2 days. I can work around it for now but it slows me down. I already restarted my laptop.
+
+Regards,
+Lin Patel
+lin.patel@acmecorp.example | +91 9850247152",Docking station,Production,New,2026-10-22 11:52,Internal,True
+INC0200441,Laptop not joining office Wi-Fi,"Wi-Fi was fine yesterday, today it won't authenticate. I can see the corporate SSID but it never connects. Rebooting didn't help. My laptop is LT-1252.",Corporate Wi-Fi,Production,New,2026-10-22 12:48,Internal,True
+INC0200442,printer not found after office move,"Good morning, Adding printer PRN-BEN-1F-07 fails with 'printer not found'. Printer PRN-BEN-1F-07 is not in my list anymore.
+
+Regards,
+John Kumar
+john.kumar@acmecorp.example | +91 9573588445",Printer,Production,New,2026-10-22 15:00,Internal,True
+INC0200443,Laptop clock is wrong,my laptop clock is 2 hours off and meeting invites show wrong times. it happens a few times a day. thanks in advance.,Windows,Production,New,2026-10-22 15:29,Public,True
+INC0200444,Problem,"The application is giving some error, not sure which one.",,Production,New,2026-10-22 15:42,Internal,True
+INC0200445,Excel crashes when opening files,Excel closes without any error when I try to open attachments. I installed a reporting plug-in last week. It's been like this for 2 days. My laptop is LT-5334.,Excel,Production,New,2026-10-22 18:42,Internal,True
+INC0200446,payments api returning 503,"Payments API health checks failing after the config change, pods keep restarting. Started after lunch today.",Payments API,Production,New,2026-10-23 04:35,Internal,True
+INC0200447,office broken since patching,"Since the update Office keeps showing errors. My entire team (19 people) is affected. Can someone look into this?
+
+Regards,
+Fatima Smith
+fatima.smith@acmecorp.example | +91 9940189805",Office,Production,New,2026-10-23 09:37,Internal,True
+INC0200448,Not able to work,Nothing is opening properly.,,Production,New,2026-10-23 14:57,Internal,True
+INC0200449,Battery dies within an hour,"hi team, the touchpad is lifting and the battery seems swollen. kindly assist.
+
+regards,
+john gupta
+john.gupta@acmecorp.example | +91 9215632373",Laptop,Production,New,2026-10-24 11:49,Public,True
+INC0200450,Excel not responding with large workbook,Excel starts but crashes as soon as I open a file. Other Office apps are fine. Low priority request. My laptop is LT-4555. Please check urgently.,Excel,Production,New,2026-10-24 13:36,Public,True

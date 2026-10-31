@@ -1,0 +1,2476 @@
+{
+  "scenarios": [
+    {
+      "id": "ACC-PWD-01",
+      "category": "Access",
+      "subcategory": "Password reset",
+      "group": "Service-Desk-L1",
+      "apps": [
+        "Windows sign-in",
+        "Employee Portal",
+        "SAP GUI"
+      ],
+      "titles": [
+        "Password expired cannot log in",
+        "Can't login to {app} - password expired message",
+        "Password expired",
+        "Unable to sign in, says password has expired"
+      ],
+      "symptoms": [
+        "When I try to log in to {app} it says my password has expired.",
+        "I am getting a 'your password has expired' message on {app}.",
+        "Cannot sign in this morning, the screen asks me to change my password but it fails.",
+        "My password seems to have expired and I can't get past the login screen."
+      ],
+      "root_cause": "Password expired under the 90-day password policy",
+      "steps": [
+        "Verified the account password had expired in Active Directory",
+        "Guided user through self-service password reset",
+        "User signed in with the new password",
+        "Advised user to update the password on mobile devices"
+      ],
+      "prio": {
+        "P3": 0.75,
+        "P4": 0.15,
+        "P2": 0.1
+      },
+      "codes": [
+        ""
+      ],
+      "context": [
+        "I was on leave for two weeks.",
+        "I did not get any reminder email.",
+        "I tried my old password a few times."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.8,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "ACC-PWD-02",
+      "category": "Access",
+      "subcategory": "Password reset",
+      "group": "Service-Desk-L1",
+      "apps": [
+        "Password Reset Portal"
+      ],
+      "titles": [
+        "Password reset link not working",
+        "Self service password reset says not registered",
+        "Can't reset my password myself",
+        "Forgot password - reset page error"
+      ],
+      "symptoms": [
+        "I forgot my password and the self-service reset page says my account is not registered for reset.",
+        "The password reset portal tells me I have no verification methods set up.",
+        "I tried to reset my password online but never get the verification code.",
+        "Reset portal shows 'You can't reset your own password because you haven't registered'."
+      ],
+      "root_cause": "User not enrolled in self-service password reset (SSPR)",
+      "steps": [
+        "Verified user identity via manager callback",
+        "Set a temporary password and forced change at next sign-in",
+        "Enrolled user in self-service password reset with phone and authenticator",
+        "Confirmed user can sign in"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.2,
+        "P2": 0.1
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "ACC-PWD-03",
+      "category": "Access",
+      "subcategory": "Password reset",
+      "group": "Security-Ops",
+      "apps": [
+        "Microsoft 365",
+        "OneDrive",
+        "DocuSign"
+      ],
+      "titles": [
+        "Entered my password on a suspicious link",
+        "Possible phishing - I clicked and logged in",
+        "Clicked phishing email and typed credentials",
+        "Suspicious login alert after email link"
+      ],
+      "symptoms": [
+        "I received an email about a shared {app} document and entered my username and password on the page, now I think it was fake.",
+        "After clicking a link in an email I got a login page that looked like {app}. I typed my password before noticing the address was wrong.",
+        "I got an alert about a sign-in from an unknown location right after I opened a link in an email.",
+        "Colleague told me the email I opened was phishing, I had already entered my credentials."
+      ],
+      "root_cause": "Credentials compromised via phishing page",
+      "steps": [
+        "Forced password reset and revoked all active sessions",
+        "Re-registered MFA methods",
+        "Reviewed sign-in logs for unauthorized access",
+        "Blocked sender and purged the phishing email from all mailboxes",
+        "Reported incident to Security Operations"
+      ],
+      "prio": {
+        "P1": 0.7,
+        "P2": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": "Restricted",
+      "weight": 0.5,
+      "kb": true,
+      "key_step": 0
+    },
+    {
+      "id": "ACC-LCK-01",
+      "category": "Access",
+      "subcategory": "Account locked",
+      "group": "Service-Desk-L1",
+      "apps": [
+        "Active Directory",
+        "Outlook mobile"
+      ],
+      "titles": [
+        "Account keeps getting locked",
+        "AD account locked out repeatedly",
+        "Locked out again after password change",
+        "My account locks every few minutes"
+      ],
+      "symptoms": [
+        "My account gets locked every 15-20 minutes even though I'm typing the right password.",
+        "Since I changed my password yesterday my account keeps locking out.",
+        "I keep getting 'your account has been locked' and have to call the helpdesk to unlock.",
+        "Account locked out multiple times today, my manager says event {code} shows in the logs."
+      ],
+      "root_cause": "Stale password cached on mobile mail app causing repeated failed logins",
+      "steps": [
+        "Checked lockout source in AD; failed attempts came from the user's mobile device",
+        "Unlocked the account",
+        "User updated the password in the Outlook mobile app",
+        "Monitored for 1 hour, no further lockouts"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        "4740"
+      ],
+      "context": [
+        "I have email set up on my phone.",
+        "I use Outlook on my iPhone and iPad.",
+        "It started right after the password change."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.4,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "ACC-LCK-02",
+      "category": "Access",
+      "subcategory": "Account locked",
+      "group": "Service-Desk-L1",
+      "apps": [
+        "Active Directory"
+      ],
+      "titles": [
+        "Account locked out after password change",
+        "AD account locked - not using phone",
+        "Repeated account lockouts",
+        "Account lockout every morning"
+      ],
+      "symptoms": [
+        "My account locks out every morning around 7 AM even before I log in.",
+        "Account keeps locking after my password change, I don't have email on my phone.",
+        "I'm getting locked out repeatedly and I only use my desktop.",
+        "Lockouts started after password change; event {code} points to server {host}."
+      ],
+      "root_cause": "Old credentials stored in a scheduled task / mapped drive on another machine",
+      "steps": [
+        "Traced lockout source to a scheduled task on {host} running under the user's account",
+        "Updated the stored credentials in the scheduled task",
+        "Removed persistent mapped drive with saved credentials",
+        "Unlocked the account and confirmed no further lockouts"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        "4740"
+      ],
+      "context": [
+        "I have a mapped drive to the finance share.",
+        "I set up a scheduled report export some months ago.",
+        "I don't use any mobile device for work."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "ACC-PRM-01",
+      "category": "Access",
+      "subcategory": "Permission request",
+      "group": "Access-Management",
+      "apps": [
+        "Finance share",
+        "Projects share",
+        "HR share",
+        "Marketing share"
+      ],
+      "titles": [
+        "Access denied on shared folder",
+        "Need access to {app}",
+        "Cannot open team folder - access denied",
+        "Permission error on network drive"
+      ],
+      "symptoms": [
+        "When I open the {app} on the file server I get 'Access is denied'.",
+        "I joined the team last week and still can't open the {app}.",
+        "Getting error {code} when trying to open the {app}.",
+        "My colleagues can open the {app} but I get a permission error."
+      ],
+      "root_cause": "User not a member of the AD security group for the share",
+      "steps": [
+        "Confirmed manager approval for access",
+        "Added user to the share's AD security group",
+        "Asked user to sign out and back in to refresh group membership",
+        "User confirmed access to the folder"
+      ],
+      "prio": {
+        "P3": 0.5,
+        "P4": 0.5
+      },
+      "codes": [
+        "0x80070005"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.2,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "ACC-PRM-02",
+      "category": "Access",
+      "subcategory": "Permission request",
+      "group": "Access-Management",
+      "apps": [
+        "SAP ERP",
+        "Workday",
+        "ServiceNow",
+        "Salesforce"
+      ],
+      "titles": [
+        "Need role in {app}",
+        "Missing authorization in {app}",
+        "{app}: not authorized to perform transaction",
+        "Request access to approve POs in {app}"
+      ],
+      "symptoms": [
+        "When I try to run the transaction in {app} it says I am not authorized.",
+        "I moved to the procurement team and need approval rights in {app}.",
+        "{app} shows 'You do not have authorization for this action'.",
+        "Menu option is greyed out in {app}, my colleague has it."
+      ],
+      "root_cause": "Required application role not assigned to user",
+      "steps": [
+        "Obtained role owner approval",
+        "Assigned the required role in {app}",
+        "User re-logged and confirmed access"
+      ],
+      "prio": {
+        "P4": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "ACC-MFA-01",
+      "category": "Access",
+      "subcategory": "MFA issue",
+      "group": "Access-Management",
+      "apps": [
+        "Microsoft Authenticator",
+        "Okta Verify"
+      ],
+      "titles": [
+        "Not receiving MFA prompts",
+        "Authenticator not working on new phone",
+        "MFA push notifications not arriving",
+        "Can't approve sign in - changed phone"
+      ],
+      "symptoms": [
+        "I got a new phone and now I don't receive the {app} approval request.",
+        "MFA notifications go to my old phone which I already returned.",
+        "The sign-in screen waits for approval but nothing appears on my phone.",
+        "I reinstalled {app} and my account is gone from it."
+      ],
+      "root_cause": "MFA registered to old device; new device not enrolled",
+      "steps": [
+        "Verified user identity via manager callback",
+        "Removed old device registration and issued a temporary access pass",
+        "User registered {app} on the new phone",
+        "Confirmed successful MFA sign-in"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P2": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "ACC-MFA-02",
+      "category": "Access",
+      "subcategory": "MFA issue",
+      "group": "Access-Management",
+      "apps": [
+        "Microsoft Authenticator",
+        "Google Authenticator"
+      ],
+      "titles": [
+        "MFA code not accepted",
+        "Authenticator code invalid",
+        "OTP code keeps failing",
+        "Verification code wrong every time"
+      ],
+      "symptoms": [
+        "The 6 digit code from {app} is always rejected as invalid.",
+        "I enter the code from the app but it says the code is wrong.",
+        "MFA code fails even though I type it quickly.",
+        "{app} shows codes but none of them work."
+      ],
+      "root_cause": "Phone clock out of sync causing invalid one-time codes",
+      "steps": [
+        "Checked phone time settings; clock was several minutes off",
+        "Enabled automatic date and time on the phone",
+        "Synced time in the authenticator app",
+        "Code accepted on next attempt"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P4": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [
+        "I travelled last week to a different time zone.",
+        "I changed the time on my phone manually.",
+        "It worked fine until a few days ago."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-ERR-01",
+      "category": "Application",
+      "subcategory": "Error/crash",
+      "group": "App-Support-L2",
+      "apps": [
+        "SAP GUI"
+      ],
+      "titles": [
+        "{app} crashes on startup",
+        "{app} closes immediately after update",
+        "{app} not opening after Windows update",
+        "{app} crash error {code}"
+      ],
+      "symptoms": [
+        "Since last night's Windows update {app} closes as soon as I open it.",
+        "{app} crashes on launch with error {code}.",
+        "I click on {app} and the window flashes and disappears.",
+        "Application error {code} when starting {app}."
+      ],
+      "root_cause": "Installed SAP GUI version incompatible with latest Windows update",
+      "steps": [
+        "Confirmed crash in Windows event log after cumulative update",
+        "Uninstalled old SAP GUI version",
+        "Installed approved SAP GUI 8.00 patch level from Software Center",
+        "Restored user's connection list; SAP GUI opens normally"
+      ],
+      "prio": {
+        "P3": 0.5,
+        "P2": 0.5
+      },
+      "codes": [
+        "0xc0000005"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "APP-ERR-02",
+      "category": "Application",
+      "subcategory": "Error/crash",
+      "group": "Desktop-Support",
+      "apps": [
+        "Excel"
+      ],
+      "titles": [
+        "Excel crashes when opening files",
+        "Excel not responding with large workbook",
+        "Excel keeps crashing",
+        "Excel freezes then closes"
+      ],
+      "symptoms": [
+        "Excel crashes every time I open the monthly forecast workbook.",
+        "Excel goes to 'Not responding' and then closes when I open bigger files.",
+        "Excel closes without any error when I try to open attachments.",
+        "Excel starts but crashes as soon as I open a file."
+      ],
+      "root_cause": "Faulty COM add-in causing Excel to crash",
+      "steps": [
+        "Started Excel in safe mode; file opened without issue",
+        "Identified and disabled the faulty COM add-in",
+        "Updated the add-in to the latest version",
+        "User confirmed Excel stable"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P4": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [
+        "It works in safe mode.",
+        "I installed a reporting plug-in last week.",
+        "Other Office apps are fine."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-ERR-03",
+      "category": "Application",
+      "subcategory": "Error/crash",
+      "group": "App-Support-L2",
+      "apps": [
+        "CRM",
+        "Customer Portal",
+        "Salesforce integration"
+      ],
+      "titles": [
+        "{app} error {code} when saving",
+        "Internal server error in {app}",
+        "{app} save fails for everyone",
+        "Cannot save records in {app} - {code}"
+      ],
+      "symptoms": [
+        "Every time we try to save a customer record in {app} we get {code} Internal Server Error.",
+        "{app} shows 'Something went wrong' and the record does not save.",
+        "Saving orders in {app} fails since this morning for the whole team.",
+        "We get {code} on submit, viewing records still works."
+      ],
+      "root_cause": "Integration service account API token expired",
+      "steps": [
+        "Checked application logs; downstream API returned 401 Unauthorized",
+        "Renewed the expired service account API token and updated the secret in the vault",
+        "Restarted the integration service",
+        "Verified saves succeed"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P1": 0.3,
+        "P3": 0.1
+      },
+      "codes": [
+        "HTTP 500"
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.6,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-PRF-01",
+      "category": "Application",
+      "subcategory": "Performance",
+      "group": "App-Support-L2",
+      "apps": [
+        "Reporting Portal",
+        "Sales Dashboard"
+      ],
+      "titles": [
+        "{app} very slow",
+        "{app} takes minutes to load",
+        "Reports timing out in {app}",
+        "Slow performance in {app} since release"
+      ],
+      "symptoms": [
+        "{app} reports now take 3-4 minutes to load, before it was seconds.",
+        "Since the weekend release {app} keeps timing out.",
+        "Dashboards in {app} are extremely slow for all of us.",
+        "Filters in {app} spin forever."
+      ],
+      "root_cause": "New release query missing database index",
+      "steps": [
+        "Reproduced slowness and captured the slow query from APM",
+        "Found full table scan introduced in the latest release",
+        "Created the missing index on the orders table",
+        "Page load time back to normal"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 0.7,
+        "UAT": 0.2,
+        "Dev": 0.1
+      },
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "APP-PRF-02",
+      "category": "Application",
+      "subcategory": "Performance",
+      "group": "App-Support-L2",
+      "apps": [
+        "SAP ERP",
+        "Oracle EBS"
+      ],
+      "titles": [
+        "{app} slow during month end",
+        "{app} performance degraded",
+        "{app} transactions very slow",
+        "Posting in {app} takes forever"
+      ],
+      "symptoms": [
+        "During month-end close {app} transactions are extremely slow.",
+        "Posting invoices in {app} takes several minutes each.",
+        "{app} becomes slow every day around 10 AM.",
+        "Finance team reports {app} is sluggish today."
+      ],
+      "root_cause": "Heavy batch jobs scheduled during business hours",
+      "steps": [
+        "Checked system load; batch jobs consuming most work processes",
+        "Rescheduled non-critical batch jobs to off-peak hours",
+        "Added background work processes",
+        "Users confirmed improved response time"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-LGN-01",
+      "category": "Application",
+      "subcategory": "Login failure",
+      "group": "Access-Management",
+      "apps": [
+        "HR Portal",
+        "Workday",
+        "Concur"
+      ],
+      "titles": [
+        "Cannot log in to {app}",
+        "{app} SSO error {code}",
+        "{app}: user not assigned to application",
+        "Login error on {app}"
+      ],
+      "symptoms": [
+        "When I sign in to {app} I get error {code}.",
+        "{app} says my account is not assigned to this application.",
+        "SSO login to {app} fails with a message to contact the administrator.",
+        "New joiner cannot access {app}, error {code}."
+      ],
+      "root_cause": "User not assigned to the enterprise application in Entra ID",
+      "steps": [
+        "Confirmed error {code} in sign-in logs",
+        "Added user to the application's assignment group in Entra ID",
+        "User signed in successfully"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        "AADSTS50105"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-LGN-02",
+      "category": "Application",
+      "subcategory": "Login failure",
+      "group": "Desktop-Support",
+      "apps": [
+        "HR Portal",
+        "Workday",
+        "Concur"
+      ],
+      "titles": [
+        "{app} login keeps looping",
+        "Stuck in sign-in loop on {app}",
+        "Cannot log in to {app} - page keeps reloading",
+        "{app} SSO redirect loop"
+      ],
+      "symptoms": [
+        "When I log in to {app} the page keeps redirecting back to the sign-in page.",
+        "{app} login page reloads endlessly after I enter my password.",
+        "I sign in to {app} and it goes back to the login screen again.",
+        "Too many redirects error when opening {app}."
+      ],
+      "root_cause": "Stale session cookies / blocked third-party cookies in browser",
+      "steps": [
+        "Reproduced loop in user's browser; worked in a private window",
+        "Cleared browser cookies and cache for the SSO domain",
+        "Allowed third-party cookies for the identity provider",
+        "User logged in successfully"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P4": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "APP-BUG-01",
+      "category": "Application",
+      "subcategory": "Functional bug",
+      "group": "App-Support-L1",
+      "apps": [
+        "Expense Portal",
+        "Concur"
+      ],
+      "titles": [
+        "Cannot upload receipt in {app}",
+        "{app} attachment upload fails",
+        "Upload error on {app}",
+        "Receipt upload keeps failing"
+      ],
+      "symptoms": [
+        "When I upload my receipt PDF in {app} it just says upload failed.",
+        "{app} rejects my attachment without a clear error.",
+        "Upload spinner runs and then fails for a scanned receipt.",
+        "I can't attach the hotel invoice in {app}."
+      ],
+      "root_cause": "Attachment exceeds 10 MB upload limit (known limitation)",
+      "steps": [
+        "Checked file size; attachment was over the 10 MB limit",
+        "Advised user to compress the PDF or split it",
+        "User uploaded the compressed file successfully",
+        "Linked to known problem record for a clearer error message"
+      ],
+      "prio": {
+        "P4": 0.5,
+        "P3": 0.5
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 0
+    },
+    {
+      "id": "APP-BUG-02",
+      "category": "Application",
+      "subcategory": "Functional bug",
+      "group": "App-Support-L1",
+      "apps": [
+        "Reporting Portal",
+        "SAP ERP"
+      ],
+      "titles": [
+        "Wrong date format in {app} export",
+        "{app} PDF export shows dates wrong",
+        "Dates swapped in {app} report",
+        "Date format issue in exported report"
+      ],
+      "symptoms": [
+        "When I export to PDF from {app} the dates show as MM/DD instead of DD/MM.",
+        "Exported report from {app} has dates in the wrong format.",
+        "{app} exports show 10/03 when it should be 03/10.",
+        "My colleague's export is fine but mine shows US date format."
+      ],
+      "root_cause": "User profile locale set to en-US instead of en-IN",
+      "steps": [
+        "Compared user settings with a colleague",
+        "Changed the user's locale in the {app} profile to en-IN",
+        "Re-exported the report; dates correct"
+      ],
+      "prio": {
+        "P4": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "NET-VPN-01",
+      "category": "Network",
+      "subcategory": "VPN",
+      "group": "Network-L2",
+      "apps": [
+        "GlobalProtect VPN",
+        "Cisco AnyConnect"
+      ],
+      "titles": [
+        "VPN not working after Windows upgrade",
+        "{app} won't connect after update",
+        "VPN client error after upgrade",
+        "{app} stuck connecting"
+      ],
+      "symptoms": [
+        "After the Windows 11 upgrade {app} stays on 'Connecting' and never connects.",
+        "{app} shows a driver error since my laptop was upgraded.",
+        "VPN was working until the OS upgrade, now it fails every time.",
+        "The {app} icon shows an error and won't start."
+      ],
+      "root_cause": "VPN client version incompatible with upgraded OS",
+      "steps": [
+        "Checked VPN client version; older than supported for the new OS",
+        "Uninstalled the old client and installed the latest VPN client from Software Center",
+        "Rebooted and connected successfully"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "NET-VPN-03",
+      "category": "Network",
+      "subcategory": "VPN",
+      "group": "Network-L2",
+      "apps": [
+        "GlobalProtect VPN"
+      ],
+      "titles": [
+        "VPN not connecting after password change",
+        "{app} error {code}",
+        "Cannot connect to VPN - error {code}",
+        "VPN fails since password reset"
+      ],
+      "symptoms": [
+        "Since I changed my password {app} gives error {code} when connecting from home.",
+        "{app} shows error {code} and keeps asking for credentials.",
+        "VPN fails with error {code} right after my password reset yesterday.",
+        "I can't connect to the VPN anymore, error {code}, I recently changed my password."
+      ],
+      "root_cause": "Stale cached credentials after password change",
+      "steps": [
+        "Cleared cached VPN credentials in Credential Manager",
+        "User signed out and back in to re-sync the AD password",
+        "Reconnected VPN with the new password",
+        "Connection successful"
+      ],
+      "prio": {
+        "P3": 0.85,
+        "P2": 0.15
+      },
+      "codes": [
+        "809"
+      ],
+      "context": [
+        "Only me, my team is connected fine.",
+        "I'm working from home today.",
+        "Restarting the laptop didn't help."
+      ],
+      "env": null,
+      "sens": null,
+      "weight": 1.6,
+      "kb": true,
+      "key_step": 0
+    },
+    {
+      "id": "NET-VPN-07",
+      "category": "Network",
+      "subcategory": "VPN",
+      "group": "Network-L2",
+      "apps": [
+        "GlobalProtect VPN"
+      ],
+      "titles": [
+        "VPN down for multiple users - error {code}",
+        "{app} error {code} for whole office",
+        "Nobody can connect to VPN",
+        "VPN outage error {code}"
+      ],
+      "symptoms": [
+        "Since last night nobody in our office can connect to {app}, everyone gets error {code}.",
+        "Whole team getting VPN error {code} from home since this morning.",
+        "VPN error {code} for all users at the {site} site.",
+        "Multiple users report {app} error {code} after the network change window."
+      ],
+      "root_cause": "Firewall rule change blocked IKE/IPsec ports (UDP 500/4500)",
+      "steps": [
+        "Correlated start time with last night's firewall change",
+        "Found UDP 500/4500 blocked by the new rule",
+        "Restored the firewall rule for IKE/IPsec traffic",
+        "Confirmed users can connect"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P1": 0.4
+      },
+      "codes": [
+        "809"
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.5,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "NET-WIF-01",
+      "category": "Network",
+      "subcategory": "Wi-Fi",
+      "group": "Desktop-Support",
+      "apps": [
+        "Corporate Wi-Fi"
+      ],
+      "titles": [
+        "Can't connect to corporate Wi-Fi",
+        "Wi-Fi says can't connect to this network",
+        "Laptop not joining office Wi-Fi",
+        "Wi-Fi authentication failed"
+      ],
+      "symptoms": [
+        "My laptop says 'Can't connect to this network' for the corporate Wi-Fi, guest Wi-Fi works.",
+        "Office Wi-Fi authentication fails only on my laptop.",
+        "I can see the corporate SSID but it never connects.",
+        "Wi-Fi was fine yesterday, today it won't authenticate."
+      ],
+      "root_cause": "Expired machine certificate used for 802.1X Wi-Fi authentication",
+      "steps": [
+        "Connected laptop via LAN cable",
+        "Found the machine certificate had expired",
+        "Ran gpupdate /force and renewed the certificate",
+        "Laptop connected to corporate Wi-Fi"
+      ],
+      "prio": {
+        "P3": 0.9,
+        "P4": 0.1
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "NET-WIF-02",
+      "category": "Network",
+      "subcategory": "Wi-Fi",
+      "group": "Network-L2",
+      "apps": [
+        "Corporate Wi-Fi"
+      ],
+      "titles": [
+        "Wi-Fi dropping on {floor}",
+        "Wireless keeps disconnecting on {floor}",
+        "Poor Wi-Fi in {floor} meeting rooms",
+        "Wi-Fi unstable on {floor}"
+      ],
+      "symptoms": [
+        "Wi-Fi drops every few minutes for everyone on {floor}.",
+        "Teams calls keep disconnecting on {floor}, other floors are fine.",
+        "Wireless signal is very weak near the east wing of {floor}.",
+        "Many of us on {floor} lose Wi-Fi connection randomly."
+      ],
+      "root_cause": "Faulty wireless access point on the floor",
+      "steps": [
+        "Checked wireless controller; one access point rebooting repeatedly",
+        "Replaced the faulty access point",
+        "Ran a site survey; coverage restored"
+      ],
+      "prio": {
+        "P2": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "NET-DNS-01",
+      "category": "Network",
+      "subcategory": "DNS",
+      "group": "Desktop-Support",
+      "apps": [
+        "Intranet",
+        "Jira",
+        "Confluence"
+      ],
+      "titles": [
+        "Internal site not opening",
+        "Cannot reach {app} by name",
+        "{app} page cannot be found",
+        "DNS error for {app}"
+      ],
+      "symptoms": [
+        "{app} shows 'This site can't be reached' for me but works for others.",
+        "I get {code} when opening {app}.",
+        "{app} doesn't open on my laptop, my colleague can open it.",
+        "Browser can't find {app} since the server move."
+      ],
+      "root_cause": "Stale DNS cache entry on user's machine after server IP change",
+      "steps": [
+        "Confirmed the name resolved correctly from another machine",
+        "Flushed DNS cache with ipconfig /flushdns",
+        "Renewed IP lease",
+        "{app} opened successfully"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P4": 0.2
+      },
+      "codes": [
+        "DNS_PROBE_FINISHED_NXDOMAIN"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "NET-DNS-02",
+      "category": "Network",
+      "subcategory": "DNS",
+      "group": "Network-L2",
+      "apps": [
+        "Intranet",
+        "Jira",
+        "Confluence"
+      ],
+      "titles": [
+        "{app} not reachable for anyone",
+        "{app} down - DNS error",
+        "Nobody can open {app}",
+        "{app} cannot be found - all users"
+      ],
+      "symptoms": [
+        "Since this morning nobody can open {app}, browser says the server can't be found.",
+        "{app} gives {code} for the whole department.",
+        "All users get 'site can't be reached' on {app}.",
+        "{app} hostname does not resolve anywhere in the office."
+      ],
+      "root_cause": "DNS A record removed during server migration",
+      "steps": [
+        "nslookup returned NXDOMAIN from all DNS servers",
+        "Found the A record was deleted during last night's migration",
+        "Recreated the DNS A record with the new IP",
+        "Verified resolution and access from multiple sites"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P1": 0.4
+      },
+      "codes": [
+        "DNS_PROBE_FINISHED_NXDOMAIN"
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.6,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "NET-CON-01",
+      "category": "Network",
+      "subcategory": "Connectivity",
+      "group": "Network-L1",
+      "apps": [
+        "Wired LAN"
+      ],
+      "titles": [
+        "No network at my desk",
+        "Ethernet not working",
+        "LAN cable connected but no internet",
+        "Network cable unplugged message"
+      ],
+      "symptoms": [
+        "I'm at desk {desk} and my laptop says 'Network cable unplugged' even though it is connected.",
+        "Wired network not working at my new desk.",
+        "Docking station LAN has no connectivity, Wi-Fi works.",
+        "No network on the desk port after the office move."
+      ],
+      "root_cause": "Switch port disabled / not patched for the desk",
+      "steps": [
+        "Traced the desk port to the switch",
+        "Found the switch port administratively disabled",
+        "Enabled the port and assigned the user VLAN",
+        "Laptop got an IP and connected"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "NET-CON-02",
+      "category": "Network",
+      "subcategory": "Connectivity",
+      "group": "Network-L2",
+      "apps": [
+        "WAN link"
+      ],
+      "titles": [
+        "Internet down at {site} office",
+        "Site outage - no internet",
+        "Entire {site} office offline",
+        "No connectivity at {site}"
+      ],
+      "symptoms": [
+        "Nobody at the {site} office has internet or access to internal systems.",
+        "All systems unreachable from {site} since 9 AM.",
+        "Complete network outage at {site}, phones also down.",
+        "The whole {site} branch lost connectivity."
+      ],
+      "root_cause": "Primary ISP link down; automatic failover did not trigger",
+      "steps": [
+        "Confirmed primary WAN circuit down with the ISP",
+        "Manually failed over to the backup link",
+        "Raised ticket with the ISP for the fiber cut",
+        "Restored primary link and failed back after the ISP fix"
+      ],
+      "prio": {
+        "P1": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.4,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "EML-OUT-01",
+      "category": "Email and collaboration",
+      "subcategory": "Outlook",
+      "group": "Desktop-Support",
+      "apps": [
+        "Outlook"
+      ],
+      "titles": [
+        "Outlook disconnected",
+        "Outlook stuck on trying to connect",
+        "Outlook not syncing emails",
+        "Outlook shows disconnected status"
+      ],
+      "symptoms": [
+        "Outlook status bar shows 'Disconnected' and no new emails arrive.",
+        "Outlook keeps saying 'Trying to connect...' but webmail works fine.",
+        "My Outlook stopped syncing since yesterday, folders are not updating.",
+        "Emails stuck in Outbox and Outlook says disconnected."
+      ],
+      "root_cause": "Corrupted Outlook profile / OST file",
+      "steps": [
+        "Confirmed mailbox works in Outlook on the web",
+        "Created a new Outlook profile and rebuilt the OST cache",
+        "Outlook connected and synced"
+      ],
+      "prio": {
+        "P3": 0.85,
+        "P2": 0.15
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.4,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "EML-OUT-02",
+      "category": "Email and collaboration",
+      "subcategory": "Outlook",
+      "group": "Desktop-Support",
+      "apps": [
+        "Outlook"
+      ],
+      "titles": [
+        "Outlook keeps asking for password",
+        "Repeated password prompts in Outlook",
+        "Outlook credential prompt loop",
+        "Outlook asks for login every few minutes"
+      ],
+      "symptoms": [
+        "Outlook keeps popping up a password window even after I enter the correct password.",
+        "I get the Windows security prompt for Outlook every few minutes.",
+        "Outlook shows 'Need password' and the prompt comes back.",
+        "After my password change Outlook won't stop asking for credentials."
+      ],
+      "root_cause": "Stale Office credentials cached / modern authentication token issue",
+      "steps": [
+        "Removed Office credentials from Credential Manager",
+        "Signed out of all Office apps and signed back in",
+        "Verified modern authentication enabled",
+        "Prompts stopped"
+      ],
+      "prio": {
+        "P3": 0.85,
+        "P4": 0.15
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 0
+    },
+    {
+      "id": "EML-MBX-01",
+      "category": "Email and collaboration",
+      "subcategory": "Mailbox/quota",
+      "group": "Messaging",
+      "apps": [
+        "Outlook",
+        "Exchange Online"
+      ],
+      "titles": [
+        "Mailbox full cannot send email",
+        "Mailbox quota exceeded",
+        "Can't send emails - mailbox full",
+        "Getting mailbox almost full warning"
+      ],
+      "symptoms": [
+        "I can't send emails, I get a message that my mailbox is full.",
+        "Outlook says my mailbox has exceeded its size limit.",
+        "Emails bounce back saying mailbox is full.",
+        "I keep getting warnings that my mailbox is almost full and now sending stopped."
+      ],
+      "root_cause": "Mailbox exceeded storage quota",
+      "steps": [
+        "Checked mailbox size; over the 50 GB quota",
+        "Enabled online archive and applied retention policy",
+        "Helped user clean up large attachments",
+        "Sending restored"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "EML-MBX-02",
+      "category": "Email and collaboration",
+      "subcategory": "Mailbox/quota",
+      "group": "Messaging",
+      "apps": [
+        "Outlook"
+      ],
+      "titles": [
+        "Shared mailbox not showing",
+        "Need access to shared mailbox",
+        "Can't see team mailbox in Outlook",
+        "Shared mailbox missing"
+      ],
+      "symptoms": [
+        "I need access to the {mbx} shared mailbox but it doesn't appear in Outlook.",
+        "My manager said I was added to {mbx} but I can't see it.",
+        "Shared mailbox {mbx} disappeared from my Outlook.",
+        "I get an error when I try to open the {mbx} mailbox."
+      ],
+      "root_cause": "User lacks Full Access permission on the shared mailbox",
+      "steps": [
+        "Confirmed approval from the mailbox owner",
+        "Granted Full Access and Send As permission",
+        "Restarted Outlook; mailbox auto-mapped"
+      ],
+      "prio": {
+        "P4": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "EML-TMS-01",
+      "category": "Email and collaboration",
+      "subcategory": "Teams",
+      "group": "Desktop-Support",
+      "apps": [
+        "Microsoft Teams"
+      ],
+      "titles": [
+        "Teams camera not working",
+        "Camera not detected in Teams",
+        "Webcam black in Teams meetings",
+        "No video in Teams"
+      ],
+      "symptoms": [
+        "In Teams meetings my camera shows 'no camera available'.",
+        "Camera works in the Camera app but Teams can't find it.",
+        "Others can't see my video in Teams calls.",
+        "Teams video preview is black."
+      ],
+      "root_cause": "Windows privacy setting blocking camera access for desktop apps",
+      "steps": [
+        "Checked Windows privacy settings; camera access blocked for desktop apps",
+        "Enabled camera access",
+        "Restarted Teams and selected the correct camera",
+        "Video working"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "EML-TMS-02",
+      "category": "Email and collaboration",
+      "subcategory": "Teams",
+      "group": "Desktop-Support",
+      "apps": [
+        "Microsoft Teams"
+      ],
+      "titles": [
+        "Teams messages not loading",
+        "Teams chat not syncing",
+        "Teams stuck loading",
+        "Teams shows old messages only"
+      ],
+      "symptoms": [
+        "Teams chat shows messages from yesterday only, new ones don't appear.",
+        "Teams keeps showing a loading spinner in chats.",
+        "Messages I send in Teams stay pending.",
+        "Teams app is blank but works in the browser."
+      ],
+      "root_cause": "Corrupted Teams local cache",
+      "steps": [
+        "Confirmed Teams on the web works",
+        "Quit Teams and cleared the local cache folder",
+        "Restarted Teams; messages synced"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P4": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "DB-CON-01",
+      "category": "Database",
+      "subcategory": "Connection",
+      "group": "DBA",
+      "apps": [
+        "Oracle DB",
+        "Billing DB"
+      ],
+      "titles": [
+        "{code} TNS no listener",
+        "Application cannot connect to database - {code}",
+        "DB connection failure {code}",
+        "{app} unreachable - {code}"
+      ],
+      "symptoms": [
+        "All application servers fail to connect to {app} with {code}: TNS:no listener.",
+        "Since the server reboot, connections to {app} fail with {code}.",
+        "Billing jobs failing with {code} on every connection attempt.",
+        "Users get database connection errors, logs show {code}."
+      ],
+      "root_cause": "Database listener not started after server reboot",
+      "steps": [
+        "Checked listener status; listener was down",
+        "Started the listener with lsnrctl start",
+        "Enabled listener auto-start on boot",
+        "Verified application connections"
+      ],
+      "prio": {
+        "P1": 0.5,
+        "P2": 0.5
+      },
+      "codes": [
+        "ORA-12541"
+      ],
+      "context": [],
+      "env": {
+        "Production": 0.8,
+        "UAT": 0.2
+      },
+      "sens": null,
+      "weight": 0.7,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "DB-CON-02",
+      "category": "Database",
+      "subcategory": "Connection",
+      "group": "DBA",
+      "apps": [
+        "Oracle DB",
+        "Billing DB"
+      ],
+      "titles": [
+        "{code} from one app server",
+        "{app} connection error {code} after migration",
+        "Only server {host} cannot reach DB",
+        "{code} on new app server"
+      ],
+      "symptoms": [
+        "Only application server {host} gets {code}, other servers connect fine.",
+        "After the migration, our app on {host} throws {code}.",
+        "New UAT server fails with {code} when connecting to {app}.",
+        "{code} from {host} but the DBA says the listener is running."
+      ],
+      "root_cause": "Wrong port in tnsnames.ora after database migration",
+      "steps": [
+        "Confirmed listener running on new port 1522",
+        "Found tnsnames.ora on {host} still pointing to port 1521",
+        "Updated the connection string",
+        "Application connected"
+      ],
+      "prio": {
+        "P3": 0.5,
+        "P2": 0.5
+      },
+      "codes": [
+        "ORA-12541"
+      ],
+      "context": [],
+      "env": {
+        "UAT": 0.5,
+        "Production": 0.3,
+        "Dev": 0.2
+      },
+      "sens": null,
+      "weight": 0.7,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "DB-CON-03",
+      "category": "Database",
+      "subcategory": "Connection",
+      "group": "DBA",
+      "apps": [
+        "PostgreSQL",
+        "MySQL",
+        "Orders DB"
+      ],
+      "titles": [
+        "{app}: too many connections",
+        "Database connection pool exhausted",
+        "Intermittent DB connection errors - {code}",
+        "App fails to get DB connection"
+      ],
+      "symptoms": [
+        "Application logs show '{code}' during peak hours.",
+        "Users intermittently see errors and logs say the connection pool is exhausted.",
+        "{app} rejects new connections, error {code}.",
+        "Order processing fails every afternoon with {code}."
+      ],
+      "root_cause": "Connection leak in application exhausting the database connection limit",
+      "steps": [
+        "Found hundreds of idle connections from one service",
+        "Restarted the leaking service to release connections",
+        "Development fixed the connection leak and set pool limits",
+        "No further errors"
+      ],
+      "prio": {
+        "P2": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        "FATAL: too many connections",
+        "Error 1040"
+      ],
+      "context": [],
+      "env": {
+        "Production": 0.7,
+        "UAT": 0.2,
+        "Dev": 0.1
+      },
+      "sens": null,
+      "weight": 0.7,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "DB-SLW-01",
+      "category": "Database",
+      "subcategory": "Slow query",
+      "group": "DBA",
+      "apps": [
+        "Oracle DB",
+        "SQL Server"
+      ],
+      "titles": [
+        "Query running very slow",
+        "Report query slow on {app}",
+        "Database performance degraded",
+        "Slow SQL after data load"
+      ],
+      "symptoms": [
+        "A report query that used to take 30 seconds now runs for 20 minutes on {app}.",
+        "After the big data load queries are very slow.",
+        "Execution plan changed and the query is much slower.",
+        "{app} queries for the sales report are timing out."
+      ],
+      "root_cause": "Stale optimizer statistics after large data load",
+      "steps": [
+        "Compared execution plans before and after",
+        "Gathered fresh table statistics",
+        "Query back to normal runtime"
+      ],
+      "prio": {
+        "P3": 0.6,
+        "P2": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 0.7,
+        "UAT": 0.2,
+        "Dev": 0.1
+      },
+      "sens": null,
+      "weight": 0.7,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "DB-SLW-02",
+      "category": "Database",
+      "subcategory": "Slow query",
+      "group": "DBA",
+      "apps": [
+        "SQL Server",
+        "Oracle DB"
+      ],
+      "titles": [
+        "Database locks blocking users",
+        "Transactions hanging on {app}",
+        "Blocking sessions on {app}",
+        "Screens freeze while saving"
+      ],
+      "symptoms": [
+        "Users' save operations hang and eventually time out.",
+        "We see blocking sessions on {app} and the app is frozen.",
+        "Deadlock errors in application logs for the last hour.",
+        "Everything that writes to the orders table is stuck."
+      ],
+      "root_cause": "Long-running uncommitted transaction holding locks",
+      "steps": [
+        "Identified head blocker session from a manual update script",
+        "Killed the blocking session after owner approval",
+        "Blocked transactions completed",
+        "Advised script owner to commit in batches"
+      ],
+      "prio": {
+        "P2": 0.7,
+        "P1": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.6,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "DB-JOB-01",
+      "category": "Database",
+      "subcategory": "Job failure",
+      "group": "DBA",
+      "apps": [
+        "Data Warehouse",
+        "Oracle DB"
+      ],
+      "titles": [
+        "Nightly ETL failed",
+        "ETL job failure {code}",
+        "Data load failed last night",
+        "Warehouse load job error {code}"
+      ],
+      "symptoms": [
+        "The nightly ETL job failed with {code}: unable to extend table.",
+        "Morning dashboards are empty because the data load failed.",
+        "ETL log shows {code} on the sales fact table.",
+        "Warehouse refresh failed overnight with space errors."
+      ],
+      "root_cause": "Tablespace full; table could not extend",
+      "steps": [
+        "Checked tablespace usage; 100% full",
+        "Added a new datafile to the tablespace",
+        "Re-ran the failed ETL job",
+        "Added space usage alert at 85%"
+      ],
+      "prio": {
+        "P2": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        "ORA-01653"
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.7,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "DB-JOB-02",
+      "category": "Database",
+      "subcategory": "Job failure",
+      "group": "DBA",
+      "apps": [
+        "SQL Server",
+        "Backup Server"
+      ],
+      "titles": [
+        "Database backup job failed",
+        "Backup failure on {host}",
+        "Nightly DB backup not running",
+        "Backup job login failed"
+      ],
+      "symptoms": [
+        "Backup job on {host} failed last night with login failed for the service account.",
+        "No database backups for the last 2 days on {host}.",
+        "Backup alert: job failed, error {code}.",
+        "Scheduled backup is failing since Monday."
+      ],
+      "root_cause": "Backup service account password expired",
+      "steps": [
+        "Found login failures for the backup service account",
+        "Reset the service account password per the service account policy",
+        "Updated credentials in the backup job",
+        "Ran manual backup successfully"
+      ],
+      "prio": {
+        "P2": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        "18456"
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 0.6,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-LAP-01",
+      "category": "Hardware",
+      "subcategory": "Laptop",
+      "group": "Desktop-Support",
+      "apps": [
+        "Laptop"
+      ],
+      "titles": [
+        "Laptop asking for BitLocker recovery key",
+        "BitLocker recovery screen on boot",
+        "Can't start laptop - recovery key needed",
+        "Laptop locked by BitLocker"
+      ],
+      "symptoms": [
+        "My laptop shows a blue BitLocker recovery screen asking for a 48 digit key.",
+        "After the BIOS update my laptop asks for a recovery key at startup.",
+        "Laptop {host} won't boot, it wants a BitLocker recovery key.",
+        "I restarted and now it's asking for the BitLocker key."
+      ],
+      "root_cause": "BIOS/firmware update triggered BitLocker recovery",
+      "steps": [
+        "Verified user identity",
+        "Retrieved the recovery key for {host} from Entra ID",
+        "User entered the key and Windows booted",
+        "Suspended and resumed BitLocker to reseal the TPM"
+      ],
+      "prio": {
+        "P2": 0.5,
+        "P3": 0.5
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-LAP-02",
+      "category": "Hardware",
+      "subcategory": "Laptop",
+      "group": "Hardware-Support",
+      "apps": [
+        "Laptop"
+      ],
+      "titles": [
+        "Laptop battery draining fast",
+        "Battery dies within an hour",
+        "Laptop overheating and battery issue",
+        "Battery swollen / not charging"
+      ],
+      "symptoms": [
+        "My laptop battery goes from 100% to 0 in about an hour.",
+        "Laptop gets very hot and battery drains quickly.",
+        "Battery shows 'plugged in, not charging'.",
+        "The touchpad is lifting and the battery seems swollen."
+      ],
+      "root_cause": "Degraded laptop battery",
+      "steps": [
+        "Ran battery health report; capacity below 40%",
+        "Ordered replacement battery under warranty",
+        "Replaced the battery",
+        "Battery holding charge normally"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 2
+    },
+    {
+      "id": "HW-LAP-03",
+      "category": "Hardware",
+      "subcategory": "Laptop",
+      "group": "Desktop-Support",
+      "apps": [
+        "Laptop"
+      ],
+      "titles": [
+        "Laptop very slow",
+        "Computer slow and freezing",
+        "Low disk space warning",
+        "Laptop hangs constantly"
+      ],
+      "symptoms": [
+        "My laptop takes ages to open anything and freezes often.",
+        "Getting low disk space warnings on C drive.",
+        "Laptop is extremely slow, even typing lags.",
+        "Applications take minutes to start on {host}."
+      ],
+      "root_cause": "System drive nearly full",
+      "steps": [
+        "Checked C drive; less than 1 GB free",
+        "Cleared temp files and old Windows update files",
+        "Moved large personal files to OneDrive",
+        "Performance back to normal"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-PRN-01",
+      "category": "Hardware",
+      "subcategory": "Printer",
+      "group": "Desktop-Support",
+      "apps": [
+        "Printer"
+      ],
+      "titles": [
+        "Printer offline",
+        "Can't print - printer shows offline",
+        "Print jobs stuck in queue",
+        "Printing not working"
+      ],
+      "symptoms": [
+        "Printer {printer} shows offline on my laptop and jobs stay in the queue.",
+        "Documents get stuck in the print queue and nothing prints.",
+        "I can't print to {printer}, it says error - printing.",
+        "Print queue won't clear and the printer appears offline."
+      ],
+      "root_cause": "Print spooler stuck with a corrupted job",
+      "steps": [
+        "Stopped the Print Spooler service",
+        "Cleared stuck jobs from the spool folder",
+        "Restarted the spooler",
+        "Test page printed successfully"
+      ],
+      "prio": {
+        "P3": 0.6,
+        "P4": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.3,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-PRN-02",
+      "category": "Hardware",
+      "subcategory": "Printer",
+      "group": "Desktop-Support",
+      "apps": [
+        "Printer"
+      ],
+      "titles": [
+        "Printer not found after office move",
+        "Cannot add printer {printer}",
+        "Printer missing from list",
+        "New floor printer not working"
+      ],
+      "symptoms": [
+        "After moving to the new floor I can't find printer {printer}.",
+        "Printer {printer} is not in my list anymore.",
+        "Adding printer {printer} fails with 'printer not found'.",
+        "Old printer mapping doesn't work after the move."
+      ],
+      "root_cause": "Printer IP changed after relocation; old queue mapping invalid",
+      "steps": [
+        "Confirmed the printer received a new IP after the move",
+        "Updated the print server port to the new IP",
+        "Re-added the printer queue for the user",
+        "Test page printed"
+      ],
+      "prio": {
+        "P4": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-PER-01",
+      "category": "Hardware",
+      "subcategory": "Peripheral",
+      "group": "Hardware-Support",
+      "apps": [
+        "Docking station"
+      ],
+      "titles": [
+        "External monitors not detected",
+        "Docking station monitors black",
+        "Second screen not working with dock",
+        "Dock not detecting displays"
+      ],
+      "symptoms": [
+        "My two monitors connected to the dock show 'no signal'.",
+        "Laptop doesn't detect external displays through the docking station.",
+        "Monitors flicker and go black when connected via the dock.",
+        "USB works on the dock but monitors don't."
+      ],
+      "root_cause": "Outdated docking station firmware",
+      "steps": [
+        "Checked dock firmware version; outdated",
+        "Updated dock firmware and display drivers",
+        "Monitors detected after reconnecting"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "HW-PER-02",
+      "category": "Hardware",
+      "subcategory": "Peripheral",
+      "group": "Desktop-Support",
+      "apps": [
+        "Headset"
+      ],
+      "titles": [
+        "Headset mic not working",
+        "People can't hear me on calls",
+        "Microphone not working in meetings",
+        "Headset audio issue"
+      ],
+      "symptoms": [
+        "People can't hear me in calls when I use my headset.",
+        "My headset microphone isn't picking up any sound.",
+        "Headset audio works but the mic is silent.",
+        "Mic level stays at zero with the USB headset."
+      ],
+      "root_cause": "Wrong default input device selected",
+      "steps": [
+        "Checked sound settings; laptop mic was the default input",
+        "Set the headset as default communication device",
+        "Selected the headset in Teams device settings",
+        "Mic working"
+      ],
+      "prio": {
+        "P4": 0.5,
+        "P3": 0.5
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-INS-01",
+      "category": "Configuration",
+      "subcategory": "Software install",
+      "group": "Desktop-Support",
+      "apps": [
+        "Visio",
+        "Power BI Desktop",
+        "Notepad++",
+        "Python",
+        "Tableau"
+      ],
+      "titles": [
+        "Request to install {app}",
+        "Need {app} installed",
+        "Software request: {app}",
+        "Please install {app} on my laptop"
+      ],
+      "symptoms": [
+        "Please install {app} on my laptop, I need it for a new project.",
+        "I need {app} for reporting work, can you install it?",
+        "Requesting installation of {app}. Manager approved.",
+        "{app} is not in Software Center for me."
+      ],
+      "root_cause": "Standard software request",
+      "steps": [
+        "Checked license availability and manager approval",
+        "Added user to the {app} deployment group",
+        "Installed via Software Center",
+        "User confirmed installation"
+      ],
+      "prio": {
+        "P4": 0.9,
+        "P3": 0.1
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.5,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-INS-02",
+      "category": "Configuration",
+      "subcategory": "Software install",
+      "group": "Desktop-Support",
+      "apps": [
+        "Zoom",
+        "Adobe Reader",
+        "Power BI Desktop",
+        "Visio"
+      ],
+      "titles": [
+        "{app} install failed {code}",
+        "Software Center install error {code}",
+        "Cannot install {app}",
+        "Installation of {app} fails"
+      ],
+      "symptoms": [
+        "Installing {app} from Software Center fails with error {code}.",
+        "{app} installation rolls back at the end with a fatal error {code}.",
+        "I tried installing {app} twice, both times it failed.",
+        "Software Center shows 'Failed' for {app}, code {code}."
+      ],
+      "root_cause": "Remnants of previous version blocking the installer",
+      "steps": [
+        "Checked installer log; previous version files found",
+        "Removed the old version with the cleanup tool",
+        "Rebooted",
+        "Reinstalled successfully"
+      ],
+      "prio": {
+        "P3": 0.6,
+        "P4": 0.4
+      },
+      "codes": [
+        "1603"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-PAT-01",
+      "category": "Configuration",
+      "subcategory": "Patch/update",
+      "group": "Desktop-Support",
+      "apps": [
+        "Windows Update"
+      ],
+      "titles": [
+        "Windows update failing {code}",
+        "Updates keep failing",
+        "Cumulative update won't install",
+        "Windows Update error {code}"
+      ],
+      "symptoms": [
+        "Windows Update fails every night with error {code}.",
+        "The monthly update downloads but fails to install.",
+        "My laptop keeps saying updates failed, error {code}.",
+        "Compliance portal shows my laptop missing patches."
+      ],
+      "root_cause": "Corrupted update components / insufficient system reserved partition",
+      "steps": [
+        "Ran DISM and SFC repair",
+        "Reset Windows Update components",
+        "Extended the system reserved partition",
+        "Update installed successfully"
+      ],
+      "prio": {
+        "P3": 0.7,
+        "P4": 0.3
+      },
+      "codes": [
+        "0x800f0922"
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-PAT-02",
+      "category": "Configuration",
+      "subcategory": "Patch/update",
+      "group": "Desktop-Support",
+      "apps": [
+        "Chrome",
+        "Java",
+        "Office"
+      ],
+      "titles": [
+        "{app} stopped working after update",
+        "Problem after last night's patch",
+        "{app} broken since patching",
+        "After update, {app} not working"
+      ],
+      "symptoms": [
+        "After last night's patch, {app} doesn't open some internal pages.",
+        "Since the update {app} keeps showing errors.",
+        "{app} functionality broken after automatic update.",
+        "Several of us have issues with {app} after the patch."
+      ],
+      "root_cause": "Faulty vendor patch causing regression",
+      "steps": [
+        "Confirmed issue on patched machines only",
+        "Rolled back the patch via update management",
+        "Paused the patch ring pending vendor fix",
+        "Users confirmed working"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-SET-01",
+      "category": "Configuration",
+      "subcategory": "Settings change",
+      "group": "Desktop-Support",
+      "apps": [
+        "Adobe Reader",
+        "Chrome",
+        "Edge"
+      ],
+      "titles": [
+        "Default app keeps resetting",
+        "PDFs open in wrong app",
+        "Default browser changes back",
+        "Can't change default program"
+      ],
+      "symptoms": [
+        "Every time I restart, files open in the wrong program instead of {app}.",
+        "I set {app} as default but it resets after reboot.",
+        "Default app settings don't stay.",
+        "Links keep opening in the wrong browser."
+      ],
+      "root_cause": "Group Policy default app association overriding user choice",
+      "steps": [
+        "Found default association XML applied via Group Policy",
+        "Updated the association policy for the user's department",
+        "Ran gpupdate and rebooted; defaults persisted"
+      ],
+      "prio": {
+        "P4": 0.9,
+        "P3": 0.1
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "CFG-SET-02",
+      "category": "Configuration",
+      "subcategory": "Settings change",
+      "group": "Desktop-Support",
+      "apps": [
+        "Windows"
+      ],
+      "titles": [
+        "Wrong time on laptop",
+        "Laptop clock is wrong",
+        "Meeting times showing incorrectly",
+        "Time zone incorrect after travel"
+      ],
+      "symptoms": [
+        "My laptop clock is 2 hours off and meeting invites show wrong times.",
+        "Time zone on my laptop changed by itself.",
+        "Calendar shows meetings at the wrong time.",
+        "Since I came back from the trip my laptop shows the wrong time."
+      ],
+      "root_cause": "Automatic time zone disabled / location services off",
+      "steps": [
+        "Enabled automatic time zone",
+        "Synced time with the domain controller",
+        "Calendar times correct"
+      ],
+      "prio": {
+        "P4": 0.7,
+        "P3": 0.3
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": true,
+      "key_step": 0
+    }
+  ],
+  "novel_scenarios": [
+    {
+      "id": "NOV-01",
+      "category": "Application",
+      "subcategory": "Error/crash",
+      "group": "App-Support-L2",
+      "apps": [
+        "Expense Hub"
+      ],
+      "titles": [
+        "New expense app shows blank screen",
+        "{app} blank page",
+        "{app} not loading - white screen"
+      ],
+      "symptoms": [
+        "The new {app} just shows a white screen after login.",
+        "{app} loads the header but the page body is empty.",
+        "Blank screen in {app} on Chrome, other sites are fine."
+      ],
+      "root_cause": "Browser extension blocking scripts of the new single-page app",
+      "steps": [
+        "Disabled the ad-blocking extension",
+        "Whitelisted the {app} domain"
+      ],
+      "prio": {
+        "P3": 0.8,
+        "P2": 0.2
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "NOV-02",
+      "category": "Hardware",
+      "subcategory": "Peripheral",
+      "group": "Hardware-Support",
+      "apps": [
+        "Badge Printer"
+      ],
+      "titles": [
+        "Visitor badge printer not encoding cards",
+        "{app} prints but badges don't open doors",
+        "Reception badge printer error"
+      ],
+      "symptoms": [
+        "Visitor badges print fine from the {app} but the doors don't accept them.",
+        "The {app} at reception shows 'encoder error' on every card.",
+        "Badges come out blank on the chip side, front print looks fine."
+      ],
+      "root_cause": "Card encoder module firmware mismatch after access-control upgrade",
+      "steps": [
+        "Updated encoder firmware",
+        "Re-paired printer with access-control server"
+      ],
+      "prio": {
+        "P2": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "NOV-03",
+      "category": "Configuration",
+      "subcategory": "Software install",
+      "group": "Desktop-Support",
+      "apps": [
+        "Copilot"
+      ],
+      "titles": [
+        "{app} missing in Word and Excel",
+        "Can't see {app} button in Office",
+        "{app} not available for me"
+      ],
+      "symptoms": [
+        "My team has {app} in Word and Excel but the button is missing for me.",
+        "I was told I have access to {app} but it doesn't show up in Office.",
+        "{app} icon is greyed out in Outlook and Teams."
+      ],
+      "root_cause": "License not assigned / Office update channel too old",
+      "steps": [
+        "Assigned the license",
+        "Switched Office to current channel"
+      ],
+      "prio": {
+        "P4": 0.6,
+        "P3": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": null,
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    },
+    {
+      "id": "NOV-04",
+      "category": "Application",
+      "subcategory": "Error/crash",
+      "group": "Platform-Engineering",
+      "apps": [
+        "Payments API"
+      ],
+      "titles": [
+        "{app} pods restarting continuously",
+        "{app} CrashLoopBackOff in production",
+        "{app} returning 503"
+      ],
+      "symptoms": [
+        "{app} pods are in CrashLoopBackOff since the 2 PM deployment.",
+        "Customers get 503 from {app}; Kubernetes shows pods restarting every minute.",
+        "{app} health checks failing after the config change, pods keep restarting."
+      ],
+      "root_cause": "Missing secret reference in new deployment manifest",
+      "steps": [
+        "Rolled back deployment",
+        "Fixed secret reference in manifest"
+      ],
+      "prio": {
+        "P1": 0.6,
+        "P2": 0.4
+      },
+      "codes": [
+        ""
+      ],
+      "context": [],
+      "env": {
+        "Production": 1.0
+      },
+      "sens": null,
+      "weight": 1.0,
+      "kb": false,
+      "key_step": 1
+    }
+  ],
+  "hard_negative_pairs": [
+    [
+      "NET-VPN-03",
+      "NET-VPN-07",
+      "same error 809; single user after password change vs office-wide firewall change"
+    ],
+    [
+      "ACC-LCK-01",
+      "ACC-LCK-02",
+      "same lockout event 4740; mobile device vs scheduled task/mapped drive"
+    ],
+    [
+      "ACC-MFA-01",
+      "ACC-MFA-02",
+      "MFA failure; new phone not enrolled vs clock drift"
+    ],
+    [
+      "APP-LGN-01",
+      "APP-LGN-02",
+      "same apps, login failure; user not assigned vs cookie redirect loop"
+    ],
+    [
+      "NET-DNS-01",
+      "NET-DNS-02",
+      "same NXDOMAIN error; local cache vs deleted DNS record"
+    ],
+    [
+      "DB-CON-01",
+      "DB-CON-02",
+      "same ORA-12541; listener down vs wrong port on one server"
+    ],
+    [
+      "EML-OUT-01",
+      "EML-OUT-02",
+      "Outlook not working; corrupted profile vs credential prompts"
+    ],
+    [
+      "ACC-PWD-01",
+      "ACC-PWD-02",
+      "password problems; expired vs not enrolled in self-service reset"
+    ],
+    [
+      "APP-PRF-01",
+      "DB-SLW-01",
+      "slow reports/queries; missing index after release vs stale statistics"
+    ]
+  ]
+}

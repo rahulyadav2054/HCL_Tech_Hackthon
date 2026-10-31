@@ -1,0 +1,117 @@
+"""Worked examples (section 16): the three behaviours judges look for, plus the access-control demo.
+
+For each example writes the full API response and the audit-log row to reports/examples/ and a readable
+summary to reports/worked_examples.md. Runs against the demo audit DB (data/app.sqlite) so the examples
+also appear on the UI's Audit page.
+
+Usage: python -m ai.eval.worked_examples
+"""
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+
+os.environ["APP_DB_PATH"] = str(Path(__file__).resolve().parents[2] / "data" / "app.sqlite")
+
+from ai.eval import common  # noqa: E402
+
+from backend import audit  # noqa: E402
+from backend.service import get_service  # noqa: E402
+
+EXAMPLES = [
+    ("Example 1 - High confidence, likely duplicate",
+     {"title": "VPN not connecting after password change",
+      "description": "Since this morning I get error 809 on GlobalProtect from home. Changed my password yesterday.",
+      "application": "GlobalProtect VPN", "environment": "Production"}),
+    ("Example 2 - Keyword trap handled by the reranker",
+     {"title": "Error 809 on VPN for the whole Pune office",
+      "description": "Error 809 on VPN for the whole Pune office since the firewall change last night.",
+      "application": "GlobalProtect VPN", "environment": "Production"}),
+    ("Example 3 - Correct fallback on a novel issue",
+     {"title": "New expense app keeps showing a blank screen",
+      "description": "New expense app keeps showing a blank screen.", "application": "unknown",
+      "environment": "Production"}),
+]
+ACCESS = ("Access control - same ticket as analyst1 (L1) vs admin1 (L2_Admin)",
+          {"title": "Clicked phishing email and typed credentials",
+           "description": "After clicking a link in an email I got a login page that looked like OneDrive. "
+                          "I typed my password before noticing the address was wrong.",
+           "application": "OneDrive", "environment": "Production"})
+
+
+def summarize(name: str, res: dict) -> str:
+    c, cls = res["confidence"], res["classification"]
+    out = [f"## {name}\n", f"**Input:** \"{res['input']['title']}\" - {res['input']['description']}  ",
+           f"Application `{res['input']['application']}`, environment `{res['input']['environment']}`, "
+           f"user `{res['user']['user_id']}` ({res['user']['role']})\n",
+           f"**Classification:** {cls['category']['label']} › {cls['subcategory']['label']} "
+           f"({cls['category']['confidence']:.2f} / {cls['subcategory']['confidence']:.2f}), "
+           f"priority {cls['priority']['label']} ({cls['priority']['confidence']:.2f})"
+           + (f", rule: *{cls['priority']['rule_applied']}*" if cls['priority']['rule_applied'] else "")
+           + f"; source `{cls['source']}`{', uncertain' if cls['uncertain'] else ''}; "
+           f"top terms: {', '.join(cls['top_terms'])}\n", "**Similar tickets:**\n"]
+    if res["similar_tickets"]:
+        out.append("| Ticket | Score | Label | BM25 rank | Dense rank | Why |\n|---|---|---|---|---|---|")
+        out += [f"| {m['source_id']} | {m['score']:.2f} | {m['label']} | {m['bm25_rank']} | {m['dense_rank']} | "
+                f"{'; '.join(m['why'])} |" for m in res["similar_tickets"]]
+    else:
+        out.append("_none above the weak threshold (0.40)_")
+    out.append("\n**Recommended resolution:**\n")
+    rec = res["recommendation"]
+    if rec.get("message"):
+        out.append(f"> {rec['message']}\n")
+    for p in rec["paths"]:
+        out.append(f"*Path {p['rank']}: {p['title']}*" + (" (requires approval)" if p.get("requires_approval") else ""))
+        out += [f"{i}. {s}" for i, s in enumerate(p["steps"], 1)]
+        out.append("\nEvidence:")
+        out += [f"- `{e['source_id']}` \"{e['excerpt']}\" - {e.get('why', '')}" for e in p["evidence"]]
+        out.append("")
+    out.append(f"**Confidence:** {c['band']} ({c['score']:.2f}); signals " +
+               ", ".join(f"{k}={v:.2f}" for k, v in c["signals"].items()) +
+               (f"; reasons: {'; '.join(c['reasons'])}" if c["reasons"] else "") + "\n")
+    if res["fallback"]:
+        f = res["fallback"]
+        out.append(f"**Fallback:** route to `{f['escalation_group']}` ({f['routing_basis']}); questions: "
+                   + " / ".join(f["clarifying_questions"]) + "\n")
+    out.append(f"**Generator:** {res['generation']['provider'] or 'LLM not called'} {res['generation']['model'] or ''} · "
+               f"latency {res['latency_ms']} · audit JSON: `reports/examples/{res['analysis_id']}.json`\n")
+    return "\n".join(out)
+
+
+def save(svc, res):
+    ex_dir = common.REPORTS / "examples"
+    ex_dir.mkdir(parents=True, exist_ok=True)
+    (ex_dir / f"{res['analysis_id']}.json").write_text(json.dumps(
+        {"response": res, "audit_row": audit.get_analysis(res["analysis_id"])}, indent=2, default=str), encoding="utf-8")
+
+
+def main():
+    svc = get_service()
+    parts = ["# Worked examples\n",
+             "Generated by `python -m ai.eval.worked_examples` from real pipeline runs on the it-ticket-dataset "
+             "(numbers are actual outputs). For screenshots, load the same samples on the UI's Analyze page.\n"]
+    for name, ticket in EXAMPLES:
+        res = svc.analyze(ticket, "analyst1")
+        save(svc, res)
+        parts.append(summarize(name, res))
+    name, ticket = ACCESS
+    parts.append(f"## {name}\n")
+    docs = svc.retriever.docs_by_id
+    for user in ("analyst1", "admin1"):
+        res = svc.analyze(ticket, user)
+        save(svc, res)
+        restricted = [m["source_id"] for m in res["similar_tickets"] if docs[m["doc_id"]]["sensitivity"] == "Restricted"]
+        parts.append(f"- **{user}** ({res['user']['role']}): {len(res['similar_tickets'])} matches, Restricted among "
+                     f"them: {restricted or 'none'}; band {res['confidence']['band']} ({res['confidence']['score']:.2f}); "
+                     f"evidence: {[e['source_id'] for e in res['evidence_pack']] or 'none'}; route: "
+                     f"{(res['fallback'] or {}).get('escalation_group')}")
+    parts.append("\nThe phishing history is Restricted, so L1 gets no matches from it: it is filtered before retrieval "
+                 "and cannot reach the reranker, the LLM or the screen. The admin sees the same cases as evidence. "
+                 "Both are escalated (security incident) to Security-Ops.\n")
+    (common.REPORTS / "worked_examples.md").write_text("\n".join(parts), encoding="utf-8")
+    print("\n".join(parts))
+
+
+if __name__ == "__main__":
+    main()

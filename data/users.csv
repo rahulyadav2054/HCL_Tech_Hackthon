@@ -1,0 +1,4 @@
+user_id,role,can_see
+analyst1,L1,"Public,Internal"
+analyst2,L1,"Public,Internal"
+admin1,L2_Admin,"Public,Internal,Restricted"

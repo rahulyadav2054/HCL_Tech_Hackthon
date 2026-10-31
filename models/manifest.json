@@ -1,0 +1,31 @@
+{
+  "trained_at": "2026-10-31T13:59:30",
+  "training_data_hash": "1d778d4f077f10eb62f2452136912f1c551fc43e5bcdcbcba11aa3658cc4024c",
+  "classifier_version": "1d778d4f077f-tfidf",
+  "n_train": 2000,
+  "variant": "tfidf",
+  "validation": {
+    "tfidf": {
+      "macro_f1": 1.0,
+      "accuracy": 1.0
+    },
+    "embedding": {
+      "macro_f1": 1.0,
+      "accuracy": 1.0
+    },
+    "combined": {
+      "macro_f1": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "gate": {
+    "conf": 0.7,
+    "margin": 0.2,
+    "accuracy": 1.0,
+    "coverage": 1.0,
+    "deferred_accuracy": null,
+    "kept_default": true,
+    "baseline_accuracy": 1.0
+  },
+  "model": "LogisticRegression(class_weight=balanced) + CalibratedClassifierCV(isotonic, cv=5)"
+}
