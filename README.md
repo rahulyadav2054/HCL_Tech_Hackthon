@@ -2,7 +2,7 @@
 | Member | GitHub | Contribution |
 |---|---|---|
 | Rahul Yadav | @rahulyadav2054 | Architecture, AI pipeline, backend, JWT Authentication |
-| Priyali Pandey | @priyalipandey4 | RAG System |
+| Priyali Pandey | @priyalipandey4 | RAG System, Data Preparation |
 | Shubham Pal | @shubham936 | UI testing, Evaluation, Debugging, Testing|
 
 
